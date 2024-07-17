@@ -65,3 +65,41 @@ img{
 .GogolText{
     font-family: Gogol, serif;
 }
+
+h1{
+    font-size: 80px;
+    font-weight: 600;
+}
+
+h2{
+    font-family: Gogol, serif;
+    font-size: 50px;
+    font-weight: 500;
+
+}
+
+.screenshotsBlock p{
+    max-width: 320px;
+    color: #75766E;
+    font-size: 18px;
+    font-weight: 500;
+}
+.screenshotsBlock h4{
+    max-width: 320px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.statisticBlock p{
+    color: #75766E;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.NumberAnimation{
+    color: #D44C02;
+    font-size: 130px;
+    font-family: Gogol, serif;
+    line-height: 1;
+}
