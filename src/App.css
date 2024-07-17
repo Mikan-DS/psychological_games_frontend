@@ -133,3 +133,82 @@ h2{
     color: #75766E;
     font-size: 18px;
 }
+
+#Authors{
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Authors h2{
+    font-size: 30px;
+    width: 880px;
+    margin-left: auto;
+    line-height: 1;
+}
+
+#Authors > div{
+    width: 1145px;
+    margin-left: auto;
+}
+
+.StretchedList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Author{
+    height: 280px;
+    align-items: center;
+}
+
+.Author img{
+    height: 100%;
+}
+
+.Author > div{
+    width: 652px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.Author p{
+    margin-top: 6px;
+    margin-bottom: 40px;
+}
+
+.Author h3{
+    margin: 0;
+}
+
+
+
+.AuthorsBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+#Authors a{
+    color: #75766E;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+#Authors a:hover {
+    color: #383D38;
+    text-decoration: underline;
+}
+
+#Authors .NumberAnimation{
+    color: #383D38;
+    font-size: 130px;
+    display: inline;
+    line-height: 0;
+}
+

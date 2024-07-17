@@ -16,6 +16,9 @@ import Screenshot5 from "./img/screenshots/5.png"
 import Screenshot6 from "./img/screenshots/6.png"
 import shockImage1 from "./img/shockSection/pic_desktop.webp"
 import shockImage2 from "./img/shockSection/pic_desktop_2.webp"
+import AuthorImage1 from "./img/autors/Autor_1.webp"
+import AuthorImage2 from "./img/autors/Autor_2.webp"
+import winnersImage from "./img/autors/image_winner.webp"
 
 
 function App() {
@@ -348,6 +351,92 @@ function App() {
 
           <div id="Authors">
 
+
+              <h1 style={{textAlign: "center"}}>
+                  АВТОРЫ ПРОЕКТА
+              </h1>
+              <div>
+                  <h2>
+                      Проект разработан под руководством профессора,
+                      доктора психологических наук,
+                      прошёл тестирование на школьниках и занял первое место на Всероссийском конкурсе “Золотая Психея”
+                  </h2>
+
+                  <div className="AuthorsBlock">
+                      <div className="Author StretchedList">
+                          <img src={AuthorImage1} alt="Доценко Евгений Леонидович"/>
+                          <div>
+                              <h3>
+                                  Доценко Евгений Леонидович
+                              </h3>
+                              <p>
+                                  — Профессор, доктор психологических наук
+                              </p>
+                              Больше 40 лет работы психологом-консультантом.
+                              <br/>
+                              8 лет командной работы над IT-продуктами.
+                              <br/>
+                              Автор популярной книги «Не будь попугаем
+                              <br/>
+                              или Как защититься от психологического нападения» и научной монографии «Психология
+                              манипуляции».
+                          </div>
+                      </div>
+                      <div className="Author StretchedList">
+                          <img src={AuthorImage2} alt="Потёмкин Сергей Александрович"/>
+                          <div>
+                              <h3>
+                                  Потёмкин Сергей Александрович
+                              </h3>
+                              <p>
+                                  — Писатель, автор текстов игры
+                              </p>
+                              Писатель, автор текстов игры.
+                              <br/>
+                              Больше 14 лет работы психологом-консультантом.
+                              <br/>
+                              8 лет командной работы над IT-продуктами.
+                              <br/>
+                              Выпускник литературной мастерской Владислава Петровича Крапивина.
+                          </div>
+                      </div>
+                  </div>
+                  <a href="https://psy.su/psyche/projects/3043/?ysclid=lxewujg7zo638636246">
+                      ПРОЕКТ ЗАНЯЛ 1 МЕСТО НА ВСЕРОССИЙСКОМ КОНКУРСЕ «ЗОЛОТАЯ ПСИХЕЯ»
+                  </a>
+                  <div className="StretchedList" style={{alignItems: "center", marginTop: 82}}>
+                      <div style={{width: 293, marginTop: 40}}>
+                          <NumberAnimation targetNumber={1700} duration={1000}/>
+                          <div className="NumberAnimation">
+                              +
+                          </div>
+                          <p style={{color: "#75766E", fontSize: "18px", marginTop: 10, marginBottom: 0}}>
+                              Школьников протестировано и результаты проверены психологами
+                          </p>
+                      </div>
+                      <img src={winnersImage} alt='Победители конкурса "ЗОЛОТАЯ ПСИХЕЯ"' style={{width: 690}}/>
+
+
+                  </div>
+
+                  <p style={{textAlign: "right"}}>
+                      Эффективность игры показана на 2 магистерских диссертациях
+                  </p>
+
+                  <button style={{
+                      background: "none",
+                      cursor: "pointer",
+                      width: "100%",
+                      padding: 38,
+                      fontSize: 26,
+                      borderRadius: 50,
+                      marginTop: 100,
+                      marginBottom: 50
+                  }}>
+                      ПОДРОБНЕЕ О ПРОЕКТЕ
+                  </button>
+
+              </div>
 
           </div>
 
