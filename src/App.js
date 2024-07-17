@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import VBox from "./VBox";
 import Cover from "./img/cover_desktop.png";
 import TitleImage from "./img/title.png"
 import AgeImage from "./img/age.png"
@@ -11,12 +10,19 @@ import Screenshot1 from "./img/screenshots/1.png"
 import Screenshot2 from "./img/screenshots/2.png"
 import Screenshot3 from "./img/screenshots/3.png"
 import NumberAnimation from "./NumberAnimation";
+import TapeImage from "./img/tape_1.webp"
+import Screenshot4 from "./img/screenshots/4.png"
+import Screenshot5 from "./img/screenshots/5.png"
+import Screenshot6 from "./img/screenshots/6.png"
+import shockImage1 from "./img/shockSection/pic_desktop.webp"
+import shockImage2 from "./img/shockSection/pic_desktop_2.webp"
+
 
 function App() {
   return (
       <div className="App">
 
-          <div id="coverSection" style={{backgroundImage: "url("+Cover+")"}}>
+          <div id="coverSection" style={{backgroundImage: "url(" + Cover + ")"}}>
 
               <header className="App-header">
 
@@ -50,7 +56,12 @@ function App() {
 
               <div style={{maxWidth: "1400px", marginLeft: "auto", marginRight: "auto"}}>
 
-                  <div style={{display: "flex", flexDirection: "row", justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: 'space-between',
+                      alignItems: 'flex-start'
+                  }}>
                       <img src={TitleImage} alt="Классные джунгли"/>
 
                       <div>
@@ -59,7 +70,7 @@ function App() {
                               <br/>
                               Проблемы школьного буллинга
                           </div>
-                          <div  style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start'}}>
                               <img src={AgeImage} alt="12+"/>
                               <button style={{
                                   background: 'none',
@@ -91,7 +102,14 @@ function App() {
                   </h2>
               </div>
 
-              <div  style={{display: "flex", flexDirection: "row", justifyContent: 'space-between', alignItems: 'flex-start', marginTop: 80, marginBottom: 40}}>
+              <div style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: 'space-between',
+                  alignItems: 'flex-start',
+                  marginTop: 80,
+                  marginBottom: 40
+              }}>
                   <div className="screenshotsBlock">
                       <img src={Screenshot1} alt="Скриншот 1"/>
                       <h4>
@@ -127,24 +145,39 @@ function App() {
                   </div>
               </div>
 
-              <button style={{background: "none", cursor: "pointer", width: "100%", padding: 38, fontSize: 26, borderRadius: 50}}>
+              <button style={{
+                  background: "none",
+                  cursor: "pointer",
+                  width: "100%",
+                  padding: 38,
+                  fontSize: 26,
+                  borderRadius: 50
+              }}>
                   ИГРАТЬ
               </button>
 
-              <div className="statisticBlock" style={{display: "flex", flexDirection: "row", justifyContent: 'space-between', width:927, marginLeft: "auto", marginTop: 100, marginBottom: 100}}>
-                  <div style={{width:220}}>
+              <div className="statisticBlock" style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: 'space-between',
+                  width: 927,
+                  marginLeft: "auto",
+                  marginTop: 100,
+                  marginBottom: 100
+              }}>
+                  <div style={{width: 220}}>
                       <NumberAnimation targetNumber={357} duration={2100}/>
                       <p>
                           Варианта развития событий
                       </p>
                   </div>
-                  <div style={{width:150}}>
+                  <div style={{width: 150}}>
                       <NumberAnimation targetNumber={6} duration={1500}/>
                       <p style={{paddingRight: 20}}>
                           Концовок | ролей
                       </p>
                   </div>
-                  <div style={{width:220}}>
+                  <div style={{width: 220}}>
                       <NumberAnimation targetNumber={10} duration={2000}/>
                       <p>
                           Прохождений, чтобы открыть весь контент
@@ -153,42 +186,173 @@ function App() {
               </div>
 
           </div>
+          <div className="factSection" style={{backgroundImage: "url(" + TapeImage + ")"}}>
+              <div style={{
+                  width: 1400,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center"
+              }}>
+                  <div style={{width: 947}}>
+                      <h2 style={{margin: 5}}>
+                          ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span style={{color: "#D44C02"}}>57%</span> ДЕТЕЙ
+                          И <span style={{color: "#D44C02"}}>70%</span> УЧИТЕЛЕЙ
+                      </h2>
+                      <p style={{margin: 5}}>
+                          По статистике за Ноябрь 2023
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div id="forParents" style={{maxWidth: "1400px", marginLeft: "auto", marginRight: "auto"}}>
+              <div style={{marginTop: 100}}>
+                  <h1>
+                      ЕСЛИ ТЫ - РОДИТЕЛЬ
+                  </h1>
+                  <h2 style={{paddingLeft: "25%"}}>
+                      и хотите помочь своему ребёнку
+                  </h2>
+              </div>
+
+              <div style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: 'space-between',
+                  alignItems: 'flex-start',
+                  marginTop: 80,
+                  marginBottom: 40
+              }}>
+                  <div className="screenshotsBlock">
+                      <img src={Screenshot4} alt="Скриншот 4"/>
+                      <h4>
+                          ВЕРНУТЬСЯ В ДЕТСТВО
+                      </h4>
+                      <p>
+                          В основе игры лежат реальные события.
+                          Поиграйте в игру, возможно, у вас было то же самое.
+                          Погрузитесь в своё детство, вспомните его, вы можете найти там невольные ошибки.
+                          С позиции главного героя исправьте их – и вы увидите изменения в своём взрослом поведении.
+                          Все мы родом из детства!
+                      </p>
+                  </div>
+                  <div className="screenshotsBlock">
+                      <img src={Screenshot5} alt="Скриншот 5"/>
+                      <h4>
+                          ПОНЯТЬ РЕБЕНКА
+                      </h4>
+                      <p>
+                          Пройдите игру вместе с ребенком или понаблюдайте за его игрой.
+                          Может вы узнаете в нём себя и увидите те же ошибки?
+                          Кроме того, вы поймёте в какой реальной ситуации он
+                          каждый день находится и с какими проблемами сталкивается.
+                          Это даст вам возможность обсуждать именно его жизнь и трудности в классе.
+                      </p>
+                  </div>
+                  <div className="screenshotsBlock">
+                      <img src={Screenshot6} alt="Скриншот 6"/>
+                      <h4>
+                          ПОМОЧЬ РЕБЕНКУ
+                      </h4>
+                      <p>
+                          Может быть, ваш ребенок стал замкнутым и подавленным,
+                          вы подозреваете, что его травят в школе, или вам говорят,
+                          что он агрессивно себя ведет. Опираясь на сюжет игры,
+                          вы сможете обсудить её с подростком. Понять, насколько опасна текущая ситуация.
+                          Дать ли ребенку возможность решать конфликты самостоятельно,
+                          или уже необходимо вмешательство взрослых. Так чтобы не навредить.
+                      </p>
+                  </div>
+              </div>
+
+              <button style={{
+                  background: "none",
+                  cursor: "pointer",
+                  width: "100%",
+                  padding: 38,
+                  fontSize: 26,
+                  borderRadius: 50,
+                  marginBottom: 100
+              }}>
+                  ИГРАТЬ
+              </button>
+
+
+          </div>
+          <div className="factSection" style={{backgroundImage: "url(" + TapeImage + ")", transform: "scaleY(-1)"}}>
+              <div style={{
+                  width: 1400,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  transform: "scaleY(-1)" // Я немного упоролся
+              }}>
+                  <div style={{width: 947}}>
+                      <h2 style={{margin: 5}}>
+                          Каждый <span style={{color: "#D44C02"}}>ВТОРОЙ</span> РЕБЕНОК СТАЛКИВАЕТСЯ С АГРЕССИЕЙ И
+                          КАЖДЫЙ <span style={{color: "#D44C02"}}>ТРЕТИЙ</span> — С ЕЁ ФИЗИЧЕСКИМИ ПРОЯВЛЕНИЯМИ
+                      </h2>
+                  </div>
+              </div>
+          </div>
+          <div id="shockSection">
+              <div id="shockImage"
+                   style={{backgroundImage: "url(" + shockImage1 + ")", display: "flex", alignItems: "end"}}>
+                  <img src={shockImage2} alt="Персонажи" style={{width: 1600}}/>
+              </div>
+
+              <div style={{width: 1400, marginTop: 100, marginBottom: 100, marginLeft: "auto", marginRight: "auto"}}>
+                  <div style={{width: 926, marginLeft: "auto"}}>
+                      <p>
+                          Вас шокировала надпись, что какого-то выдуманного Саню,
+                          которого вы лично не знаете, назвали лохом?
+                          Но это самое милое, что можно услышать в школах на переменах!
+                          <br/>
+                          <br/>
+                          Не верите нам?
+                          <br/>
+                          <br/>
+                          Они ожидают, что вы им не поверите,
+                          поэтому только 20% детей рассказывают о буллинге родителям! Сыграйте в
+                          нашу игру с детьми – наладьте с ними контакт. Узнаете много интересного!
+                      </p>
+                  </div>
+
+              </div>
+
+
+          </div>
+
+
+          <div className="factSection" style={{backgroundImage: "url(" + TapeImage + ")"}}>
+              <div style={{
+                  width: 1400,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center"
+              }}>
+                  <div style={{width: 947}}>
+                      <h2 style={{margin: 5}}>
+                          У <span style={{color: "#D44C02"}}>ТРЕТИ</span> УЧЕНИКОВ, КОТОРЫХ ТРАВИЛИ В ШКОЛЕ, В БУДУЩЕМ
+                          ВОЗНИКАЮТ <span
+                          style={{color: "#D44C02"}}>ПСИХИЧЕСКИЕ РАССТРОЙСТВА</span>
+                      </h2>
+                  </div>
+              </div>
+          </div>
+
+          <div id="Authors">
+
+
+          </div>
+
           <div style={{height: 2000}}></div>
 
-          {/*<VBox>*/}
-          {/*    <h1 id="forStudent">Заголовок школьники</h1>*/}
-          {/*    <button>Играть!</button>*/}
-          {/*    <button>Играть!</button>*/}
-
-          {/*</VBox>*/}
-
-          <div>
-              Жертвами бубузинга...
-          </div>
-
-          <VBox>
-              <h1 id="forParents">Заголовок родители</h1>
-              <button>Играть!</button>
-              <button>Играть!</button>
-
-          </VBox>
-
-          <div>
-              Жертвами агрессии...
-          </div>
-
-          <div>
-              Вас шокировало!...
-          </div>
-
-          <div>
-              Треть учеников
-          </div>
-
-          <div>
-              <h1 id="Authors">Авторы проекта</h1>
-
-          </div>
 
           <div>
               <h1 id="FAQ">Чаво</h1>

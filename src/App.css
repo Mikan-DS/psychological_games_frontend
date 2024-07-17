@@ -103,3 +103,33 @@ h2{
     font-family: Gogol, serif;
     line-height: 1;
 }
+
+.factSection{
+    background-color: #FFDE51;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    width: 100%;
+    height: 280px;
+}
+
+.factSection h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+.factSection p{
+    font-size: 18px;
+}
+
+#shockImage{
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    height: 600px;
+}
+
+.shockSection p{
+    color: #75766E;
+    font-size: 18px;
+}
