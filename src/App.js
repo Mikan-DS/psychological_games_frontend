@@ -20,6 +20,8 @@ import AuthorImage1 from "./img/autors/Autor_1.webp"
 import AuthorImage2 from "./img/autors/Autor_2.webp"
 import winnersImage from "./img/autors/image_winner.webp"
 import ToggleQuestion from "./ToggleQuestion";
+import footerBackground from "./img/footer_bg.png"
+import footerTitle from "./img/footer_title.png"
 
 
 function App() {
@@ -621,11 +623,37 @@ function App() {
               </div>
 
           </div>
-          <div style={{height: 2000}}></div>
 
+          <footer style={{backgroundImage: "url(" + footerBackground + ")"}}>
+              <div style={{width: 1400, marginLeft: "auto", marginRight: "auto"}}>
+                  <div className="StretchedList" style={{alignItems: "center"}}>
+                      <div>
+                          <img src={footerTitle} alt="Логотип" style={{display: "block", marginBottom: 118}}/>
+                          <button style={{fontSize:10}}>
+                              ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
+                          </button>
+                      </div>
+                      <div>
+                          <a href="#forStudent">ЕСЛИ ТЫ - ШКОЛЬНИК</a>
+                          <br/><br/>
+                          <a href="#forParents">ЕСЛИ ТЫ - РОДИТЕЛЬ</a>
+                          <br/><br/>
+                          <a href="#Authors">АВТОРЫ</a>
+                          <br/><br/>
+                          <a href="#FAQ">ВОПРОСЫ</a>
+                          <br/><br/>
+                          <br/><br/>
+                          <button>
+                              ПОДРОБНЕЕ О ПРОЕКТЕ
+                          </button>
+                          <br/><br/>
+                          <button>
+                              АВТОРИЗАЦИЯ
+                          </button>
 
-          <footer>
-              футер
+                      </div>
+                  </div>
+              </div>
           </footer>
 
       </div>
