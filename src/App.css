@@ -212,3 +212,11 @@ h2{
     line-height: 0;
 }
 
+#FAQ{
+    background-color: #F3F2EE;
+}
+
+.ToggleQuestion p{
+    color: #75766E;
+    font-size: 20px;
+}
