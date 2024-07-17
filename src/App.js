@@ -31,13 +31,10 @@ function App() {
           <div id="coverSection" style={{backgroundImage: "url(" + Cover + ")"}}>
 
               <header className="App-header">
-
                   <div>
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect width="18" height="18" rx="9" fill="#FCFCFA"/>
                       </svg>
-
-
                       <div>
                           <a href="#forStudent">
                               ШКОЛЬНИКУ
@@ -56,12 +53,10 @@ function App() {
                           </a>
                       </div>
                   </div>
-
                   <hr style={{width: '100%', backgroundColor: '#FCFCFA', marginTop: '10px'}}/>
               </header>
 
               <div style={{maxWidth: "1400px", marginLeft: "auto", marginRight: "auto"}}>
-
                   <div style={{
                       display: "flex",
                       flexDirection: "row",
@@ -69,7 +64,6 @@ function App() {
                       alignItems: 'flex-start'
                   }}>
                       <img src={TitleImage} alt="Классные джунгли"/>
-
                       <div>
                           <div className={"GogolText"} style={{fontSize: 40, textAlign: "right"}}>
                               Психологическая компьютерная игра
@@ -78,23 +72,13 @@ function App() {
                           </div>
                           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start'}}>
                               <img src={AgeImage} alt="12+"/>
-                              <button style={{
-                                  background: 'none',
-                                  border: 'none',
-                                  color: '#F4CC18',
-                                  cursor: 'pointer',
-                                  padding: 0,
-                                  fontSize: 80
-                              }}>
+                              <button className="primaryButton" style={{fontSize: 80}}>
                                   ИГРАТЬ
                               </button>
-
                           </div>
                       </div>
                   </div>
-
                   <img src={CoverPics} alt="Фоны игры" style={{marginTop: -38}}/>
-
               </div>
 
           </div>
@@ -107,7 +91,6 @@ function App() {
                       играй дома, чтобы выигрывать в классе
                   </h2>
               </div>
-
               <div style={{
                   display: "flex",
                   flexDirection: "row",
@@ -150,22 +133,10 @@ function App() {
                       </p>
                   </div>
               </div>
-
-              <button style={{
-                  background: "none",
-                  cursor: "pointer",
-                  width: "100%",
-                  padding: 38,
-                  fontSize: 26,
-                  borderRadius: 50
-              }}>
+              <button className="secondaryButton" style={{fontSize: 26}}>
                   ИГРАТЬ
               </button>
-
-              <div className="statisticBlock" style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: 'space-between',
+              <div className="statisticBlock StretchedList" style={{
                   width: 927,
                   marginLeft: "auto",
                   marginTop: 100,
@@ -222,10 +193,7 @@ function App() {
                   </h2>
               </div>
 
-              <div style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: 'space-between',
+              <div className="StretchedList" style={{
                   alignItems: 'flex-start',
                   marginTop: 80,
                   marginBottom: 40
@@ -271,20 +239,9 @@ function App() {
                       </p>
                   </div>
               </div>
-
-              <button style={{
-                  background: "none",
-                  cursor: "pointer",
-                  width: "100%",
-                  padding: 38,
-                  fontSize: 26,
-                  borderRadius: 50,
-                  marginBottom: 100
-              }}>
+              <button className="secondaryButton" style={{fontSize: 26, marginBottom: 100}}>
                   ИГРАТЬ
               </button>
-
-
           </div>
           <div className="factSection" style={{backgroundImage: "url(" + TapeImage + ")", transform: "scaleY(-1)"}}>
               <div style={{
@@ -309,7 +266,6 @@ function App() {
                    style={{backgroundImage: "url(" + shockImage1 + ")", display: "flex", alignItems: "end"}}>
                   <img src={shockImage2} alt="Персонажи" style={{width: 1600}}/>
               </div>
-
               <div style={{width: 1400, marginTop: 100, marginBottom: 100, marginLeft: "auto", marginRight: "auto"}}>
                   <div style={{width: 926, marginLeft: "auto"}}>
                       <p>
@@ -326,13 +282,8 @@ function App() {
                           нашу игру с детьми – наладьте с ними контакт. Узнаете много интересного!
                       </p>
                   </div>
-
               </div>
-
-
           </div>
-
-
           <div className="factSection" style={{backgroundImage: "url(" + TapeImage + ")"}}>
               <div style={{
                   width: 1400,
@@ -351,10 +302,7 @@ function App() {
                   </div>
               </div>
           </div>
-
           <div id="Authors">
-
-
               <h1 style={{textAlign: "center"}}>
                   АВТОРЫ ПРОЕКТА
               </h1>
@@ -364,7 +312,6 @@ function App() {
                       доктора психологических наук,
                       прошёл тестирование на школьниках и занял первое место на Всероссийском конкурсе “Золотая Психея”
                   </h2>
-
                   <div className="AuthorsBlock">
                       <div className="Author StretchedList">
                           <img src={AuthorImage1} alt="Доценко Евгений Леонидович"/>
@@ -418,40 +365,21 @@ function App() {
                           </p>
                       </div>
                       <img src={winnersImage} alt='Победители конкурса "ЗОЛОТАЯ ПСИХЕЯ"' style={{width: 690}}/>
-
-
                   </div>
-
                   <p style={{textAlign: "right"}}>
                       Эффективность игры показана на 2 магистерских диссертациях
                   </p>
-
-                  <button style={{
-                      background: "none",
-                      cursor: "pointer",
-                      width: "100%",
-                      padding: 38,
-                      fontSize: 26,
-                      borderRadius: 50,
-                      marginTop: 100,
-                      marginBottom: 50
-                  }}>
+                  <button className="secondaryButton" style={{fontSize: 26,marginTop: 100,marginBottom: 50}}>
                       ПОДРОБНЕЕ О ПРОЕКТЕ
                   </button>
-
               </div>
-
           </div>
-
-
           <div id="FAQ" style={{paddingTop: 100, paddingBottom: 100}}>
               <div style={{width: 1400, marginLeft: "auto", marginRight: "auto"}}>
                   <h1 style={{marginTop: 0, marginBottom: 80}}>
                       ЧАСТЫЕ ВОПРОСЫ
                   </h1>
-
                   <hr style={{width: '100%', backgroundColor: '#9E9F9A'}}/>
-
                   <ToggleQuestion question="Как возврат в детство помогает во взрослой жизни?">
                       <p>
                           Все мы родом из детства.
@@ -621,41 +549,37 @@ function App() {
                       </p>
                   </ToggleQuestion>
               </div>
-
           </div>
-
           <footer style={{backgroundImage: "url(" + footerBackground + ")"}}>
               <div style={{width: 1400, marginLeft: "auto", marginRight: "auto"}}>
                   <div className="StretchedList" style={{alignItems: "center"}}>
                       <div>
                           <img src={footerTitle} alt="Логотип" style={{display: "block", marginBottom: 118}}/>
-                          <button style={{fontSize:10}}>
+                          <button className="primaryButton footerButton" style={{fontSize:10}}>
                               ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
                           </button>
                       </div>
                       <div>
-                          <a href="#forStudent">ЕСЛИ ТЫ - ШКОЛЬНИК</a>
+                          <a href="#forStudent" className="primaryButton footerButton">ЕСЛИ ТЫ - ШКОЛЬНИК</a>
                           <br/><br/>
-                          <a href="#forParents">ЕСЛИ ТЫ - РОДИТЕЛЬ</a>
+                          <a href="#forParents" className="primaryButton footerButton">ЕСЛИ ТЫ - РОДИТЕЛЬ</a>
                           <br/><br/>
-                          <a href="#Authors">АВТОРЫ</a>
+                          <a href="#Authors" className="primaryButton footerButton">АВТОРЫ</a>
                           <br/><br/>
-                          <a href="#FAQ">ВОПРОСЫ</a>
+                          <a href="#FAQ" className="primaryButton footerButton" >ВОПРОСЫ</a>
                           <br/><br/>
                           <br/><br/>
-                          <button>
+                          <button className="primaryButton footerButton" >
                               ПОДРОБНЕЕ О ПРОЕКТЕ
                           </button>
                           <br/><br/>
-                          <button>
+                          <button className="primaryButton footerButton" >
                               АВТОРИЗАЦИЯ
                           </button>
-
                       </div>
                   </div>
               </div>
           </footer>
-
       </div>
   );
 }

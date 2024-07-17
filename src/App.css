@@ -239,11 +239,44 @@ footer a{
     font-size: 16px;
 }
 
-footer button{
+
+
+.primaryButton{
+    background: none;
+    border: none;
+    color: #F4CC18;
+    cursor: pointer;
+    padding: 0;
+}
+
+.primaryButton:hover{
+    color: #E0BB15;
+}
+
+.secondaryButton{
+    color: #222226;
+    background: none;
+    border-color: #222226;
+    cursor: pointer;
+    padding: 38px;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.secondaryButton:hover{
+    background-color: #FFDE51;
+    border: none;
+    padding: 40px;
+}
+
+.footerButton{
     background: none;
     border: none;
     color: white;
     cursor: pointer;
     padding: 0;
     font-size: 16px;
+}
+.footerButton:hover{
+    color: #F4CC18;
 }
