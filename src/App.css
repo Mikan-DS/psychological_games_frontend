@@ -1,17 +1,25 @@
+@font-face {
+    font-family: "Gogol";   /*Can be any text*/
+    src: local("Gogol Regular"),
+    url("./fonts/Gogol Regular.ttf") format("truetype");
+}
+
 body {
     /*background-color: white;*/
-    background-color: black;
+    background-color: white;
     color: #383D38;
     font-family: 'Montserrat', sans-serif;
+
 }
+
 
 header {
     max-width: 1400px;
     margin: 0 auto;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
     width: 100%;
     padding-top: 22px;
     padding-bottom: 22px;
@@ -40,3 +48,20 @@ header > div > div {
     align-items: center;
 }
 
+#coverSection{
+    background-color: #121715;
+    width: 100%;
+    height: 900px;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+img{
+    pointer-events: none;
+}
+
+.GogolText{
+    font-family: Gogol, serif;
+}
