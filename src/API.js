@@ -31,9 +31,20 @@ export default function API() {
         window.location.reload();
     }
 
-    return {
-        get_user,
-        logout
+    async function isPhoneNew(phone) {
+        let result = false;
+        const response = await fetchApi({url: '/web/utils/checknumber/' + phone})
+
+        if (response !== null) {
+            result = response.result
+        }
+        return result
+
     }
 
+    return {
+        get_user,
+        logout,
+        isPhoneNew
+    }
 }

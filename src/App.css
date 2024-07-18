@@ -523,3 +523,11 @@ footer a{
 #Policy .tertiaryButton{
     margin-top: 73px;
 }
+
+.errorInput label{
+    color: red;
+}
+
+.errorInput input{
+    border-bottom: 1px solid red;
+}

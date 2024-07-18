@@ -67,7 +67,7 @@ function App() {
     return (
         <div className="App">
 
-            <PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin}/>
+            <PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin} api={api}/>
             <LoginModal modalControl={loginModalControl} openPayment={openPayment}/>
             <PolicyModal modalControl={policyModalControl}/>
 
