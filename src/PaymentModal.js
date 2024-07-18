@@ -5,7 +5,7 @@ import CoverPics from "./img/cover_pic_modal_desktop.png"
 
 
 
-export default function PaymentModal({modalControl}){
+export default function PaymentModal({modalControl, openPolicy, openLogin}){
 
     const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
 
@@ -198,7 +198,7 @@ export default function PaymentModal({modalControl}){
                         style={{marginRight: 10}}
                         required
                     />
-                    Я согласен на обработку&nbsp;<a href="#">Персональных данных</a>
+                    Я согласен на обработку&nbsp;<a onClick={()=>{closeModal(); openPolicy()}} style={{cursor: "pointer"}}>Персональных данных</a>
                 </label>
 
                 {selectedOption === "game_consultation" ? (<div className="consultationParameters">
@@ -279,7 +279,7 @@ export default function PaymentModal({modalControl}){
                 <label style={{display: "block", marginTop: 40, marginBottom: 4}}>
                     Уже покупали игру?
                 </label>
-                <a href="#">
+                <a onClick={()=>{closeModal(); openLogin()}} style={{cursor: "pointer"}}>
                     Авторизоваться
                 </a>
             </div>

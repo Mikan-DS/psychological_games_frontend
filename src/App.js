@@ -26,6 +26,7 @@ import Modal from "./Modal";
 import PaymentModal from "./PaymentModal";
 import ModalControl from "./ModalControl";
 import LoginModal from "./LoginModal";
+import PolicyModal from "./PolicyModal";
 
 
 function App() {
@@ -35,12 +36,15 @@ function App() {
     const openPayment = paymentModalControl.openModal;
     const loginModalControl = ModalControl();
     const openLogin = loginModalControl.openModal;
+    const policyModalControl = ModalControl();
+    const openPolicy = policyModalControl.openModal;
 
     return (
         <div className="App">
 
-            <PaymentModal modalControl={paymentModalControl}/>
-            <LoginModal modalControl={loginModalControl}/>
+            <PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin}/>
+            <LoginModal modalControl={loginModalControl} openPayment={openPayment}/>
+            <PolicyModal modalControl={policyModalControl}/>
 
             <div id="coverSection" style={{backgroundImage: "url(" + Cover + ")"}}>
 
@@ -578,7 +582,7 @@ function App() {
                     <div className="StretchedList" style={{alignItems: "center"}}>
                         <div>
                             <img src={footerTitle} alt="Логотип" style={{display: "block", marginBottom: 118}}/>
-                            <button className="primaryButton footerButton" style={{fontSize: 10}}>
+                            <button className="primaryButton footerButton" style={{fontSize: 10}} onClick={openPolicy}>
                                 ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
                             </button>
                         </div>

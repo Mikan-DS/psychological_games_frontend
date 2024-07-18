@@ -496,3 +496,33 @@ footer a{
 .loginModal .tertiaryButton{
     margin-bottom: 40px;
 }
+
+#Policy h1{
+    color: #383D38;
+    font-size: 26px;
+    font-weight: 600;
+    max-width: 545px;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+#Policy h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #75766E;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#Policy p{
+    font-family: 'Montserrat', sans-serif;
+    color: #75766E;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+#Policy .tertiaryButton{
+    margin-top: 73px;
+}

@@ -4,7 +4,7 @@ import closeButtonImage from './img/close_button.png'
 export default function Modal ({ isOpen, onClose, children }) {
     useEffect(() => {
         if (isOpen) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'auto';
         } else {
             document.body.style.overflow = 'auto';
         }

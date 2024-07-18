@@ -5,7 +5,7 @@ import CodeInput from "./CodeInput";
 
 
 
-export default function LoginModal({modalControl}){
+export default function LoginModal({modalControl, openPayment}){
     const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
 
     const [phone, setPhone] = useState('');
@@ -31,7 +31,7 @@ export default function LoginModal({modalControl}){
                 </h2>
                 <img src={CoverPics} alt="Скришоты из игры"/>
 
-                <div className="formTextInputs" style={{width:350}}>
+                <div className="formTextInputs" style={{width: 350}}>
                     <label htmlFor="phone">Ваш логин (номер телефона)</label>
                     <input
                         className="formInputText"
@@ -53,8 +53,17 @@ export default function LoginModal({modalControl}){
                 <button className="tertiaryButton">
                     ОТПРАВИТЬ
                 </button>
-                <a href="#">
+                <a style={{cursor: "pointer"}}>
                     Получить код повторно
+                </a>
+                <label>
+                    Ещё не покупали игру?
+                </label>
+                <a onClick={() => {
+                    closeModal();
+                    openPayment()
+                }} style={{cursor: "pointer"}}>
+                    Регистрация
                 </a>
             </div>
 
