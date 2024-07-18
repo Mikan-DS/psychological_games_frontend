@@ -174,6 +174,7 @@ export default function PaymentModal({modalControl}){
                         name="vk_link"
                         value={formData.vk_link}
                         onChange={handleChangeFormData}
+                        required
                     />
 
                     {selectedOption === "game_consultation" ? (
@@ -195,6 +196,7 @@ export default function PaymentModal({modalControl}){
                         checked={formData.consent}
                         onChange={handleChangeFormData}
                         style={{marginRight: 10}}
+                        required
                     />
                     Я согласен на обработку&nbsp;<a href="#">Персональных данных</a>
                 </label>

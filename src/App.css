@@ -438,3 +438,61 @@ footer a{
     color: #383D38;
     background-color: #FFDE51;
 }
+
+.code-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.code-input {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #F3F2EE;
+    color: #383D38;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.loginModal h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    color: #75766E;
+}
+
+.loginModal img{
+    width: 400px;
+}
+
+.loginModal label{
+    color: #9E9F9A;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 60px;
+}
+
+.loginModal input[type="tel"]{
+    margin-bottom: 40px;
+}
+
+.loginModal a{
+    color: #383D38;
+    text-decoration: none;
+}
+
+.loginModal a:hover{
+    text-decoration: underline;
+}
+
+.loginModal .code-input-container{
+    margin-bottom: 30px;
+}
+
+.loginModal .tertiaryButton{
+    margin-bottom: 40px;
+}

@@ -25,6 +25,7 @@ import footerTitle from "./img/footer_title.png"
 import Modal from "./Modal";
 import PaymentModal from "./PaymentModal";
 import ModalControl from "./ModalControl";
+import LoginModal from "./LoginModal";
 
 
 function App() {
@@ -32,11 +33,14 @@ function App() {
 
     const paymentModalControl = ModalControl();
     const openPayment = paymentModalControl.openModal;
+    const loginModalControl = ModalControl();
+    const openLogin = loginModalControl.openModal;
 
     return (
         <div className="App">
 
             <PaymentModal modalControl={paymentModalControl}/>
+            <LoginModal modalControl={loginModalControl}/>
 
             <div id="coverSection" style={{backgroundImage: "url(" + Cover + ")"}}>
 
@@ -58,7 +62,7 @@ function App() {
                             <a href="#FAQ">
                                 ВОПРОСЫ
                             </a>
-                            <a href="#">
+                            <a onClick={openLogin} style={{cursor: "pointer"}}>
                                 ВОЙТИ
                             </a>
                         </div>
@@ -380,7 +384,7 @@ function App() {
                     <p style={{textAlign: "right"}}>
                         Эффективность игры показана на 2 магистерских диссертациях
                     </p>
-                    <button className="secondaryButton" style={{fontSize: 26, marginTop: 100, marginBottom: 50}}>
+                    <button className="secondaryButton" style={{fontSize: 26, marginTop: 100, marginBottom: 50}} onClick={()=>{window.alert("Этот раздел в разработке!")}}>
                         ПОДРОБНЕЕ О ПРОЕКТЕ
                     </button>
                 </div>
@@ -588,11 +592,11 @@ function App() {
                             <a href="#FAQ" className="primaryButton footerButton">ВОПРОСЫ</a>
                             <br/><br/>
                             <br/><br/>
-                            <button className="primaryButton footerButton">
+                            <button className="primaryButton footerButton" onClick={()=>{window.alert("Этот раздел в разработке!")}}>
                                 ПОДРОБНЕЕ О ПРОЕКТЕ
                             </button>
                             <br/><br/>
-                            <button className="primaryButton footerButton">
+                            <button className="primaryButton footerButton" onClick={openLogin}>
                                 АВТОРИЗАЦИЯ
                             </button>
                         </div>
