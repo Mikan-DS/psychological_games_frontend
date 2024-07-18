@@ -1,11 +1,10 @@
 @font-face {
-    font-family: "Gogol";   /*Can be any text*/
+    font-family: "Gogol";
     src: local("Gogol Regular"),
     url("./fonts/Gogol Regular.ttf") format("truetype");
 }
 
 body {
-    /*background-color: white;*/
     background-color: white;
     color: #383D38;
     font-family: 'Montserrat', sans-serif;
@@ -16,16 +15,11 @@ body {
 header {
     max-width: 1400px;
     margin: 0 auto;
-    /*position: fixed;*/
     top: 0;
-    /*left: 50%;*/
-    /*transform: translateX(-50%);*/
     width: 100%;
     padding-top: 22px;
     padding-bottom: 22px;
 }
-
-
 
 header a {
     color: white;
@@ -33,12 +27,15 @@ header a {
     font-size: 20px;
 }
 
+header a:hover{
+    color: #F4CC18;
+}
+
 header > div {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-
 
 header > div > div {
 
