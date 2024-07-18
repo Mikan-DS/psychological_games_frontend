@@ -4,7 +4,7 @@ export default function API() {
 
     const host = "http://localhost:8000"
 
-    async function fetchApi({url}){
+    async function fetchGetApi({url}){
         try {
             const response = await fetch(host+url, {
                 method: 'GET',
@@ -22,18 +22,18 @@ export default function API() {
     }
 
     async function get_user() {
-        return await fetchApi({url:'/web/utils/get_user'})
+        return await fetchGetApi({url:'/web/utils/get_user'})
 
     }
 
     async function logout(){
-        await fetchApi({url:'/auth/logout'})
+        await fetchGetApi({url:'/auth/logout'})
         window.location.reload();
     }
 
     async function isPhoneNew(phone) {
         let result = false;
-        const response = await fetchApi({url: '/web/utils/checknumber/' + phone})
+        const response = await fetchGetApi({url: '/web/utils/checknumber/' + phone})
 
         if (response !== null) {
             result = response.result
@@ -42,9 +42,37 @@ export default function API() {
 
     }
 
+    async function fetchPostApi({ url, data }) {
+        try {
+            const response = await fetch(host+url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching:', error);
+            return null;
+        }
+    }
+
+    async function buyInit(buy_parameters) {
+        return await fetchPostApi({ url: '/auth/pay/init', data: buy_parameters });
+    }
+
+
+
     return {
         get_user,
         logout,
-        isPhoneNew
+        isPhoneNew,
+        buyInit
     }
 }

@@ -100,7 +100,25 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
         setErrors(newErrors)
 
         if (!newErrors.phone && !newErrors.name && !newErrors.consent && !newErrors.email){
-            //TODO
+            const buy_parameters = {
+                buy_type: selectedOption,
+                name: formData.name,
+                phone: phone,
+                email: formData.email,
+                consultation_parameters: null
+            }
+
+            if (selectedOption === "game_consultation"){
+                buy_parameters.consultation_parameters = {
+                    custom_question: formData.custom_question,
+                    age: consultationData.age,
+                    gender: consultationData.gender === "М",
+                    contact_way: consultationData.contactWay
+                }
+            }
+
+            const result = await api.buyInit(buy_parameters);
+            console.log(result)
         }
 
 
