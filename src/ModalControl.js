@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function ModalControl(){
+export default function ModalControl() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {

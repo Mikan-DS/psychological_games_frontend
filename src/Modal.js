@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import closeButtonImage from './img/close_button.png'
 
-export default function Modal ({ isOpen, onClose, children }) {
+export default function Modal({isOpen, onClose, children}) {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'auto';

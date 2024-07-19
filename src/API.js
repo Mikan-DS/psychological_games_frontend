@@ -1,12 +1,10 @@
-
-
 export default function API() {
 
     const host = ""//http://localhost:8000
 
-    async function fetchGetApi({url}){
+    async function fetchGetApi({url}) {
         try {
-            const response = await fetch(host+url, {
+            const response = await fetch(host + url, {
                 method: 'GET',
                 credentials: 'include'
             });
@@ -22,12 +20,12 @@ export default function API() {
     }
 
     async function get_user() {
-        return await fetchGetApi({url:'/web/utils/get_user'})
+        return await fetchGetApi({url: '/web/utils/get_user'})
 
     }
 
-    async function logout(){
-        await fetchGetApi({url:'/auth/logout'})
+    async function logout() {
+        await fetchGetApi({url: '/auth/logout'})
         window.location.reload();
     }
 
@@ -42,9 +40,9 @@ export default function API() {
 
     }
 
-    async function fetchPostApi({ url, data }) {
+    async function fetchPostApi({url, data}) {
         try {
-            const response = await fetch(host+url, {
+            const response = await fetch(host + url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -63,14 +61,13 @@ export default function API() {
         }
     }
 
-    async function loginInit(phone){
+    async function loginInit(phone) {
         return await fetchGetApi({url: '/auth/login/init/' + phone})
     }
 
     async function buyInit(buy_parameters) {
-        return await fetchPostApi({ url: '/auth/pay/init', data: buy_parameters });
+        return await fetchPostApi({url: '/auth/pay/init', data: buy_parameters});
     }
-
 
 
     return {

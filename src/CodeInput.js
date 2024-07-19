@@ -1,9 +1,7 @@
-
-
 export default function CodeInput({codes, setCodes}) {
 
     const handleInput = (e, index) => {
-        const { value } = e.target;
+        const {value} = e.target;
         let newCodes = [...codes];
 
         if (value.length === codes.length) {
@@ -12,7 +10,7 @@ export default function CodeInput({codes, setCodes}) {
             setCodes(newCodes);
         } else {
             // Если вводится один символ
-            newCodes[index] = value.charAt(value.length-1);
+            newCodes[index] = value.charAt(value.length - 1);
             setCodes(newCodes);
             if (index < codes.length - 1 && value) {
                 document.getElementById(`code-input-${index + 1}`).focus();
@@ -21,7 +19,7 @@ export default function CodeInput({codes, setCodes}) {
     };
 
     return (
-        <div className="code-input-container" style={{ display: 'flex', gap: '10px' }}>
+        <div className="code-input-container" style={{display: 'flex', gap: '10px'}}>
             {codes.map((code, index) => (
                 <input
                     key={index}

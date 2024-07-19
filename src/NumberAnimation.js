@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 
-export default function NumberAnimation({ targetNumber, duration }) {
+export default function NumberAnimation({targetNumber, duration}) {
 
     const numberRef = useRef(null);
 

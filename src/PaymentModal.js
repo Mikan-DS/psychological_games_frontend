@@ -4,7 +4,7 @@ import RadioButton from "./RadioButton";
 import CoverPics from "./img/cover_pic_modal_desktop.png"
 
 
-export default function PaymentModal({modalControl, openPolicy, openLogin, api}){
+export default function PaymentModal({modalControl, openPolicy, openLogin, api}) {
 
     const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
 
@@ -19,7 +19,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
     });
 
     const handleChangeFormData = (e) => {
-        const { name, value, type, checked } = e.target;
+        const {name, value, type, checked} = e.target;
         setErrors({
             ...errors,
             [name]: null
@@ -98,7 +98,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
 
         setErrors(newErrors)
 
-        if (!newErrors.phone && !newErrors.name && !newErrors.consent && !newErrors.email){
+        if (!newErrors.phone && !newErrors.name && !newErrors.consent && !newErrors.email) {
             const buy_parameters = {
                 buy_type: selectedOption,
                 name: formData.name,
@@ -107,7 +107,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                 consultation_parameters: null
             }
 
-            if (selectedOption === "game_consultation"){
+            if (selectedOption === "game_consultation") {
                 buy_parameters.consultation_parameters = {
                     custom_question: formData.custom_question,
                     age: consultationData.age,
@@ -118,10 +118,9 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
 
             const result = await api.buyInit(buy_parameters);
 
-            if (result && result.url){
+            if (result && result.url) {
                 window.location = result.url;
-            }
-            else {
+            } else {
                 window.alert("Произошла ошибка при регистрации!")
             }
         }
@@ -202,8 +201,8 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                         ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ
                     </h2>
 
-                    <div className={errors.name?"errorInput":""}>
-                        <label htmlFor="name">{errors.name?errors.name:"Имя*"}</label>
+                    <div className={errors.name ? "errorInput" : ""}>
+                        <label htmlFor="name">{errors.name ? errors.name : "Имя*"}</label>
                         <input
                             className="formInputText"
                             type="text"
@@ -216,8 +215,8 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                     </div>
 
                     <div style={{display: "flex", width: "100%", gap: 20}}>
-                        <div className={errors.phone?"errorInput":""} style={{width: "100%"}}>
-                            <label htmlFor="phone">{errors.phone?errors.phone:"Телефон*"}</label>
+                        <div className={errors.phone ? "errorInput" : ""} style={{width: "100%"}}>
+                            <label htmlFor="phone">{errors.phone ? errors.phone : "Телефон*"}</label>
                             <input
                                 className="formInputText"
                                 type="tel"
@@ -228,8 +227,8 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                                 required
                             />
                         </div>
-                        <div className={errors.email?"errorInput":""}  style={{width: "100%"}}>
-                            <label htmlFor="email">{errors.email?errors.email:"E-mail"}</label>
+                        <div className={errors.email ? "errorInput" : ""} style={{width: "100%"}}>
+                            <label htmlFor="email">{errors.email ? errors.email : "E-mail"}</label>
                             <input
                                 className="formInputText"
                                 type="email"
@@ -253,7 +252,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                                 onChange={handleChangeFormData}
                             /></div>) : null}
                 </div>
-                <div className={errors.consent?"errorInput":""}>
+                <div className={errors.consent ? "errorInput" : ""}>
                     <label style={{display: "flex", alignItems: "center"}}>
                         <input
                             type="checkbox"
@@ -264,7 +263,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                             style={{marginRight: 10}}
                             required
                         />
-                        {errors.consent?errors.consent:"Я согласен на обработку"}&nbsp;<a onClick={() => {
+                        {errors.consent ? errors.consent : "Я согласен на обработку"}&nbsp;<a onClick={() => {
                         closeModal();
                         openPolicy()
                     }} style={{cursor: "pointer"}}>Персональных данных</a>
@@ -302,7 +301,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                         <h3>
                             ПОЛ ВАШЕГО РЕБЕНКА
                         </h3>
-                        <div style={{marginLeft:-40}}>
+                        <div style={{marginLeft: -40}}>
                             <RadioButton onChange={setGender} currentSelected={consultationData.gender}
                                          value="М"/>
                             <label>М</label>
@@ -316,7 +315,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                         <h3>
                             КАК ВЫ ХОТИТЕ, ЧТОБЫ МЫ С ВАМИ СВЯЗАЛИСЬ ДЛЯ ВЫБОРА ВРЕМЕНИ КОНСУЛЬТАЦИИ?
                         </h3>
-                        <div style={{marginLeft:-40}}>
+                        <div style={{marginLeft: -40}}>
                             <RadioButton onChange={setContactWay} currentSelected={consultationData.contactWay}
                                          value="phone"/>
                             <label>ПО ТЕЛЕФОНУ</label>
@@ -350,7 +349,10 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                 <label style={{display: "block", marginTop: 40, marginBottom: 4}}>
                     Уже покупали игру?
                 </label>
-                <a onClick={()=>{closeModal(); openLogin()}} style={{cursor: "pointer"}}>
+                <a onClick={() => {
+                    closeModal();
+                    openLogin()
+                }} style={{cursor: "pointer"}}>
                     Авторизоваться
                 </a>
             </div>
