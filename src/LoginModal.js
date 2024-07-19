@@ -68,6 +68,10 @@ export default function LoginModal({modalControl, openPayment, api}){
     }
 
 
+    function login() {
+        window.location = "/auth/login/"+vkBot.phone+"/"+codes.join("")
+    }
+
     return(
         <Modal onClose={closeModal} isOpen={isModalOpen}>
 
@@ -101,7 +105,7 @@ export default function LoginModal({modalControl, openPayment, api}){
 
                         <CodeInput codes={codes} setCodes={setCodes}/>
 
-                        <button className="tertiaryButton">
+                        <button className="tertiaryButton" onClick={login}>
                             ОТПРАВИТЬ
                         </button>
                         <a style={{cursor: "pointer"}}>
