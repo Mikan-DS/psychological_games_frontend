@@ -77,7 +77,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
 
 
         let phone = formData.phone;
-        phone = phone.replace("(", "").replace(")", "").replace("+", "").replace("-", "").replace(" ", "")
+        phone = phone.replace("(", "").replace(")", "").replace("+", "").replace("-", "").replace("-", "").replace(" ", "").replace(" ", "")
 
         if (phone.length === 0) {
             newErrors.phone = "Телефон это обязательный параметр!"
@@ -118,7 +118,13 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
             }
 
             const result = await api.buyInit(buy_parameters);
-            console.log(result)
+
+            if (result && result.url){
+                window.location = result.url;
+            }
+            else {
+                window.alert("Произошла ошибка при регистрации!")
+            }
         }
 
 

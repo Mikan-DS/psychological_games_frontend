@@ -68,7 +68,7 @@ function App() {
         <div className="App">
 
             <PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin} api={api}/>
-            <LoginModal modalControl={loginModalControl} openPayment={openPayment}/>
+            <LoginModal modalControl={loginModalControl} openPayment={openPayment} api={api}/>
             <PolicyModal modalControl={policyModalControl}/>
 
             <div id="coverSection" style={{backgroundImage: "url(" + Cover + ")"}}>

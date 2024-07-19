@@ -63,6 +63,10 @@ export default function API() {
         }
     }
 
+    async function loginInit(phone){
+        return await fetchGetApi({url: '/auth/login/init/' + phone})
+    }
+
     async function buyInit(buy_parameters) {
         return await fetchPostApi({ url: '/auth/pay/init', data: buy_parameters });
     }
@@ -73,6 +77,7 @@ export default function API() {
         get_user,
         logout,
         isPhoneNew,
-        buyInit
+        buyInit,
+        loginInit
     }
 }
