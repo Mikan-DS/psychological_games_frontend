@@ -125,7 +125,7 @@ export default function LoginModal({modalControl, openPayment, api, initialLogin
                     <div className={"loginModal" + (errors.code ? " errorInput" : "")}
                          style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <h2>
-                            {vkBot.message} <a href={vkBot.url + "?ref_source=" + vkBot.phone} target="_blank">ВК БОТЕ</a>
+                            {vkBot.message} <a href={vkBot.url + "&ref_source=" + vkBot.phone} target="_blank">ВК БОТЕ</a>
                         </h2>
 
                         <CodeInput codes={codes} setCodes={setCodes}/>
