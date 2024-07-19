@@ -107,7 +107,7 @@ function App() {
                             <a onClick={user.authenticated ? () => {
                                 window.alert("Личный кабинет в разработке!")
                             } : openLogin} style={{cursor: "pointer"}}>
-                                {user.authenticated ? user.name.toUpperCase() : "ВОЙТИ"}
+                                {user.authenticated ? user.name.split(' ')[0].toUpperCase() : "ВОЙТИ"}
                             </a>
                         </div>
                     </div>
