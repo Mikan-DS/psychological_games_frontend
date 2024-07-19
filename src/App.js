@@ -53,7 +53,10 @@ function App() {
         if (onlyOne){
             api.get_user().then(r => {
                 if (r !== null){
-                    setUser(r)
+                    setUser(r);
+                    if (r.username){
+                        loginModalControl.closeModal()
+                    }
                 }
             });
             onlyOne = false;
@@ -61,7 +64,7 @@ function App() {
     }, [user]);
 
     const urlParams = new URLSearchParams(window.location.search);
-    const initialLogin = ("+"+urlParams.get('login')) || '';
+    const initialLogin = urlParams.get('login')?("+"+urlParams.get('login')) : '';
     const initialCode = urlParams.get('code') || '';
 
     const [initialLoginOpen, setInitialLoginOpen] = useState(initialLogin.length!==0)
