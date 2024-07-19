@@ -1,8 +1,8 @@
 import Modal from "./Modal";
 import React from "react";
 
-export default function PolicyModal({ modalControl }) {
-    const { openModal, closeModal, isModalOpen, setIsModalOpen } = modalControl;
+export default function PolicyModal({modalControl}) {
+    const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
 
     return (
         <Modal onClose={closeModal} isOpen={isModalOpen}>

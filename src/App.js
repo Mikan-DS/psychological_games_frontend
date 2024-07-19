@@ -1,11 +1,10 @@
 import "./App.css";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Cover from "./img/cover_desktop.png";
 import TitleImage from "./img/title.png"
 import AgeImage from "./img/age.png"
 import CoverPics from "./img/Cover_pic_desktop.png"
 // import GogolFont from "./fonts/Gogol Regular.ttf"
-
 import Screenshot1 from "./img/screenshots/1.png"
 import Screenshot2 from "./img/screenshots/2.png"
 import Screenshot3 from "./img/screenshots/3.png"
@@ -22,15 +21,26 @@ import winnersImage from "./img/autors/image_winner.webp"
 import ToggleQuestion from "./ToggleQuestion";
 import footerBackground from "./img/footer_bg.png"
 import footerTitle from "./img/footer_title.png"
-import Modal from "./Modal";
 import PaymentModal from "./PaymentModal";
 import ModalControl from "./ModalControl";
 import LoginModal from "./LoginModal";
 import PolicyModal from "./PolicyModal";
+import API from "./API";
+
+let onlyOne = true;
 
 
 function App() {
 
+    const api = API()
+
+    const [user, setUser] = useState({
+        authenticated: false,
+        username: "",
+        name: "",
+        id: "",
+        email: ""
+    })
 
     const paymentModalControl = ModalControl();
     const openPayment = paymentModalControl.openModal;
@@ -39,11 +49,39 @@ function App() {
     const policyModalControl = ModalControl();
     const openPolicy = policyModalControl.openModal;
 
+    useEffect(() => {
+        if (onlyOne) {
+            api.get_user().then(r => {
+                if (r !== null) {
+                    setUser(r);
+                    if (r.username) {
+                        loginModalControl.closeModal()
+                    }
+                }
+            });
+            onlyOne = false;
+        }
+    }, [user]);
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialLogin = urlParams.get('login') ? ("+" + urlParams.get('login')) : '';
+    const initialCode = urlParams.get('code') || '';
+
+    const [initialLoginOpen, setInitialLoginOpen] = useState(initialLogin.length !== 0)
+
+    if (initialLoginOpen) {
+        openLogin();
+        setInitialLoginOpen(false)
+    }
+
     return (
         <div className="App">
 
-            <PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin}/>
-            <LoginModal modalControl={loginModalControl} openPayment={openPayment}/>
+            <PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin} api={api}/>
+            <LoginModal
+                modalControl={loginModalControl}
+                openPayment={openPayment} api={api}
+                initialLogin={initialLogin}/>
             <PolicyModal modalControl={policyModalControl}/>
 
             <div id="coverSection" style={{backgroundImage: "url(" + Cover + ")"}}>
@@ -66,12 +104,14 @@ function App() {
                             <a href="#FAQ">
                                 ВОПРОСЫ
                             </a>
-                            <a onClick={openLogin} style={{cursor: "pointer"}}>
-                                ВОЙТИ
+                            <a onClick={user.authenticated ? () => {
+                                window.alert("Личный кабинет в разработке!")
+                            } : openLogin} style={{cursor: "pointer"}}>
+                                {user.authenticated ? user.name.toUpperCase() : "ВОЙТИ"}
                             </a>
                         </div>
                     </div>
-                    <hr style={{width: '100%', backgroundColor: '#FCFCFA', marginTop: '10px', border: 0, height:1}}/>
+                    <hr style={{width: '100%', backgroundColor: '#FCFCFA', marginTop: '10px', border: 0, height: 1}}/>
                 </header>
 
                 <div style={{maxWidth: "1400px", marginLeft: "auto", marginRight: "auto"}}>
@@ -90,7 +130,10 @@ function App() {
                             </div>
                             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start'}}>
                                 <img src={AgeImage} alt="12+"/>
-                                <button className="primaryButton" style={{fontSize: 80}} onClick={openPayment}>
+                                <button className="primaryButton" style={{fontSize: 80}}
+                                        onClick={!user.authenticated ? openPayment : () => {
+                                            window.alert("Игры в разработке!")
+                                        }}>
                                     ИГРАТЬ
                                 </button>
                             </div>
@@ -151,7 +194,10 @@ function App() {
                         </p>
                     </div>
                 </div>
-                <button className="secondaryButton" style={{fontSize: 26}} onClick={openPayment}>
+                <button className="secondaryButton" style={{fontSize: 26}}
+                        onClick={!user.authenticated ? openPayment : () => {
+                            window.alert("Игры в разработке!")
+                        }}>
                     ИГРАТЬ
                 </button>
                 <div className="statisticBlock StretchedList" style={{
@@ -257,7 +303,10 @@ function App() {
                         </p>
                     </div>
                 </div>
-                <button className="secondaryButton" style={{fontSize: 26, marginBottom: 100}} onClick={openPayment}>
+                <button className="secondaryButton" style={{fontSize: 26, marginBottom: 100}}
+                        onClick={!user.authenticated ? openPayment : () => {
+                            window.alert("Игры в разработке!")
+                        }}>
                     ИГРАТЬ
                 </button>
             </div>
@@ -388,7 +437,10 @@ function App() {
                     <p style={{textAlign: "right"}}>
                         Эффективность игры показана на 2 магистерских диссертациях
                     </p>
-                    <button className="secondaryButton" style={{fontSize: 26, marginTop: 100, marginBottom: 50}} onClick={()=>{window.alert("Этот раздел в разработке!")}}>
+                    <button className="secondaryButton" style={{fontSize: 26, marginTop: 100, marginBottom: 50}}
+                            onClick={() => {
+                                window.alert("Этот раздел в разработке!")
+                            }}>
                         ПОДРОБНЕЕ О ПРОЕКТЕ
                     </button>
                 </div>
@@ -398,7 +450,7 @@ function App() {
                     <h1 style={{marginTop: 0, marginBottom: 80}}>
                         ЧАСТЫЕ ВОПРОСЫ
                     </h1>
-                    <hr style={{width: '100%', backgroundColor: '#9E9F9A', border: 0, height:1}}/>
+                    <hr style={{width: '100%', backgroundColor: '#9E9F9A', border: 0, height: 1}}/>
                     <ToggleQuestion question="Как возврат в детство помогает во взрослой жизни?">
                         <p>
                             Все мы родом из детства.
@@ -596,13 +648,20 @@ function App() {
                             <a href="#FAQ" className="primaryButton footerButton">ВОПРОСЫ</a>
                             <br/><br/>
                             <br/><br/>
-                            <button className="primaryButton footerButton" onClick={()=>{window.alert("Этот раздел в разработке!")}}>
+                            <button className="primaryButton footerButton" onClick={() => {
+                                window.alert("Этот раздел в разработке!")
+                            }}>
                                 ПОДРОБНЕЕ О ПРОЕКТЕ
                             </button>
                             <br/><br/>
-                            <button className="primaryButton footerButton" onClick={openLogin}>
-                                АВТОРИЗАЦИЯ
-                            </button>
+                            {user.authenticated ?
+                                <button className="primaryButton footerButton" onClick={api.logout}>
+                                    ВЫЙТИ
+                                </button> :
+                                <button className="primaryButton footerButton" onClick={openLogin}>
+                                    АВТОРИЗАЦИЯ
+                                </button>
+                            }
                         </div>
                     </div>
                 </div>
