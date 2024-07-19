@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ToggleImage from './img/toggle.png'
 
 export default function ToggleQuestion({ question, children }) {

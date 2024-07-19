@@ -5,7 +5,6 @@ import TitleImage from "./img/title.png"
 import AgeImage from "./img/age.png"
 import CoverPics from "./img/Cover_pic_desktop.png"
 // import GogolFont from "./fonts/Gogol Regular.ttf"
-
 import Screenshot1 from "./img/screenshots/1.png"
 import Screenshot2 from "./img/screenshots/2.png"
 import Screenshot3 from "./img/screenshots/3.png"
@@ -61,14 +60,22 @@ function App() {
         }
     }, [user]);
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialLogin = ("+"+urlParams.get('login')) || '';
+    const initialCode = urlParams.get('code') || '';
 
+    const [initialLoginOpen, setInitialLoginOpen] = useState(initialLogin.length!==0)
 
+    if (initialLoginOpen){
+        openLogin();
+        setInitialLoginOpen(false)
+    }
 
     return (
         <div className="App">
 
             <PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin} api={api}/>
-            <LoginModal modalControl={loginModalControl} openPayment={openPayment} api={api}/>
+            <LoginModal modalControl={loginModalControl} openPayment={openPayment} api={api} initialLogin={initialLogin}/>
             <PolicyModal modalControl={policyModalControl}/>
 
             <div id="coverSection" style={{backgroundImage: "url(" + Cover + ")"}}>

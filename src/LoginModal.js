@@ -4,12 +4,21 @@ import React, {useState} from "react";
 import CodeInput from "./CodeInput";
 
 
-
-export default function LoginModal({modalControl, openPayment, api}){
+export default function LoginModal({modalControl, openPayment, api, initialLogin}){
     const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
 
-    const [phone, setPhone] = useState('');
-    const [codes, setCodes] = useState(['', '', '', '']);
+    const [phone, setPhone] = useState(initialLogin);
+    const [codes, _setCodes] = useState(['', '', '', '']);
+
+    function setCodes(codes){
+        setErrors(
+            {
+                ...errors,
+                ["code"]: null
+            }
+        )
+        _setCodes(codes);
+    }
 
     const [vkBot, setVkBot] = useState(null)
 
@@ -23,15 +32,17 @@ export default function LoginModal({modalControl, openPayment, api}){
     };
 
     const [errors, setErrors] = useState({
-        phone: null,
-        wrongEmail: null
+        phone: initialLogin?"Код неверен или устарел, получите новый.":null,
+        wrongEmail: null,
+        code: null
     });
 
     async function loginInit() {
 
         const newErrors = {
             phone: null,
-            wrongEmail: null
+            wrongEmail: null,
+            code: null
         }
 
         let result = null;
@@ -69,7 +80,21 @@ export default function LoginModal({modalControl, openPayment, api}){
 
 
     function login() {
-        window.location = "/auth/login/"+vkBot.phone+"/"+codes.join("")
+
+        const newErrors = {
+            phone: null,
+            wrongEmail: null,
+            code: null
+        }
+
+        if (codes.join("").length!==4){
+            newErrors.code = "Код это обязательный параметр!"
+            setErrors(newErrors)
+        }
+        else {
+            window.location = "/auth/login/"+vkBot.phone+"/"+codes.join("")
+        }
+
     }
 
     return(
@@ -98,7 +123,7 @@ export default function LoginModal({modalControl, openPayment, api}){
                 </div>
 
                 {vkBot ?
-                    <div className="loginModal" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                    <div className={"loginModal"+(errors.code ? " errorInput" : "")} style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <h2>
                             {vkBot.message} <a href={vkBot.url+"?ref_source="+vkBot.phone}>ВК БОТЕ</a>
                         </h2>
@@ -108,7 +133,7 @@ export default function LoginModal({modalControl, openPayment, api}){
                         <button className="tertiaryButton" onClick={login}>
                             ОТПРАВИТЬ
                         </button>
-                        <a style={{cursor: "pointer"}}>
+                        <a style={{cursor: "pointer"}} onClick={loginInit}>
                             Получить код повторно
                         </a>
                     </div> :

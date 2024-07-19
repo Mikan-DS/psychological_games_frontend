@@ -4,7 +4,6 @@ import RadioButton from "./RadioButton";
 import CoverPics from "./img/cover_pic_modal_desktop.png"
 
 
-
 export default function PaymentModal({modalControl, openPolicy, openLogin, api}){
 
     const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
