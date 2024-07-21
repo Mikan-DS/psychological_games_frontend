@@ -6,7 +6,7 @@ export default function API() {
         try {
             const response = await fetch(host + url, {
                 method: 'GET',
-                credentials: 'include'
+                credentials: 'same-origin'
             });
             if (!response.ok) {
                 throw new Error('Network response was not ok');
