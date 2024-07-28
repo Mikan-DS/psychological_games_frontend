@@ -1,38 +1,50 @@
 import "./App.css";
 import React, {useEffect, useState} from "react";
+
 import Cover from "./img/cover_desktop.png";
 import TitleImage from "./img/title.png"
 import AgeImage from "./img/age.png"
 import CoverPics from "./img/Cover_pic_desktop.png"
-// import GogolFont from "./fonts/Gogol Regular.ttf"
+
 import Screenshot1 from "./img/screenshots/1.png"
 import Screenshot2 from "./img/screenshots/2.png"
 import Screenshot3 from "./img/screenshots/3.png"
-import NumberAnimation from "./NumberAnimation";
-import TapeImage from "./img/tape_1.webp"
 import Screenshot4 from "./img/screenshots/4.png"
 import Screenshot5 from "./img/screenshots/5.png"
 import Screenshot6 from "./img/screenshots/6.png"
+
+import TapeImage from "./img/tape_1.webp"
+
 import shockImage1 from "./img/shockSection/pic_desktop.webp"
 import shockImage2 from "./img/shockSection/pic_desktop_2.webp"
 import AuthorImage1 from "./img/autors/Autor_1.webp"
 import AuthorImage2 from "./img/autors/Autor_2.webp"
 import winnersImage from "./img/autors/image_winner.webp"
-import ToggleQuestion from "./ToggleQuestion";
 import footerBackground from "./img/footer_bg.png"
 import footerTitle from "./img/footer_title.png"
+
+import NumberAnimation from "./NumberAnimation";
+import ToggleQuestion from "./ToggleQuestion";
+
 import PaymentModal from "./PaymentModal";
 import ModalControl from "./ModalControl";
 import LoginModal from "./LoginModal";
 import PolicyModal from "./PolicyModal";
+
 import API from "./API";
 
 let onlyOne = true;
 
-
 function App() {
 
-    const api = API()
+    const api = API() // По хорошему лучше иметь всего 1 объект API, на случай если в будущем в нем будет происходить одноразовая логика (Например если будет OAuth)
+
+    const paymentModalControl = ModalControl();
+    const openPayment = paymentModalControl.openModal;
+    const loginModalControl = ModalControl();
+    const openLogin = loginModalControl.openModal;
+    const policyModalControl = ModalControl();
+    const openPolicy = policyModalControl.openModal;
 
     const [user, setUser] = useState({
         authenticated: false,
@@ -41,13 +53,6 @@ function App() {
         id: "",
         email: ""
     })
-
-    const paymentModalControl = ModalControl();
-    const openPayment = paymentModalControl.openModal;
-    const loginModalControl = ModalControl();
-    const openLogin = loginModalControl.openModal;
-    const policyModalControl = ModalControl();
-    const openPolicy = policyModalControl.openModal;
 
     useEffect(() => {
         if (onlyOne) {
@@ -63,16 +68,16 @@ function App() {
         }
     }, [user]);
 
+
     const urlParams = new URLSearchParams(window.location.search);
     const initialLogin = urlParams.get('login') ? ("+" + urlParams.get('login')) : '';
-    const initialCode = urlParams.get('code') || '';
-
     const [initialLoginOpen, setInitialLoginOpen] = useState(initialLogin.length !== 0)
 
-    if (initialLoginOpen) {
+    if (initialLoginOpen) { // Это нужно на случай если страница с параметром логина
         openLogin();
         setInitialLoginOpen(false)
     }
+
 
     return (
         <div className="App">
