@@ -163,7 +163,7 @@ function App() {
                     <div className="screenshotsBlock">
                         <img src={Screenshot1} alt="Скриншот 1"/>
                         <h4>
-                            Отдохнуть
+                            ОТДОХНУТЬ
                         </h4>
                         <p>
                             Погрузись в игру, по жанру это визуальная новелла, основанная на реальных событиях.
@@ -250,7 +250,7 @@ function App() {
             <div id="forParents" style={{maxWidth: "1400px", marginLeft: "auto", marginRight: "auto"}}>
                 <div style={{marginTop: 100}}>
                     <h1>
-                        ЕСЛИ ТЫ - РОДИТЕЛЬ
+                        ЕСЛИ ВЫ - РОДИТЕЛЬ
                     </h1>
                     <h2 style={{paddingLeft: "25%"}}>
                         и хотите помочь своему ребёнку
