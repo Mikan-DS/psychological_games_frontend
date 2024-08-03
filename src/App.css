@@ -182,11 +182,12 @@ hr{
     .cover-age-image{
         width: 80px;
     }
-    #cover-title-image{
+    .cover-title-image{
         height: 266px;
     }
     .cover-description-text{
         padding-top: 20px;
+        width: 574px;
     }
     .cover-description-box{
         gap: 40px
@@ -233,7 +234,7 @@ hr{
     .cover-age-image{
         width: 100px;
     }
-    #cover-title-image{
+    .cover-title-image{
         margin-bottom: -38px;
         margin-right: -200px;
         height: 300px;

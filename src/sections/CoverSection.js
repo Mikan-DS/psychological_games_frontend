@@ -53,7 +53,7 @@ export default function CoverSection({user, loginModalControl, playAction}){
 
             <div className={"content-box"}>
                 <div className={"stretched-box"}>
-                    <img id={"title-image"} src={TitleImage ? TitleImage : ""} alt="Классные джунгли"/>
+                    <img className={"cover-title-image"} src={TitleImage ? TitleImage : ""} alt="Классные джунгли"/>
                     <div className={"vertical-box align-right cover-description-box only-desktop"}>
                         <div className={"accent-text2 cover-description-text"}>
                             Психологическая компьютерная игра
