@@ -46,7 +46,10 @@ body{
 .only-desktop { /* 1200+ */
     display: none;
 }
-.only-mobile { /* 1200- */
+.only-mobile { /* 640+ */
+    display: none;
+}
+.only-phone { /* 640- */
     display: flex;
 }
 
@@ -100,7 +103,7 @@ body{
 }
 
 .primary-button-large{
-    padding: 20px 60px;
+    padding: 18px 60px;
     font-size: 80px;
 }
 
@@ -109,6 +112,10 @@ body{
     font-size: 60px;
 }
 
+.primary-button-small{
+    padding: 18px 40px;
+    font-size: 40px;
+}
 
 /* TODO проверить используется ли еще где-то*/
 
@@ -130,7 +137,6 @@ hr{
 }
 
 .menu-buttons{
-    display: flex;
     gap: 20px;
 }
 
@@ -150,11 +156,44 @@ hr{
 /* Для экранов 360px и выше */
 @media (min-width: 360px) {
 
+    /* Виды контейнеров и позиции */
+    .content-box{
+        width: 320px;
+    }
+
     /* Секции */
 
     /** Cover **/
     .cover-section{
         height: 639px;
+    }
+    header > div{
+        padding-bottom: 12px;
+    }
+    header{
+        margin-bottom: 20px;
+        padding-top: 12px;
+    }
+    .cover-title-image{
+        height: 142px;
+    }
+    .cover-age-image{
+        width: 30px;
+    }
+    .cover-description-text{
+        padding-top: 20px;
+        width: 320px;
+    }
+    .cover-description-box{
+        gap: 20px
+    }
+
+
+
+
+    /* TODO проверить используется ли еще где-то*/
+    .accent-text2{
+        font-size: 30px;
     }
 }
 
@@ -164,6 +203,15 @@ hr{
     /* Виды контейнеров и позиции */
     .content-box{
         width: 600px;
+    }
+
+    /* Отображение на адаптивах */
+
+    .only-phone { /* 640- */
+        display: none;
+    }
+    .only-mobile { /* 1200- */
+        display: flex;
     }
 
     /* Секции */
@@ -186,11 +234,14 @@ hr{
         height: 266px;
     }
     .cover-description-text{
-        padding-top: 20px;
         width: 574px;
     }
     .cover-description-box{
         gap: 40px
+    }
+
+    .icon{
+        width: 31px;
     }
 
     /* TODO проверить используется ли еще где-то*/
