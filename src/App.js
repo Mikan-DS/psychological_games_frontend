@@ -342,7 +342,7 @@ function App() {
             <div id="shockSection">
                 <div id="shockImage"
                      style={{backgroundImage: "url(" + shockImage1 + ")", display: "flex", alignItems: "end"}}>
-                    <img src={shockImage2} alt="Персонажи" style={{width: 1600}}/>
+                    <img src={shockImage2} alt="Персонажи" style={{width: "100%"}}/>
                 </div>
                 <div style={{width: 1400, marginTop: 100, marginBottom: 100, marginLeft: "auto", marginRight: "auto"}}>
                     <div style={{width: 926, marginLeft: "auto"}}>
