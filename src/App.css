@@ -465,6 +465,45 @@ hr{
         gap: 20px
     }
 
+    /** About **/
+    h1{
+        font-size: 80px;
+        margin-top: 100px;
+    }
+
+    .accent-text{
+        font-size: 50px;
+        margin-left: 226px;
+    }
+
+    .about-list{
+        flex-direction: row;
+        padding-top: 80px;
+        gap: unset;
+    }
+
+    .about-list > div{
+        width: 373px;
+    }
+
+    .about-list div > div{
+        max-width: 373px;
+    }
+    .about-statistic{
+        flex-direction: row;
+        padding-bottom: 33px;
+        margin-left: auto;
+        width: 767px;
+    }
+
+    .about-statistic > div{
+        max-width: 170px;
+    }
+    .NumberAnimation{
+        padding-top: 100px;
+        font-size: 130px;
+    }
+
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
         font-size: 40px;
