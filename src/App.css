@@ -10,7 +10,6 @@
 
 
 body{
-    /*background-color: palevioletred; !* TODO Дебаг режим *!*/
     min-width: 320px;
 }
 
@@ -54,6 +53,186 @@ body{
 .only-phone { /* 640- */
     display: flex;
 }
+
+
+
+/* Кнопки */
+
+/** Primary **/
+.primary-button{
+    color: #F4CC18;
+    background: none;
+    border-color: #F4CC18;
+    cursor: pointer;
+    border-radius: 500px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+}
+.primary-button:hover{
+    color: #FCFCFA;
+    background: #F4CC18;
+    border-color: #F4CC18;
+}
+
+.primary-button-large{
+    padding: 18px 58px;
+    font-size: 80px;
+}
+
+.primary-button-medium{
+    padding: 18px 38px;
+    font-size: 60px;
+}
+
+.primary-button-small{
+    padding: 18px 38px;
+    font-size: 40px;
+}
+
+/** Secondary **/
+.secondary-button{
+    color: #222226;
+    background: none;
+    border-color: #9E9F9A;
+    cursor: pointer;
+    border-radius: 500px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+}
+.secondary-button:hover{
+    color: #FCFCFA;
+    background: #F4CC18;
+    border-color: #F4CC18;
+}
+
+.secondary-button-large{
+    width: 100%;
+    padding: 36px 40px;
+    font-size: 26px;
+}
+
+/* Глобальные стили */
+h1{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    color: #383D38;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 0;
+
+    color: #383D38;
+}
+
+h4{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #383D38;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+img{
+    pointer-events: none;
+}
+
+/* TODO проверить используется ли еще где-то*/
+
+hr{
+    width: 100%;
+    background-color: #FCFCFA;
+    margin: 0;
+    border: 0;
+    height: 1px;
+}
+
+.menu-text a{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+.menu-text a:hover{
+    color: #F4CC18;
+}
+
+.menu-buttons{
+    gap: 20px;
+}
+
+
+.accent-text{
+    font-family: Gogol, serif;
+    color: #383D38;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.accent-text2{ /* TODO Склеить с первым accent-text */
+    font-family: Gogol, serif;
+    color: #FCFCFA;
+    text-align: right;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.accent-text3{ /* TODO Склеить с первым accent-text */
+    font-family: Gogol, serif;
+    color: #383D38;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.body-text{
+    font-family: "Montserrat", sans-serif;
+    color: #75766E;
+    line-height: 1;
+    font-size: 18px;
+}
+
+.body-text2{
+    font-family: "Montserrat", sans-serif;
+    color: #75766E;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-text{
+    font-family: 'Ruda', sans-serif;
+    color: #383D38;
+    font-size: 26px;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card-text span{
+    color: #D44C02;
+}
+
 
 /* Секции */
 
@@ -193,7 +372,7 @@ header{
     padding-top: 10px;
 }
 
-/** Fact **/
+/** Shock **/
 .shock-image{
     width: 100%;
     height: 231px;
@@ -215,186 +394,81 @@ header{
 }
 
 /* Autors */
-.autors-autor > img{
+.authors-author{
+    display: flex;
+    flex-direction: column;
+    color: #383D38;
+    /*padding-top: 60px;*/
+}
+
+.authors-author > img{
     width: 150px;
+    height: 150px;
     object-fit: cover;
+    margin-bottom: 40px;
 }
 
-/* Кнопки */
+.authors-author > div > div{
+    color: #75766E;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
 
-/** Primary **/
-.primary-button{
-    color: #F4CC18;
+.authors-box{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 60px;
+}
+
+.authors-more{
+    padding-top: 40px;
+}
+
+.authors-more > button{
     background: none;
-    border-color: #F4CC18;
-    cursor: pointer;
-    border-radius: 500px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-}
-.primary-button:hover{
-    color: #FCFCFA;
-    background: #F4CC18;
-    border-color: #F4CC18;
-}
-
-.primary-button-large{
-    padding: 18px 58px;
-    font-size: 80px;
-}
-
-.primary-button-medium{
-    padding: 18px 38px;
-    font-size: 60px;
-}
-
-.primary-button-small{
-    padding: 18px 38px;
-    font-size: 40px;
-}
-
-/** Secondary **/
-.secondary-button{
-    color: #222226;
-    background: none;
-    border-color: #9E9F9A;
-    cursor: pointer;
-    border-radius: 500px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-}
-.secondary-button:hover{
-    color: #FCFCFA;
-    background: #F4CC18;
-    border-color: #F4CC18;
-}
-
-.secondary-button-large{
-    width: 100%;
-    padding: 36px 40px;
-    font-size: 26px;
-}
-
-/* Глобальные стили */
-h1{
-    font-size: 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    max-width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    color: #383D38;
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-h3{
-    font-size: 26px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 120%;
-    text-transform: uppercase;
-
-    color: #383D38;
-}
-
-h4{
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #383D38;
-
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-}
-
-img{
-   pointer-events: none;
-}
-
-/* TODO проверить используется ли еще где-то*/
-
-hr{
-    width: 100%;
-    background-color: #FCFCFA;
-    margin: 0;
-    border: 0;
-    height: 1px;
-}
-
-.menu-text a{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-decoration: none;
-}
-.menu-text a:hover{
-    color: #F4CC18;
-}
-
-.menu-buttons{
+    border: none;
+    padding: 0;
+    justify-content: unset;
     gap: 20px;
 }
-
-
-.accent-text{
-    font-family: Gogol, serif;
-    color: #383D38;
-    line-height: 1;
-    font-size: 30px;
-}
-
-.accent-text2{ /* TODO Склеить с первым accent-text */
-    font-family: Gogol, serif;
-    color: #FCFCFA;
-    text-align: right;
-    line-height: 1;
-    font-size: 30px;
-}
-
-.accent-text3{ /* TODO Склеить с первым accent-text */
-    font-family: Gogol, serif;
-    color: #383D38;
-    line-height: 1;
-    font-size: 30px;
-}
-
-.body-text{
-    font-family: "Montserrat", sans-serif;
+.authors-more > button h3{
     color: #75766E;
-    line-height: 1;
-    font-size: 18px;
 }
 
-.body-text2{
-    font-family: "Montserrat", sans-serif;
+.authors-project-link{
     color: #75766E;
-    line-height: 1;
-    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    text-decoration: none;
+
+    margin-top: 82px;
+    margin-bottom: 62px;
 }
 
-.card-text{
-    font-family: 'Ruda', sans-serif;
+.authors-project-link:hover{
     color: #383D38;
-    font-size: 26px;
-    letter-spacing: -0.04em;
-    font-weight: 600;
-    text-transform: uppercase;
+    text-decoration: underline;
 }
 
-.card-text span{
-    color: #D44C02;
+.authors-number-animation{
+    display: flex;
+}
+.authors-number-animation .NumberAnimation{
+    color: #383D38;
 }
 
+.authors-winners-image{
+    width: 100%;
+}
+
+.authors-statistic{
+
+}
 
 
 /* Для экранов 360px и выше */
@@ -546,7 +620,7 @@ hr{
         font-size: 30px;
     }
 
-    /** Fact **/
+    /** Shock **/
     .shock-image{
         width: 100%;
         height: 200px;
@@ -563,6 +637,15 @@ hr{
     #ShockSection .content-box{
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+
+    /* Autors */
+    .authors-author{
+        flex-direction: row;
+        gap: 60px;
+    }
+    .authors-author > img{
+        margin-bottom: 0;
     }
 
 
