@@ -25,9 +25,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-.adaptive-direction-box{
-    flex-direction: column;
-}
 
 .content-box{
     width: 280px;
@@ -135,7 +132,7 @@ header{
     background-color: #444;
 }
 
-/** ForStudent **/
+/** About **/
 #ForStudent{
     padding-top: 60px;
 }
@@ -145,6 +142,8 @@ header{
     padding-top: 40px;
     padding-bottom: 40px;
     gap: 40px;
+    flex-direction: column;
+
 }
 
 .about-list img{
@@ -158,11 +157,13 @@ header{
 
 .about-statistic{
     padding-bottom: 20px;
+    flex-direction: column;
+
 }
 
 .NumberAnimation {
     color: #D44C02;
-    font-size: 130px;
+    font-size: 100px;
     font-family: Gogol, serif;
     line-height: 1;
 
@@ -382,9 +383,37 @@ hr{
         width: 31px;
     }
 
+    /** About **/
+    h1{
+        font-size: 60px;
+        margin-top: 80px;
+    }
+
+    .about-statistic{
+        flex-direction: row;
+        padding-bottom: 33px;
+    }
+
+    .about-statistic > div{
+        max-width: 170px;
+    }
+    .about-list img{
+        height: 230px;
+    }
+    .about-list div > div{
+        max-width: 320px;
+    }
+
+    .NumberAnimation{
+        padding-top: 60px;
+    }
+
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
         font-size: 34px;
+    }
+    .accent-text{
+        font-size: 40px;
     }
     .menu-text a{
         font-size: 16px;
