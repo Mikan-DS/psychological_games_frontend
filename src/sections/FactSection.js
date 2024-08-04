@@ -2,17 +2,20 @@ import TapeImage from "../img/tape_1.webp";
 import TapeMobileImage from "../img/tape_mobile.png";
 import React from "react";
 
-export default function FactSection({children}) {
+export default function FactSection({children, reverse}) {
     // style={{backgroundImage: "url(" + TapeImage + ")"}}
     return (
         <div className={"fact-section stretched-box card-text"}>
             <div className={"content-box"}>
-                <div>
+                <div className={reverse?"fact-section-second":"fact-section-first"}>
                     {children}
                 </div>
             </div>
             <img className={"only-phone"} src={TapeMobileImage || ""} alt={"Лента"}/>
-            <img className={"only-mobile only-desktop"} src={TapeImage || ""} alt={"Лента"}/>
+            <img
+                className={"only-mobile only-desktop"}
+                src={TapeImage || ""} alt={"Лента"}
+                style={{transform: reverse? "scaleY(-1)": "none"}}/>
         </div>
     );
 }

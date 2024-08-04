@@ -338,6 +338,7 @@ hr{
     font-size: 26px;
     letter-spacing: -0.04em;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .card-text span{
@@ -460,8 +461,11 @@ hr{
         margin-bottom: auto;
     }
 
-    .fact-section .content-box > div{
+    .fact-section-first{
         max-width: 497px;
+    }
+    .fact-section-second{
+        max-width: 570px;
     }
 
     .fact-section img{
@@ -577,7 +581,10 @@ hr{
         height: 312px;
     }
 
-    .fact-section .content-box > div{
+    .fact-section-first{
+        max-width: 778px;
+    }
+    .fact-section-second{
         max-width: 778px;
     }
 
@@ -646,8 +653,11 @@ hr{
     .fact-section .content-box{
         margin-top: 100px;
     }
-    .fact-section .content-box > div{
+    .fact-section-first{
         max-width: 947px;
+    }
+    .fact-section-second{
+        max-width: 1020px;
     }
 
     .fact-section img{
