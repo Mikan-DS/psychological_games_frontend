@@ -9,7 +9,7 @@
 
 
 body{
-    background-color: palevioletred; /* TODO Дебаг режим */
+    /*background-color: palevioletred; !* TODO Дебаг режим *!*/
     min-width: 320px;
 }
 
@@ -97,42 +97,8 @@ header{
     padding-top: 20px;
 }
 
-/* Кнопки */
 
-/** Primary **/
-.primary-button{
-    color: #F4CC18;
-    background: none;
-    border-color: #F4CC18;
-    cursor: pointer;
-    border-radius: 500px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-}
-.primary-button:hover{
-    color: #FCFCFA;
-    background: #F4CC18;
-    border-color: #F4CC18;
-}
-
-.primary-button-large{
-    padding: 18px 60px;
-    font-size: 80px;
-}
-
-.primary-button-medium{
-    padding: 18px 40px;
-    font-size: 60px;
-}
-
-.primary-button-small{
-    padding: 18px 40px;
-    font-size: 40px;
-}
-
-/** DROPDOWN MENU **/
+/*** DROPDOWN MENU ***/
 
 .dropdown-menu {
     position: relative;
@@ -166,6 +132,113 @@ header{
     background-color: #444;
 }
 
+/** ForStudent **/
+#ForStudent{
+    padding-top: 60px;
+}
+
+.about-list{
+    flex-direction: column;
+}
+
+.about-list img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+
+    height: 150px;
+}
+
+
+/* Кнопки */
+
+/** Primary **/
+.primary-button{
+    color: #F4CC18;
+    background: none;
+    border-color: #F4CC18;
+    cursor: pointer;
+    border-radius: 500px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+}
+.primary-button:hover{
+    color: #FCFCFA;
+    background: #F4CC18;
+    border-color: #F4CC18;
+}
+
+.primary-button-large{
+    padding: 18px 58px;
+    font-size: 80px;
+}
+
+.primary-button-medium{
+    padding: 18px 38px;
+    font-size: 60px;
+}
+
+.primary-button-small{
+    padding: 18px 38px;
+    font-size: 40px;
+}
+
+/** Secondary **/
+.secondary-button{
+    color: #222226;
+    background: none;
+    border-color: #9E9F9A;
+    cursor: pointer;
+    border-radius: 500px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+}
+.secondary-button:hover{
+    color: #FCFCFA;
+    background: #F4CC18;
+    border-color: #F4CC18;
+}
+
+.secondary-button-large{
+    width: 100%;
+    padding: 36px 40px;
+    font-size: 26px;
+}
+
+/* Глобальные стили */
+h1{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    color: #383D38;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h4{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #383D38;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
 /* TODO проверить используется ли еще где-то*/
 
 hr{
@@ -189,7 +262,15 @@ hr{
     gap: 20px;
 }
 
-.accent-text2{
+
+.accent-text{
+    font-family: Gogol, serif;
+    color: #383D38;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.accent-text2{ /* TODO Склеить с первым accent-text */
     font-family: Gogol, serif;
     color: #FCFCFA;
     text-align: right;
@@ -197,6 +278,12 @@ hr{
     font-size: 30px;
 }
 
+.body-text{
+    font-family: "Montserrat", sans-serif;
+    color: #75766E;
+    line-height: 1;
+    font-size: 18px;
+}
 
 
 

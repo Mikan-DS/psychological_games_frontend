@@ -7,6 +7,7 @@ import API from "./API";
 import CoverSection from "./sections/CoverSection";
 import PaymentModal from "./PaymentModal";
 import LoginModal from "./LoginModal";
+import ForStudent from "./sections/ForStudent";
 
 let onlyOne = true;
 
@@ -71,10 +72,10 @@ function App() {
                 initialLogin={initialLogin}/>
             {/*<PolicyModal modalControl={policyModalControl}/>*/}
 
-            <CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>
+            {/*<CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>*/}
+            <ForStudent user={user} playAction={playAction}/>
 
-            <div id={"forStudent"} style={{height: 3000}}>
-                TEST
+            <div id={"forStudent"} style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
             </div>
 
         </div>
