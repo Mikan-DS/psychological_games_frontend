@@ -278,6 +278,10 @@ h4{
 
 }
 
+img{
+   pointer-events: none;
+}
+
 /* TODO проверить используется ли еще где-то*/
 
 hr{
@@ -550,9 +554,8 @@ hr{
         margin-left: auto;
         width: 767px;
     }
-
     .about-statistic > div{
-        max-width: 170px;
+        max-width: 210px;
     }
     .NumberAnimation{
         padding-top: 100px;
@@ -570,8 +573,6 @@ hr{
 
     .fact-section img{
         margin-top: -312px;
-        object-fit: cover;
-        object-position: center;
     }
 
     .card-text{
@@ -623,8 +624,25 @@ hr{
         width: 927px;
     }
 
-    .about-statistic > div{
-        max-width: 170px;
+    /** Fact **/
+    .fact-section{
+        height: 280px;
+    }
+
+    .fact-section .content-box{
+        margin-top: 100px;
+    }
+    .fact-section .content-box > div{
+        max-width: 947px;
+    }
+
+    .fact-section img{
+        margin-top: -280px;
+        width: 1600px;
+        object-fit: cover;
+        object-position: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }

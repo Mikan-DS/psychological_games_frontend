@@ -58,7 +58,9 @@ export default function ForStudent({user, playAction}){
                 </div>
                 <div>
                     <NumberAnimation targetNumber={6} duration={1500}/>
-                    Концовок | ролей
+                    <div className={"only-mobile"}>Концовок | ролей</div>
+                    <div className={"only-desktop"}>Концовок |<br/> ролей</div>
+
                 </div>
                 <div>
                     <NumberAnimation targetNumber={10} duration={2000}/>
