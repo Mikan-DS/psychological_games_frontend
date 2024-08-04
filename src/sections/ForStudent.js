@@ -4,7 +4,7 @@ import Screenshot3 from "../img/screenshots/3.png";
 
 import NumberAnimation from "../NumberAnimation";
 
-import React, {useState} from "react";
+import React from "react";
 
 export default function ForStudent({user, playAction}){
 

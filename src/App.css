@@ -1,6 +1,7 @@
 /* Шрифты */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
 @font-face {
     font-family: "Gogol";
     src: local("Gogol Regular"),
@@ -171,6 +172,20 @@ header{
 
 }
 
+/** Fact **/
+.fact-section{
+    padding-top: 60px;
+    background-color: #FFDE51;
+    flex-direction: column;
+}
+
+.fact-section img{
+    height: 213px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 /* Кнопки */
 
 /** Primary **/
@@ -305,6 +320,17 @@ hr{
     font-size: 18px;
 }
 
+.card-text{
+    font-family: 'Ruda', sans-serif;
+    color: #383D38;
+    font-size: 26px;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+}
+
+.card-text span{
+    color: #D44C02;
+}
 
 
 

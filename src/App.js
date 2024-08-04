@@ -8,6 +8,7 @@ import CoverSection from "./sections/CoverSection";
 import PaymentModal from "./PaymentModal";
 import LoginModal from "./LoginModal";
 import ForStudent from "./sections/ForStudent";
+import FactSection from "./sections/FactSection";
 
 let onlyOne = true;
 
@@ -73,9 +74,16 @@ function App() {
             {/*<PolicyModal modalControl={policyModalControl}/>*/}
 
             {/*<CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>*/}
-            <ForStudent user={user} playAction={playAction}/>
+            {/*<ForStudent user={user} playAction={playAction}/>*/}
+            <FactSection>
+                ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
+                И <span>70%</span> УЧИТЕЛЕЙ
+                <div className={"body-text"}>
+                    По статистике за Ноябрь 2023
+                </div>
+            </FactSection>
 
-            <div id={"forStudent"} style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
+            <div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
             </div>
 
         </div>
