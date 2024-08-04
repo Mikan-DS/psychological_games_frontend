@@ -17,7 +17,7 @@ export default function ForStudent({user, playAction}){
                 играй дома, чтобы выигрывать в классе
             </div>
 
-            <div className={"stretched-box about-list"}>
+            <div className={"stretched-box adaptive-direction-box about-list"}>
                 <div>
                     <img src={Screenshot1 ? Screenshot1 : ""} alt="Скриншот 1"/>
                     <h4>Отдохнуть</h4>
@@ -45,54 +45,20 @@ export default function ForStudent({user, playAction}){
                 ХОЧУ ИГРАТЬ
             </button>
 
-            <div className={"stretched-box about-list"}>
+            <div className={"stretched-box adaptive-direction-box about-statistic"}>
                 <div>
                     <NumberAnimation targetNumber={357} duration={2100}/>
-                    <p>
-                        Варианта развития событий
-                    </p>
+                    Варианта развития событий
                 </div>
                 <div>
                     <NumberAnimation targetNumber={6} duration={1500}/>
-                    <p>
-                        Концовок | ролей
-                    </p>
+                    Концовок | ролей
                 </div>
                 <div>
                     <NumberAnimation targetNumber={10} duration={2000}/>
-                    <p>
-                        Прохождений, чтобы открыть весь контент
-                    </p>
+                    Прохождений, чтобы открыть весь контент
                 </div>
             </div>
-
-
-            {/*<div className="statisticBlock StretchedList" style={{*/}
-            {/*    width: 927,*/}
-            {/*    marginLeft: "auto",*/}
-            {/*    marginTop: 100,*/}
-            {/*    marginBottom: 100*/}
-            {/*}}>*/}
-            {/*    <div style={{width: 220}}>*/}
-            {/*        <NumberAnimation targetNumber={357} duration={2100}/>*/}
-            {/*        <p>*/}
-            {/*            Варианта развития событий*/}
-            {/*        </p>*/}
-            {/*    </div>*/}
-            {/*    <div style={{width: 150}}>*/}
-            {/*        <NumberAnimation targetNumber={6} duration={1500}/>*/}
-            {/*        <p style={{paddingRight: 20}}>*/}
-            {/*            Концовок | ролей*/}
-            {/*        </p>*/}
-            {/*    </div>*/}
-            {/*    <div style={{width: 220}}>*/}
-            {/*        <NumberAnimation targetNumber={10} duration={2000}/>*/}
-            {/*        <p>*/}
-            {/*            Прохождений, чтобы открыть весь контент*/}
-            {/*        </p>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
         </div>
     )
 }

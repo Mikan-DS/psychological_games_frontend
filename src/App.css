@@ -25,6 +25,9 @@ body{
     display: flex;
     flex-direction: column;
 }
+.adaptive-direction-box{
+    flex-direction: column;
+}
 
 .content-box{
     width: 280px;
@@ -137,8 +140,11 @@ header{
     padding-top: 60px;
 }
 
+
 .about-list{
-    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 40px;
 }
 
 .about-list img{
@@ -150,6 +156,19 @@ header{
     height: 150px;
 }
 
+.about-statistic{
+    padding-bottom: 20px;
+}
+
+.NumberAnimation {
+    color: #D44C02;
+    font-size: 130px;
+    font-family: Gogol, serif;
+    line-height: 1;
+
+    padding-top: 40px;
+
+}
 
 /* Кнопки */
 
