@@ -214,6 +214,12 @@ header{
     padding-bottom: 60px;
 }
 
+/* Autors */
+.autors-autor > img{
+    width: 150px;
+    object-fit: cover;
+}
+
 /* Кнопки */
 
 /** Primary **/
@@ -289,6 +295,16 @@ h1{
     margin-bottom: 20px;
 }
 
+h3{
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    color: #383D38;
+}
+
 h4{
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -345,7 +361,21 @@ hr{
     font-size: 30px;
 }
 
+.accent-text3{ /* TODO Склеить с первым accent-text */
+    font-family: Gogol, serif;
+    color: #383D38;
+    line-height: 1;
+    font-size: 30px;
+}
+
 .body-text{
+    font-family: "Montserrat", sans-serif;
+    color: #75766E;
+    line-height: 1;
+    font-size: 18px;
+}
+
+.body-text2{
     font-family: "Montserrat", sans-serif;
     color: #75766E;
     line-height: 1;

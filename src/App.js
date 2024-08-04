@@ -12,6 +12,7 @@ import FactSection from "./sections/FactSection";
 import ForParent from "./sections/ForParent";
 import PolicyModal from "./PolicyModal";
 import ShockSection from "./sections/ShockSection";
+import AutorsSection from "./sections/AutorsSection";
 
 let onlyOne = true;
 
@@ -76,25 +77,26 @@ function App() {
                 initialLogin={initialLogin}/>
             <PolicyModal modalControl={policyModalControl}/>
 
-            <CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>
-            <ForStudent user={user} playAction={playAction}/>
-            <FactSection reverse={false}>
-                ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
-                И <span>70%</span> УЧИТЕЛЕЙ
-                <div className={"body-text"}>
-                    По статистике за Ноябрь 2023
-                </div>
-            </FactSection>
-            <ForParent user={user} playAction={playAction}/>
-            <FactSection reverse={true}>
-                Каждый <span>ВТОРОЙ</span> РЕБЕНОК СТАЛКИВАЕТСЯ С АГРЕССИЕЙ И
-                КАЖДЫЙ <span>ТРЕТИЙ</span> — С ЕЁ ФИЗИЧЕСКИМИ ПРОЯВЛЕНИЯМИ
-            </FactSection>
-            <ShockSection/>
-            <FactSection reverse={true}>
-                У <span>ТРЕТИ</span> УЧЕНИКОВ, КОТОРЫХ ТРАВИЛИ В ШКОЛЕ, В БУДУЩЕМ
-                ВОЗНИКАЮТ <span>ПСИХИЧЕСКИЕ РАССТРОЙСТВА</span>
-            </FactSection>
+            {/*<CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>*/}
+            {/*<ForStudent user={user} playAction={playAction}/>*/}
+            {/*<FactSection reverse={false}>*/}
+            {/*    ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ*/}
+            {/*    И <span>70%</span> УЧИТЕЛЕЙ*/}
+            {/*    <div className={"body-text"}>*/}
+            {/*        По статистике за Ноябрь 2023*/}
+            {/*    </div>*/}
+            {/*</FactSection>*/}
+            {/*<ForParent user={user} playAction={playAction}/>*/}
+            {/*<FactSection reverse={true}>*/}
+            {/*    Каждый <span>ВТОРОЙ</span> РЕБЕНОК СТАЛКИВАЕТСЯ С АГРЕССИЕЙ И*/}
+            {/*    КАЖДЫЙ <span>ТРЕТИЙ</span> — С ЕЁ ФИЗИЧЕСКИМИ ПРОЯВЛЕНИЯМИ*/}
+            {/*</FactSection>*/}
+            {/*<ShockSection/>*/}
+            {/*<FactSection reverse={true}>*/}
+            {/*    У <span>ТРЕТИ</span> УЧЕНИКОВ, КОТОРЫХ ТРАВИЛИ В ШКОЛЕ, В БУДУЩЕМ*/}
+            {/*    ВОЗНИКАЮТ <span>ПСИХИЧЕСКИЕ РАССТРОЙСТВА</span>*/}
+            {/*</FactSection>*/}
+            <AutorsSection/>
 
             <div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
             </div>
