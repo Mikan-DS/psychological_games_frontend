@@ -162,6 +162,10 @@ header{
 
 }
 
+#forParent .secondary-button{
+    margin-bottom: 20px;
+}
+
 .NumberAnimation {
     color: #D44C02;
     font-size: 100px;
@@ -427,6 +431,9 @@ hr{
         flex-direction: row;
         padding-bottom: 33px;
     }
+    #forParent .secondary-button{
+        margin-bottom: 33px;
+    }
 
     .about-statistic > div{
         max-width: 170px;
@@ -554,6 +561,9 @@ hr{
         margin-left: auto;
         width: 767px;
     }
+    #forParent .secondary-button{
+        margin-bottom: 150px;
+    }
     .about-statistic > div{
         max-width: 210px;
     }
@@ -622,6 +632,10 @@ hr{
     .about-statistic{
         padding-bottom: 100px;
         width: 927px;
+    }
+
+    #forParent .secondary-button{
+        margin-bottom: 100px;
     }
 
     /** Fact **/

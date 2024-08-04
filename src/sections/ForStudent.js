@@ -9,7 +9,7 @@ import React from "react";
 export default function ForStudent({user, playAction}){
 
     return (
-        <div id="forStudent" className={"content-box body-text"}>
+        <div id={"forStudent"} className={"content-box body-text"}>
             <h1>
                 Если ты школьник
             </h1>

@@ -9,6 +9,7 @@ import PaymentModal from "./PaymentModal";
 import LoginModal from "./LoginModal";
 import ForStudent from "./sections/ForStudent";
 import FactSection from "./sections/FactSection";
+import ForParent from "./sections/ForParent";
 
 let onlyOne = true;
 
@@ -82,6 +83,8 @@ function App() {
                     По статистике за Ноябрь 2023
                 </div>
             </FactSection>
+            <ForParent user={user} playAction={playAction}/>
+
 
             <div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
             </div>
