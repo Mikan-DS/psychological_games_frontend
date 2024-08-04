@@ -73,7 +73,7 @@ function App() {
 
             <CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>
 
-            <div id={"forStudent"}>
+            <div id={"forStudent"} style={{height: 3000}}>
                 TEST
             </div>
 

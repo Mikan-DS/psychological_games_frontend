@@ -7,10 +7,10 @@
     url("./fonts/Gogol Regular.ttf") format("truetype");
 }
 
-/* TODO Дебаг режим */
 
 body{
-    background-color: palevioletred;
+    background-color: palevioletred; /* TODO Дебаг режим */
+    min-width: 320px;
 }
 
 /* Виды контейнеров и позиции */
@@ -27,6 +27,7 @@ body{
 }
 
 .content-box{
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -56,30 +57,44 @@ body{
 /* Секции */
 
 /** Cover **/
-.cover-section{
+#cover-section{
     background-color: #121715;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     pointer-events: none;
+
+    height: 600px;
 }
 
-.cover-section a, button{
+#cover-section a, button{
     pointer-events: auto;
-
 }
 
+header > div{
+    padding-bottom: 12px;
+}
+header{
+    margin-bottom: 20px;
+    padding-top: 12px;
+}
+.cover-title-image{
+    height: 124px;
+}
+.cover-age-image{
+    width: 30px;
+}
 .cover-play-box{
     gap: 20px;
 }
 
 .cover-description-box{
-    gap: 0;
+    gap: 20px
 }
 
 .cover-description-text{
-    width: 0;
+    padding-top: 20px;
 }
 
 /* Кнопки */
@@ -117,6 +132,40 @@ body{
     font-size: 40px;
 }
 
+/** DROPDOWN MENU **/
+
+.dropdown-menu {
+    position: relative;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu-content a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu-content a:hover {
+    background-color: #444;
+}
+
 /* TODO проверить используется ли еще где-то*/
 
 hr{
@@ -145,13 +194,12 @@ hr{
     color: #FCFCFA;
     text-align: right;
     line-height: 1;
+    font-size: 30px;
 }
 
 
-/* Для экранов 320px и выше */
-@media (min-width: 320px) {
 
-}
+
 
 /* Для экранов 360px и выше */
 @media (min-width: 360px) {
@@ -164,32 +212,16 @@ hr{
     /* Секции */
 
     /** Cover **/
-    .cover-section{
+    #cover-section{
         height: 639px;
-    }
-    header > div{
-        padding-bottom: 12px;
-    }
-    header{
-        margin-bottom: 20px;
-        padding-top: 12px;
     }
     .cover-title-image{
         height: 142px;
-    }
-    .cover-age-image{
-        width: 30px;
     }
     .cover-description-text{
         padding-top: 20px;
         width: 320px;
     }
-    .cover-description-box{
-        gap: 20px
-    }
-
-
-
 
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
@@ -217,7 +249,7 @@ hr{
     /* Секции */
 
     /** Cover **/
-    .cover-section{
+    #cover-section{
         height: 947px;
     }
     header > div{
@@ -271,7 +303,7 @@ hr{
     /* Секции */
 
     /** Cover **/
-    .cover-section{
+    #cover-section{
         height: 858px;
     }
 
@@ -317,7 +349,7 @@ hr{
     /* Секции */
 
     /** Cover **/
-    .cover-section{
+    #cover-section{
         height: 900px;
     }
     .cover-description-text{
