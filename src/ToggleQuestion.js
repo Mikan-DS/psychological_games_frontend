@@ -9,22 +9,19 @@ export default function ToggleQuestion({question, children}) {
     };
 
     return (
-        <div className="ToggleQuestion">
-            <div className="StretchedList" onClick={toggleContent}
-                 style={{cursor: 'pointer', paddingRight: 40, alignItems: "center", marginTop: 40, marginBottom: 40}}>
-                <h3 style={{display: "inline", fontSize: 26, margin: 0, maxWidth: 1045}}>
-                    {question}
-                </h3>
-                <img src={ToggleImage} style={{
+        <div className={"faq-toggle-question body-text2"}>
+            <div className={"stretched-box"} onClick={toggleContent}>
+                <h3>{question}</h3>
+                <img src={ToggleImage || ""} style={{
                     transform: isOpen ? null : "scaleY(-1)",
                     aspectRatio: "1/1",
                     objectFit: "cover",
                     height: "100%"
-                }}/>
+                }} alt={">"}/>
 
             </div>
-            {isOpen && <div style={{marginBottom: 40, width: 1050}}>{children}</div>}
-            <hr style={{width: '100%', backgroundColor: '#9E9F9A'}}/>
+            {isOpen && <div className={"faq-answer"}>{children}</div>}
+            <hr/>
         </div>
     );
 }

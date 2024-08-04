@@ -504,6 +504,33 @@ header{
     color: #383D38;
 }
 
+/* FAQ */
+#FAQ{
+    background-color: #F3F2EE;
+    padding: 60px 0;
+}
+
+#FAQ h1{
+    margin: 0;
+}
+
+#FAQ h3{
+    font-size: 20px;
+}
+
+#FAQ hr{
+    background-color: #9E9F9A;
+    margin-top: 30px;
+}
+
+.faq-toggle-question{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.faq-answer{
+    padding-top: 30px;
+}
 
 
 /* Для экранов 360px и выше */
