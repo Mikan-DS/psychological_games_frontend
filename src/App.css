@@ -456,7 +456,7 @@ hr{
     .fact-section img{
         margin-top: -252px;
         object-fit: cover;
-        height: 252px;
+        height: 100%;
         object-position: center;
     }
 
@@ -557,6 +557,25 @@ hr{
     .NumberAnimation{
         padding-top: 100px;
         font-size: 130px;
+    }
+
+    /** Fact **/
+    .fact-section{
+        height: 312px;
+    }
+
+    .fact-section .content-box > div{
+        max-width: 778px;
+    }
+
+    .fact-section img{
+        margin-top: -312px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .card-text{
+        font-size: 40px;
     }
 
     /* TODO проверить используется ли еще где-то*/

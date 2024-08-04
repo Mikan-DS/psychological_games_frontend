@@ -73,8 +73,8 @@ function App() {
                 initialLogin={initialLogin}/>
             {/*<PolicyModal modalControl={policyModalControl}/>*/}
 
-            {/*<CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>*/}
-            {/*<ForStudent user={user} playAction={playAction}/>*/}
+            <CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>
+            <ForStudent user={user} playAction={playAction}/>
             <FactSection>
                 ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
                 И <span>70%</span> УЧИТЕЛЕЙ
