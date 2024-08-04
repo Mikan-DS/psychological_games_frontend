@@ -7,9 +7,12 @@ export default function FactSection({children}) {
     return (
         <div className={"fact-section stretched-box card-text"}>
             <div className={"content-box"}>
-                {children}
+                <div>
+                    {children}
+                </div>
             </div>
-            <img src={TapeMobileImage || ""} alt={"Лента"}/>
+            <img className={"only-phone"} src={TapeMobileImage || ""} alt={"Лента"}/>
+            <img className={"only-mobile only-desktop"} src={TapeImage || ""} alt={"Лента"}/>
         </div>
     );
 }
