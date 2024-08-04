@@ -133,31 +133,34 @@ export default function AutorsSection(){
                 ПРОЕКТ ЗАНЯЛ 1 МЕСТО НА ВСЕРОССИЙСКОМ КОНКУРСЕ «ЗОЛОТАЯ ПСИХЕЯ»
             </a>
 
-            <div className={"authors-statistic"}>
-                <div className={"authors-number-animation"}>
-                    <NumberAnimation targetNumber={1700} duration={1000}/>
-                    <div className="NumberAnimation">+</div>
+            <div className={"authors-achievement"}>
+                <div className={"authors-statistic"}>
+                    <div className={"authors-number-animation"}>
+                        <NumberAnimation targetNumber={1700} duration={1000}/>
+                        <div className="NumberAnimation">+</div>
+                    </div>
+
+                    <div className={"body-text"}>
+                        Школьников протестировано и результаты проверены психологами
+                    </div>
                 </div>
 
-                <div className={"body-text"}>
-                    Школьников протестировано и результаты проверены психологами
+                <div className={"authors-results"}>
+                    <img className={"authors-winners-image"} src={winnersImage || ""}
+                         alt='Победители конкурса "ЗОЛОТАЯ ПСИХЕЯ"'/>
+
+                    <div className={"body-text"}>
+                        Эффективность игры показана на 2 магистерских диссертациях
+                    </div>
                 </div>
             </div>
 
-            <div className={"authors-results"}>
-                <img className={"authors-winners-image"} src={winnersImage || ""}
-                     alt='Победители конкурса "ЗОЛОТАЯ ПСИХЕЯ"'/>
 
-                <div className={"body-text"}>
-                    Эффективность игры показана на 2 магистерских диссертациях
-                </div>
-            </div>
-
-            <button className="secondaryButton"
+            <button className="secondary-button secondary-button-large"
                     onClick={() => {
                         window.alert("Этот раздел в разработке!")
                     }}>
-                ПОДРОБНЕЕ О ПРОЕКТЕ
+                О ПРОЕКТЕ
             </button>
         </div>
     );

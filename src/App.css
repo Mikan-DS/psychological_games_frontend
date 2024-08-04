@@ -393,7 +393,18 @@ header{
     padding-bottom: 60px;
 }
 
-/* Autors */
+/* Authors */
+
+#Authors{
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#Authors h1{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
 .authors-author{
     display: flex;
     flex-direction: column;
@@ -423,6 +434,7 @@ header{
 
 .authors-more{
     padding-top: 40px;
+    padding-bottom: 80px;
 }
 
 .authors-more > button{
@@ -446,8 +458,8 @@ header{
     max-width: 100%;
     text-decoration: none;
 
-    margin-top: 82px;
-    margin-bottom: 62px;
+    /*margin-top: 82px;*/
+    /*margin-bottom: 62px;*/
 }
 
 .authors-project-link:hover{
@@ -464,11 +476,34 @@ header{
 
 .authors-winners-image{
     width: 100%;
+    border-radius: 6px;
+}
+
+
+.authors-achievement{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+    padding-top: 10px;
 }
 
 .authors-statistic{
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.authors-results{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.authors-results .body-text{
+    color: #383D38;
+}
+
 
 
 /* Для экранов 360px и выше */
