@@ -35,13 +35,13 @@ export default function CoverSection({user, loginModalControl, playAction}){
                         <a href={"#forStudent"}>
                             ШКОЛЬНИКУ
                         </a>
-                        <a href="#forParents">
+                        <a href={"#forParents"}>
                             РОДИТЕЛЮ
                         </a>
-                        <a href="#Authors">
+                        <a href={"#Authors"}>
                             АВТОРЫ
                         </a>
-                        <a href="#FAQ">
+                        <a href={"#FAQ"}>
                             ВОПРОСЫ
                         </a>
                         <a onClick={userProfile}>
@@ -52,17 +52,17 @@ export default function CoverSection({user, loginModalControl, playAction}){
                     <div className="dropdown-menu only-phone">
                         <button className="menu-button" onClick={toggleMenu}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="<http://www.w3.org/2000/svg>">
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.75 6H20.25M3.75 12H20.25M3.75 18H20.25" stroke="#FCFCFA" strokeWidth="1.5"
                                       strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                         </button>
                         {isDropDownMenuOpen && (
                             <div className="menu-content">
-                                <a href="#forStudent">ШКОЛЬНИКУ</a>
-                                <a href="#forParents">РОДИТЕЛЮ</a>
-                                <a href="#Authors">АВТОРЫ</a>
-                                <a href="#FAQ">ВОПРОСЫ</a>
+                                <a href={"#forStudent"}>ШКОЛЬНИКУ</a>
+                                <a href={"#forParents"}>РОДИТЕЛЮ</a>
+                                <a href={"#Authors"}>АВТОРЫ</a>
+                                <a href={"#FAQ"}>ВОПРОСЫ</a>
                                 <a onClick={userProfile}>
                                     {user.authenticated ? user.name.split(' ')[0].toUpperCase() : "ВОЙТИ"}
                                 </a>
