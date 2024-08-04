@@ -193,6 +193,26 @@ header{
     padding-top: 10px;
 }
 
+/** Fact **/
+.shock-image{
+    width: 100%;
+    height: 231px;
+    background-size: cover;
+    background-position: 78%;
+    padding-top: 129px;
+}
+
+.shock-image > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 5%;
+}
+
+#ShockSection .content-box{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 /* Кнопки */
 
@@ -369,6 +389,23 @@ hr{
         width: 320px;
     }
 
+    /** Fact **/
+    .shock-image{
+        height: 260px;
+        background-position: 82%;
+        padding-top: 145px;
+    }
+
+    .shock-image > img{
+        /*height: 260px;*/
+        object-position: 5%;
+    }
+
+    #ShockSection .content-box{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
         font-size: 30px;
@@ -478,6 +515,26 @@ hr{
     .card-text{
         font-size: 30px;
     }
+
+    /** Fact **/
+    .shock-image{
+        width: 100%;
+        height: 200px;
+        background-position: 78%;
+        background-position-y: top;
+        padding-top: 32px;
+    }
+
+    .shock-image > img{
+        height: 200px;
+        object-position: 5%;
+    }
+
+    #ShockSection .content-box{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
 
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
@@ -596,6 +653,24 @@ hr{
         font-size: 40px;
     }
 
+    /** Fact **/
+    .shock-image{
+        height: 500px;
+        background-position: 78%;
+        padding-top: 100px;
+    }
+
+    .shock-image > img{
+        height: 500px;
+        object-position: 5%;
+    }
+
+
+    #ShockSection .content-box > div{
+        width: 767px;
+        margin-left: auto;
+    }
+
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
         font-size: 40px;
@@ -667,6 +742,32 @@ hr{
         object-position: center;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /** Fact **/
+    .shock-image{
+        height: 500px;
+        background-position: 78%;
+        padding-top: 100px;
+        background-position-y: 10%;
+    }
+
+    .shock-image > img{
+        height: 500px;
+        width: 1000px;
+        object-position: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #ShockSection .content-box{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    #ShockSection .content-box > div{
+        width: 926px;
+        margin-left: auto;
     }
 
 }

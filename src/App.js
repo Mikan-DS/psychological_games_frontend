@@ -10,6 +10,8 @@ import LoginModal from "./LoginModal";
 import ForStudent from "./sections/ForStudent";
 import FactSection from "./sections/FactSection";
 import ForParent from "./sections/ForParent";
+import PolicyModal from "./PolicyModal";
+import ShockSection from "./sections/ShockSection";
 
 let onlyOne = true;
 
@@ -66,28 +68,29 @@ function App() {
     return (
         <div className="App">
 
-            {/*<PaymentModal modalControl={paymentModalControl} openPolicy={openPolicy} openLogin={openLogin} api={api}/>*/}
+            <PaymentModal modalControl={paymentModalControl} openPolicy={policyModalControl.openModal} openLogin={loginModalControl.openModal} api={api}/>
             <LoginModal
                 modalControl={loginModalControl}
                 openPayment={paymentModalControl.openModal}
                 api={api}
                 initialLogin={initialLogin}/>
-            {/*<PolicyModal modalControl={policyModalControl}/>*/}
+            <PolicyModal modalControl={policyModalControl}/>
 
-            <CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>
-            <ForStudent user={user} playAction={playAction}/>
-            <FactSection reverse={false}>
-                ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
-                И <span>70%</span> УЧИТЕЛЕЙ
-                <div className={"body-text"}>
-                    По статистике за Ноябрь 2023
-                </div>
-            </FactSection>
-            <ForParent user={user} playAction={playAction}/>
-            <FactSection reverse={true}>
-                Каждый <span>ВТОРОЙ</span> РЕБЕНОК СТАЛКИВАЕТСЯ С АГРЕССИЕЙ И
-                КАЖДЫЙ <span>ТРЕТИЙ</span> — С ЕЁ ФИЗИЧЕСКИМИ ПРОЯВЛЕНИЯМИ
-            </FactSection>
+            {/*<CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>*/}
+            {/*<ForStudent user={user} playAction={playAction}/>*/}
+            {/*<FactSection reverse={false}>*/}
+            {/*    ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ*/}
+            {/*    И <span>70%</span> УЧИТЕЛЕЙ*/}
+            {/*    <div className={"body-text"}>*/}
+            {/*        По статистике за Ноябрь 2023*/}
+            {/*    </div>*/}
+            {/*</FactSection>*/}
+            {/*<ForParent user={user} playAction={playAction}/>*/}
+            {/*<FactSection reverse={true}>*/}
+            {/*    Каждый <span>ВТОРОЙ</span> РЕБЕНОК СТАЛКИВАЕТСЯ С АГРЕССИЕЙ И*/}
+            {/*    КАЖДЫЙ <span>ТРЕТИЙ</span> — С ЕЁ ФИЗИЧЕСКИМИ ПРОЯВЛЕНИЯМИ*/}
+            {/*</FactSection>*/}
+            <ShockSection/>
 
             <div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
             </div>
