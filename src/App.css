@@ -405,6 +405,13 @@ header{
     margin-bottom: 20px;
 }
 
+.authors-box{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 60px;
+}
+
 .authors-author{
     display: flex;
     flex-direction: column;
@@ -425,12 +432,7 @@ header{
     padding-bottom: 20px;
 }
 
-.authors-box{
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    gap: 60px;
-}
+
 
 .authors-more{
     padding-top: 40px;
@@ -457,9 +459,6 @@ header{
     overflow-wrap: break-word;
     max-width: 100%;
     text-decoration: none;
-
-    /*margin-top: 82px;*/
-    /*margin-bottom: 62px;*/
 }
 
 .authors-project-link:hover{
@@ -674,13 +673,28 @@ header{
         padding-bottom: 100px;
     }
 
-    /* Autors */
+    /* Authors */
+    #Authors{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
     .authors-author{
         flex-direction: row;
         gap: 60px;
     }
     .authors-author > img{
         margin-bottom: 0;
+    }
+
+    .authors-author > img{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    .authors-more > button{
+        margin-left: 260px;
     }
 
 
