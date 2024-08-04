@@ -80,7 +80,7 @@ export default function AutorsSection(){
                     }}/>
                 </button>
 
-                {isOpenMoreAuthors?(
+                {isOpenMoreAuthors ? (
                     <div className={"authors-box"}>
                         <div className={"authors-author body-text2"}>
                             <img src={AuthorImage3 || ""} alt="Волкова Александра Андреевна"/>
@@ -129,7 +129,8 @@ export default function AutorsSection(){
             </div>
 
 
-            <a className={"authors-project-link"} href="https://psy.su/psyche/projects/3043/?ysclid=lxewujg7zo638636246">
+            <a className={"authors-project-link"}
+               href="https://psy.su/psyche/projects/3043/?ysclid=lxewujg7zo638636246">
                 ПРОЕКТ ЗАНЯЛ 1 МЕСТО НА ВСЕРОССИЙСКОМ КОНКУРСЕ «ЗОЛОТАЯ ПСИХЕЯ»
             </a>
 
@@ -155,13 +156,23 @@ export default function AutorsSection(){
                 </div>
             </div>
 
+            <div className={"only-phone"}>
+                <button className="secondary-button secondary-button-large"
+                        onClick={() => {
+                            window.alert("Этот раздел в разработке!")
+                        }}>
+                    О ПРОЕКТЕ
+                </button>
+            </div>
+            <div className={"only-mobile only-desktop"}>
+                <button className="secondary-button secondary-button-large"
+                        onClick={() => {
+                            window.alert("Этот раздел в разработке!")
+                        }}>
+                    ПОДРОБНЕЕ О ПРОЕКТЕ
+                </button>
+            </div>
 
-            <button className="secondary-button secondary-button-large"
-                    onClick={() => {
-                        window.alert("Этот раздел в разработке!")
-                    }}>
-                О ПРОЕКТЕ
-            </button>
         </div>
     );
 }

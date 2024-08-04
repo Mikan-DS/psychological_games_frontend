@@ -697,6 +697,10 @@ header{
         margin-left: 260px;
     }
 
+    .authors-statistic {
+        max-width: 293px;
+    }
+
 
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
