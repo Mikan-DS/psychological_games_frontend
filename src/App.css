@@ -487,11 +487,10 @@ hr{
     }
 
     .about-list div > div{
-        max-width: 373px;
+        max-width: 100%;
     }
     .about-statistic{
-        flex-direction: row;
-        padding-bottom: 33px;
+        padding-bottom: 150px;
         margin-left: auto;
         width: 767px;
     }
@@ -532,6 +531,27 @@ hr{
     .cover-description-box{
         gap: 40px
     }
+
+    /** About **/
+
+
+    .accent-text{
+        margin-left: 353px;
+    }
+
+    .about-list > div{
+        width: 453px;
+    }
+
+    .about-statistic{
+        padding-bottom: 100px;
+        width: 927px;
+    }
+
+    .about-statistic > div{
+        max-width: 170px;
+    }
+
 }
 
 /* Для экранов 1900px и выше */
