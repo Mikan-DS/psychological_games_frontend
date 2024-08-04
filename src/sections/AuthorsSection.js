@@ -8,7 +8,7 @@ import winnersImage from "../img/autors/image_winner.webp";
 import React, {useState} from "react";
 import ToggleImage from "../img/toggle.png";
 
-export default function AutorsSection(){
+export default function AuthorsSection(){
 
     const [isOpenMoreAuthors, setIsOpenMoreAuthors] = useState(false);
 
@@ -77,7 +77,7 @@ export default function AutorsSection(){
                         aspectRatio: "1/1",
                         objectFit: "cover",
                         height: "100%"
-                    }}/>
+                    }} alt={">"}/>
                 </button>
 
                 {isOpenMoreAuthors ? (

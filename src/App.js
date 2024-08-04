@@ -12,7 +12,7 @@ import FactSection from "./sections/FactSection";
 import ForParent from "./sections/ForParent";
 import PolicyModal from "./PolicyModal";
 import ShockSection from "./sections/ShockSection";
-import AutorsSection from "./sections/AutorsSection";
+import AuthorsSection from "./sections/AuthorsSection";
 
 let onlyOne = true;
 
@@ -96,7 +96,7 @@ function App() {
             {/*    У <span>ТРЕТИ</span> УЧЕНИКОВ, КОТОРЫХ ТРАВИЛИ В ШКОЛЕ, В БУДУЩЕМ*/}
             {/*    ВОЗНИКАЮТ <span>ПСИХИЧЕСКИЕ РАССТРОЙСТВА</span>*/}
             {/*</FactSection>*/}
-            <AutorsSection/>
+            <AuthorsSection/>
 
             <div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
             </div>
