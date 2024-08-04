@@ -401,9 +401,10 @@ header{
 }
 
 #Authors h1{
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 }
+
+
 
 .authors-box{
     display: flex;
@@ -837,6 +838,60 @@ header{
         margin-left: auto;
     }
 
+    /* Authors */
+    #Authors{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    #Authors > .accent-text3{
+        padding-left: 226px;
+        max-width: 880px;
+    }
+
+    .authors-list{
+        margin-left: 53px;
+    }
+
+    .authors-author{
+        gap: 60px;
+        align-items: center;
+        padding-top: 80px;
+    }
+    .authors-author > img{
+        margin-bottom: 0;
+    }
+
+    .authors-author > img{
+        width: 280px;
+        height: 280px;
+    }
+
+    .authors-more{
+        padding-top: 20px;
+        padding-bottom: 100px;
+    }
+    .authors-more > button{
+        margin-left: 260px;
+    }
+
+    .authors-achievement{
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        padding: 80px 81px 167px 50px;
+    }
+
+    .authors-statistic {
+        max-width: 243px;
+
+    }
+
+    .authors-results > .body-text{
+        max-width: 570px;
+    }
+
+
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
         font-size: 40px;
@@ -924,6 +979,25 @@ header{
         object-position: 5%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* Authors */
+    .authors-achievement{
+        gap: 120px;
+        padding: 80px 0 60px 0;
+    }
+
+    .authors-statistic{
+        margin-top: 147px;
+        max-width: 293px;
+
+    }
+    .authors-number-animation .NumberAnimation{
+        padding-top: 0;
+    }
+
+    .authors-results > .body-text{
+        max-width: 100%;
     }
 
     #ShockSection .content-box{

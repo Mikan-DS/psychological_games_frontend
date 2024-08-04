@@ -28,104 +28,107 @@ export default function AuthorsSection(){
                 Психея”
             </div>
 
-            <div className={"authors-box"}>
-                <div className={"body-text2 authors-author"}>
-                    <img src={AuthorImage1 || ""} alt="Доценко Евгений Леонидович"/>
-                    <div>
-                        <h3>
-                            Доценко Евгений Леонидович
-                        </h3>
+            <div className={"authors-list"}>
+                <div className={"authors-box"}>
+                    <div className={"body-text2 authors-author"}>
+                        <img src={AuthorImage1 || ""} alt="Доценко Евгений Леонидович"/>
                         <div>
-                            — Профессор, доктор психологических наук
+                            <h3>
+                                Доценко Евгений Леонидович
+                            </h3>
+                            <div>
+                                — Профессор, доктор психологических наук
+                            </div>
+                            Больше 40 лет работы психологом-консультантом.
+                            <br/>
+                            8 лет командной работы над IT-продуктами.
+                            <br/>
+                            Автор популярной книги «Не будь попугаем
+                            <br/>
+                            или Как защититься от психологического нападения» и научной монографии «Психология
+                            манипуляции».
                         </div>
-                        Больше 40 лет работы психологом-консультантом.
-                        <br/>
-                        8 лет командной работы над IT-продуктами.
-                        <br/>
-                        Автор популярной книги «Не будь попугаем
-                        <br/>
-                        или Как защититься от психологического нападения» и научной монографии «Психология
-                        манипуляции».
+                    </div>
+                    <div className={"authors-author body-text2"}>
+                        <img src={AuthorImage2 || ""} alt="Потёмкин Сергей Александрович"/>
+                        <div>
+                            <h3>
+                                Потёмкин Сергей Александрович
+                            </h3>
+                            <div>
+                                — Писатель, автор текстов игры
+                            </div>
+                            Писатель, автор текстов игры.
+                            <br/>
+                            Больше 14 лет работы психологом-консультантом.
+                            <br/>
+                            8 лет командной работы над IT-продуктами.
+                            <br/>
+                            Выпускник литературной мастерской Владислава Петровича Крапивина.
+                        </div>
                     </div>
                 </div>
-                <div className={"authors-author body-text2"}>
-                    <img src={AuthorImage2 || ""} alt="Потёмкин Сергей Александрович"/>
-                    <div>
-                        <h3>
-                            Потёмкин Сергей Александрович
-                        </h3>
-                        <div>
-                            — Писатель, автор текстов игры
+
+                <div className={"authors-more"}>
+
+                    <button className={"stretched-box"} onClick={toggleContent}>
+                        <h3>ЕЩЕ АВТОРЫ</h3>
+                        <img src={ToggleImage || ""} style={{
+                            transform: isOpenMoreAuthors ? null : "scaleY(-1)",
+                            aspectRatio: "1/1",
+                            objectFit: "cover",
+                            height: "100%"
+                        }} alt={">"}/>
+                    </button>
+
+                    {isOpenMoreAuthors ? (
+                        <div className={"authors-box"}>
+                            <div className={"authors-author body-text2"}>
+                                <img src={AuthorImage3 || ""} alt="Волкова Александра Андреевна"/>
+                                <div>
+                                    <h3>
+                                        Волкова Александра Андреевна
+                                    </h3>
+                                    <div>
+                                        — Художник
+                                    </div>
+                                    Концепт-художник, разрабатывающий образы персонажей в игре.
+                                    <br/>
+                                    Практикующий психолог.
+                                </div>
+                            </div>
+                            <div className={"authors-author body-text2"}>
+                                <img src={AuthorImage4 || ""} alt="Волкова Александра Андреевна"/>
+                                <div>
+                                    <h3>
+                                        Волощенко Полина Сергеевна
+                                    </h3>
+                                    <div>
+                                        — Педагог, художник
+                                    </div>
+                                    Художественно-педагогическое образование ТюмГу.
+                                    <br/>
+                                    2 года магистратуры по направлению «личностное и организационное консультирование».
+                                </div>
+                            </div>
+                            <div className={"authors-author body-text2"}>
+                                <img src={AuthorImage5 || ""} alt="Иванова Ева Константиновна"/>
+                                <div>
+                                    <h3>
+                                        Иванова Ева Константиновна
+                                    </h3>
+                                    <div>
+                                        — Художник
+                                    </div>
+                                    2D художник, рисующий графику для компьютерных игр и не только.
+                                    <br/>
+                                    Автор спрайтов персонажей.
+                                </div>
+                            </div>
                         </div>
-                        Писатель, автор текстов игры.
-                        <br/>
-                        Больше 14 лет работы психологом-консультантом.
-                        <br/>
-                        8 лет командной работы над IT-продуктами.
-                        <br/>
-                        Выпускник литературной мастерской Владислава Петровича Крапивина.
-                    </div>
+                    ) : null}
                 </div>
-            </div>
 
-            <div className={"authors-more"}>
-
-                <button className={"stretched-box"} onClick={toggleContent}>
-                    <h3>ЕЩЕ АВТОРЫ</h3>
-                    <img src={ToggleImage || ""} style={{
-                        transform: isOpenMoreAuthors ? null : "scaleY(-1)",
-                        aspectRatio: "1/1",
-                        objectFit: "cover",
-                        height: "100%"
-                    }} alt={">"}/>
-                </button>
-
-                {isOpenMoreAuthors ? (
-                    <div className={"authors-box"}>
-                        <div className={"authors-author body-text2"}>
-                            <img src={AuthorImage3 || ""} alt="Волкова Александра Андреевна"/>
-                            <div>
-                                <h3>
-                                    Волкова Александра Андреевна
-                                </h3>
-                                <div>
-                                    — Художник
-                                </div>
-                                Концепт-художник, разрабатывающий образы персонажей в игре.
-                                <br/>
-                                Практикующий психолог.
-                            </div>
-                        </div>
-                        <div className={"authors-author body-text2"}>
-                            <img src={AuthorImage4 || ""} alt="Волкова Александра Андреевна"/>
-                            <div>
-                                <h3>
-                                    Волощенко Полина Сергеевна
-                                </h3>
-                                <div>
-                                    — Педагог, художник
-                                </div>
-                                Художественно-педагогическое образование ТюмГу.
-                                <br/>
-                                2 года магистратуры по направлению «личностное и организационное консультирование».
-                            </div>
-                        </div>
-                        <div className={"authors-author body-text2"}>
-                            <img src={AuthorImage5 || ""} alt="Иванова Ева Константиновна"/>
-                            <div>
-                                <h3>
-                                    Иванова Ева Константиновна
-                                </h3>
-                                <div>
-                                    — Художник
-                                </div>
-                                2D художник, рисующий графику для компьютерных игр и не только.
-                                <br/>
-                                Автор спрайтов персонажей.
-                            </div>
-                        </div>
-                    </div>
-                ) : null}
             </div>
 
 
