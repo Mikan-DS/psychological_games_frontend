@@ -7,7 +7,6 @@
     font-size: 30px;
 
 }
-
 .accent-text{
     color: #383D38;
 }
@@ -25,18 +24,8 @@
     font-family: "Montserrat", sans-serif;
     color: #75766E;
     line-height: 1;
-    font-size: 18px;
+    font-size: 18px; /* TODO body-text2 в шаблоне размером в 20 */
     font-weight: 500;
-}
-
-.NumberAnimation {
-    color: #D44C02;
-    font-size: 100px;
-    font-family: Gogol, serif;
-    line-height: 1;
-
-    padding-top: 40px;
-
 }
 
 /* Для экранов 360px и выше */
@@ -48,17 +37,12 @@
 
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-    .NumberAnimation{
-        padding-top: 60px;
-    }
-
     .accent-text2{
         font-size: 34px;
     }
     .accent-text{
         font-size: 40px;
     }
-
 }
 
 /* Для экранов 1200px и выше */
@@ -69,9 +53,5 @@
     }
     .accent-text2{
         font-size: 40px;
-    }
-    .NumberAnimation{
-        padding-top: 100px;
-        font-size: 130px;
     }
 }

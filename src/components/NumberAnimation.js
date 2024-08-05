@@ -45,7 +45,7 @@ export default function NumberAnimation({targetNumber, duration}) {
     }, [targetNumber]);
 
     return (
-        <div ref={numberRef} className="NumberAnimation">
+        <div ref={numberRef} className="numeric-text">
             0
         </div>
     );

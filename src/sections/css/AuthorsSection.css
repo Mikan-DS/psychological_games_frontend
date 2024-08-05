@@ -74,7 +74,7 @@
 .authors-number-animation{
     display: flex;
 }
-.authors-number-animation .NumberAnimation{
+.authors-number-animation .numeric-text{
     color: #383D38;
 }
 
@@ -198,7 +198,7 @@
         max-width: 293px;
 
     }
-    .authors-number-animation .NumberAnimation {
+    .authors-number-animation .numeric-text {
         padding-top: 0;
     }
     .authors-results > .body-text {

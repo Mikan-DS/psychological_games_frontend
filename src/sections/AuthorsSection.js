@@ -143,7 +143,7 @@ export default function AuthorsSection(){
                 <div className={"authors-statistic"}>
                     <div className={"authors-number-animation"}>
                         <NumberAnimation targetNumber={1700} duration={1000}/>
-                        <div className="NumberAnimation">+</div>
+                        <div className="numeric-text">+</div>
                     </div>
 
                     <div className={"body-text"}>
