@@ -28,28 +28,21 @@
     font-weight: 500;
 }
 
-/* Для экранов 360px и выше */
-@media (min-width: 360px) {
-    .accent-text2{
-        font-size: 30px;
-    }
-}
-
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-    .accent-text2{
-        font-size: 34px;
-    }
     .accent-text{
         font-size: 40px;
+    }
+    .accent-text2{
+        font-size: 34px;
     }
 }
 
 /* Для экранов 1200px и выше */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { /* TODO А может от 1600?*/
     .accent-text{
         font-size: 50px;
-        margin-left: 226px;
+        /*margin-left: 226px;*/
     }
     .accent-text2{
         font-size: 40px;
