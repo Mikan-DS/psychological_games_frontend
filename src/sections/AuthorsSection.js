@@ -162,7 +162,7 @@ export default function AuthorsSection(){
             </div>
 
             <div className={"only-phone"}>
-                <button className="secondary-button secondary-button-large"
+                <button className="secondary-button large"
                         onClick={() => {
                             window.alert("Этот раздел в разработке!")
                         }}>
@@ -170,7 +170,7 @@ export default function AuthorsSection(){
                 </button>
             </div>
             <div className={"only-mobile only-desktop"}>
-                <button className="secondary-button secondary-button-large"
+                <button className="secondary-button large"
                         onClick={() => {
                             window.alert("Этот раздел в разработке!")
                         }}>

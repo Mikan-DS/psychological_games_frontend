@@ -93,7 +93,7 @@ export default function CoverSection({username, authenticated, loginModalControl
                         </div>
                         <div className={"align-center play-box"}>
                             <img className={"age-image"} src={AgeImage ? AgeImage : ""} alt="12+"/>
-                            <button className={"primary-button primary-button-large"} onClick={playAction}>
+                            <button className={"primary-button large"} onClick={playAction}>
                                 ИГРАТЬ
                             </button>
                         </div>
@@ -111,10 +111,10 @@ export default function CoverSection({username, authenticated, loginModalControl
                     </div>
                     <div className={"align-center play-box"}>
                         <img className={"age-image only-mobile"} src={AgeImage ? AgeImage : ""} alt="12+"/>
-                        <button className={"primary-button primary-button-small only-phone"} onClick={playAction}>
+                        <button className={"primary-button small only-phone"} onClick={playAction}>
                             ИГРАТЬ
                         </button>
-                        <button className={"primary-button primary-button-medium only-mobile"} onClick={playAction}>
+                        <button className={"primary-button medium only-mobile"} onClick={playAction}>
                             ИГРАТЬ
                         </button>
                     </div>

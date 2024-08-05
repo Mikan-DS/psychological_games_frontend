@@ -49,7 +49,7 @@ export default function ForStudentSection({user, playAction}){
                 </div>
             </div>
 
-            <button className={"secondary-button secondary-button-large"} onClick={playAction}>
+            <button className={"secondary-button large"} onClick={playAction}>
                 ХОЧУ ИГРАТЬ
             </button>
 

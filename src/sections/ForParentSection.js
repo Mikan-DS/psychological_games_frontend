@@ -55,7 +55,7 @@ export default function ForParentSection({user, playAction}){
                 </div>
             </div>
 
-            <button className={"secondary-button secondary-button-large"} onClick={playAction}>
+            <button className={"secondary-button large"} onClick={playAction}>
                 ЗАКАЗАТЬ ИГРУ ДЛЯ РЕБЁНКА
             </button>
         </div>

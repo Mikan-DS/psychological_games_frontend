@@ -18,16 +18,15 @@
     color: #F4CC18;
     border-color: #F4CC18;
 }
-
-.primary-button-large{
+.primary-button.large{
     padding: 18px 58px;
     font-size: 80px;
 }
-.primary-button-medium{
+.primary-button.medium{
     padding: 18px 38px;
     font-size: 60px;
 }
-.primary-button-small{
+.primary-button.small{
     padding: 18px 38px;
     font-size: 40px;
 }
@@ -37,8 +36,7 @@
     color: #222226;
     border-color: #9E9F9A;
 }
-
-.secondary-button-large{
+.secondary-button.large{
     width: 100%;
     padding: 36px 62px;
     font-size: 26px;
