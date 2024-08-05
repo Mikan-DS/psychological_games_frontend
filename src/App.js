@@ -1,4 +1,9 @@
-import "./App.css";
+import './css/fonts.css'
+import './css/containers.css'
+import './css/common.css'
+import './css/buttons.css'
+import './css/text.css'
+
 import React, {useEffect, useState} from "react";
 
 import ModalControl from "./ModalControl";
@@ -7,9 +12,9 @@ import API from "./API";
 import CoverSection from "./sections/CoverSection";
 import PaymentModal from "./PaymentModal";
 import LoginModal from "./LoginModal";
-import ForStudent from "./sections/ForStudent";
+import ForStudentSection from "./sections/ForStudentSection";
 import FactSection from "./sections/FactSection";
-import ForParent from "./sections/ForParent";
+import ForParentSection from "./sections/ForParentSection";
 import PolicyModal from "./PolicyModal";
 import ShockSection from "./sections/ShockSection";
 import AuthorsSection from "./sections/AuthorsSection";
@@ -80,7 +85,7 @@ function App() {
             <PolicyModal modalControl={policyModalControl}/>
 
             <CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>
-            <ForStudent user={user} playAction={playAction}/>
+            <ForStudentSection user={user} playAction={playAction}/>
             <FactSection reverse={false}>
                 ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
                 И <span>70%</span> УЧИТЕЛЕЙ
@@ -88,7 +93,7 @@ function App() {
                     По статистике за Ноябрь 2023
                 </div>
             </FactSection>
-            <ForParent user={user} playAction={playAction}/>
+            <ForParentSection user={user} playAction={playAction}/>
             <FactSection reverse={true}>
                 Каждый <span>ВТОРОЙ</span> РЕБЕНОК СТАЛКИВАЕТСЯ С АГРЕССИЕЙ И
                 КАЖДЫЙ <span>ТРЕТИЙ</span> — С ЕЁ ФИЗИЧЕСКИМИ ПРОЯВЛЕНИЯМИ

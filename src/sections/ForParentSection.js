@@ -1,10 +1,12 @@
+import './AboutSection.css'
+
 import Screenshot4 from "../img/screenshots/4.png";
 import Screenshot5 from "../img/screenshots/5.png";
 import Screenshot6 from "../img/screenshots/6.png";
 
 import React from "react";
 
-export default function ForParent({user, playAction}){
+export default function ForParentSection({user, playAction}){
 
     return (
         <div id={"forParent"} className={"content-box body-text"}>

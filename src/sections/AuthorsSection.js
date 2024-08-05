@@ -1,3 +1,5 @@
+import "./AuthorsSection.css"
+
 import AuthorImage1 from "../img/autors/autor_1.webp";
 import AuthorImage2 from "../img/autors/autor_2.webp";
 import AuthorImage3 from "../img/autors/autor_3.webp";

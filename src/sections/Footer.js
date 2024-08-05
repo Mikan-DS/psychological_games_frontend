@@ -1,9 +1,10 @@
+import './Footer.css'
+
 import footerTitle from "../img/footer_title.png";
 import React from "react";
 import footerBackground from "../img/footer_bg.png";
 
 export default function Footer({user, api, openLogin, openPolicy}){
-
     return (
         <footer style={{backgroundImage: "url(" + footerBackground + ")"}}>
             <div className={"content-box footer-menu-text"}>

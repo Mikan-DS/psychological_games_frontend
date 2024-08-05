@@ -1,3 +1,5 @@
+import './AboutSection.css'
+
 import Screenshot1 from "../img/screenshots/1.png";
 import Screenshot2 from "../img/screenshots/2.png";
 import Screenshot3 from "../img/screenshots/3.png";
@@ -6,7 +8,7 @@ import NumberAnimation from "../NumberAnimation";
 
 import React from "react";
 
-export default function ForStudent({user, playAction}){
+export default function ForStudentSection({user, playAction}){
 
     return (
         <div id={"forStudent"} className={"content-box body-text"}>

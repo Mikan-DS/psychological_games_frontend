@@ -1,3 +1,5 @@
+import './FaqSection.css'
+
 import ToggleQuestion from "../ToggleQuestion";
 import React from "react";
 

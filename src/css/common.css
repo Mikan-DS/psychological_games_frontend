@@ -1,0 +1,65 @@
+h1{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    color: #383D38;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 0;
+
+    color: #383D38;
+}
+
+h4{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #383D38;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+img{
+    pointer-events: none;
+}
+
+hr{
+    width: 100%;
+    background-color: #FCFCFA;
+    margin: 0;
+    border: 0;
+    height: 1px;
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    h1{
+        font-size: 60px;
+        margin-top: 80px;
+    }
+}
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 80px;
+        margin-top: 100px;
+    }
+}

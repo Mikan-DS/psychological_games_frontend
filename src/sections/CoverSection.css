@@ -1,0 +1,171 @@
+#cover-section{
+    background-color: #121715;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+
+    height: 600px;
+}
+#cover-section a, button{
+    pointer-events: auto;
+}
+header > div{
+    padding-bottom: 12px;
+}
+header{
+    margin-bottom: 20px;
+    padding-top: 12px;
+}
+.cover-title-image{
+    height: 124px;
+}
+.cover-age-image{
+    width: 30px;
+}
+.cover-play-box{
+    gap: 20px;
+}
+.cover-description-box{
+    gap: 20px
+}
+
+.cover-description-text{
+    padding-top: 20px;
+}
+.menu-text a{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+.menu-text a:hover{
+    color: #F4CC18;
+}
+.menu-buttons{
+    gap: 20px;
+}
+
+/*** DROPDOWN MENU ***/
+
+.dropdown-menu {
+    position: relative;
+}
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.menu-content a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.menu-content a:hover {
+    background-color: #444;
+}
+
+/* Для экранов 360px и выше */
+@media (min-width: 360px) {
+    #cover-section {
+        height: 639px;
+    }
+    .cover-title-image {
+        height: 142px;
+    }
+    .cover-description-text {
+        padding-top: 20px;
+        width: 320px;
+    }
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    #cover-section{
+        height: 947px;
+    }
+    header > div{
+        padding-bottom: 21px;
+    }
+    header{
+        margin-bottom: 38px;
+        padding-top: 21px;
+    }
+    .cover-age-image{
+        width: 80px;
+    }
+    .cover-title-image{
+        height: 266px;
+    }
+    .cover-description-text{
+        width: 574px;
+    }
+    .cover-description-box{
+        gap: 40px
+    }
+    .icon{
+        width: 31px;
+    }
+    .menu-text a{
+        font-size: 16px;
+    }
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    #cover-section{
+        height: 858px;
+    }
+    header > div{
+        padding-bottom: 22px;
+    }
+    header{
+        margin-bottom: 40px;
+        padding-top: 22px;
+    }
+    .cover-age-image{
+        width: 100px;
+    }
+    .cover-title-image{
+        margin-bottom: -38px;
+        margin-right: -200px;
+        height: 300px;
+    }
+    .cover-description-text{
+        padding: 0;
+        width: 444px;
+    }
+    .cover-description-box{
+        gap: 20px
+    }
+    .menu-text a{
+        font-size: 20px;
+    }
+}
+
+/* Для экранов 1600px и выше */
+@media (min-width: 1600px) {
+    #cover-section {
+        height: 900px;
+    }
+    .cover-description-text {
+        width: 675px;
+    }
+    .cover-description-box {
+        gap: 40px
+    }
+    .accent-text{
+        margin-left: 353px;
+    }
+}

@@ -1,0 +1,102 @@
+#ForStudent{
+    padding-top: 60px;
+}
+
+
+.about-list{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 40px;
+    flex-direction: column;
+
+}
+
+.about-list img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+
+    height: 150px;
+}
+
+.about-statistic{
+    padding-bottom: 20px;
+    flex-direction: column;
+
+}
+
+#forParent .secondary-button{
+    margin-bottom: 20px;
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    .about-statistic {
+        flex-direction: row;
+        padding-bottom: 33px;
+    }
+
+    #forParent .secondary-button {
+        margin-bottom: 33px;
+    }
+
+    .about-statistic > div {
+        max-width: 170px;
+    }
+
+    .about-list img {
+        height: 230px;
+    }
+
+    .about-list div > div {
+        max-width: 320px;
+    }
+}
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+
+    .about-list{
+        flex-direction: row;
+        padding-top: 80px;
+        gap: unset;
+    }
+
+    .about-list > div{
+        width: 373px;
+    }
+
+    .about-list div > div{
+        max-width: 100%;
+    }
+    .about-statistic{
+        padding-bottom: 150px;
+        margin-left: auto;
+        width: 767px;
+    }
+
+    #forParent .secondary-button{
+        margin-bottom: 150px;
+    }
+    .about-statistic > div{
+        max-width: 210px;
+    }
+
+}
+
+/* Для экранов 1600px и выше */
+@media (min-width: 1600px) {
+
+    .about-list > div {
+        width: 453px;
+    }
+
+    .about-statistic {
+        padding-bottom: 100px;
+        width: 927px;
+    }
+
+    #forParent .secondary-button {
+        margin-bottom: 100px;
+    }
+}

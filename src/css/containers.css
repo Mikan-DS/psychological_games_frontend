@@ -1,0 +1,84 @@
+body{
+    min-width: 320px;
+}
+
+/* Виды контейнеров и позиции */
+.stretched-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.vertical-box{
+    display: flex;
+    flex-direction: column;
+}
+.content-box{
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.align-right{
+    display: flex;
+    align-items: flex-end;
+}
+.align-center{
+    display: flex;
+    align-items: center;
+}
+
+/* Отображение на адаптивах */
+
+.only-desktop { /* 1200+ */
+    display: none;
+}
+.only-mobile { /* 640+ */
+    display: none;
+}
+.only-phone { /* 640- */
+    display: flex;
+}
+
+/* Для экранов 360px и выше */
+@media (min-width: 360px) {
+    /* Виды контейнеров и позиции */
+    .content-box{
+        width: 320px;
+    }
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    /* Виды контейнеров и позиции */
+    .content-box{
+        width: 600px;
+    }
+    /* Отображение на адаптивах */
+    .only-phone { /* 640- */
+        display: none;
+    }
+    .only-mobile { /* 1200- */
+        display: flex;
+    }
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    /* Виды контейнеров и позиции */
+    .content-box {
+        width: 1160px;
+    }
+    /* Отображение на адаптивах */
+    .only-mobile {
+        display: none;
+    }
+    .only-desktop {
+        display: flex;
+    }
+}
+/* Для экранов 1600px и выше */
+@media (min-width: 1600px) {
+    /* Виды контейнеров и позиции */
+    .content-box {
+        width: 1400px;
+    }
+}

@@ -1,3 +1,5 @@
+import './FactSection.css'
+
 import TapeImage from "../img/tape_1.webp";
 import TapeMobileImage from "../img/tape_mobile.png";
 import React from "react";

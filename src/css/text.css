@@ -1,0 +1,84 @@
+.accent-text{
+    font-family: Gogol, serif;
+    color: #383D38;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.accent-text2{ /* TODO Склеить с первым accent-text */
+    font-family: Gogol, serif;
+    color: #FCFCFA;
+    text-align: right;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.accent-text3{ /* TODO Склеить с первым accent-text */
+    font-family: Gogol, serif;
+    color: #383D38;
+    line-height: 1;
+    font-size: 30px;
+}
+
+.body-text{
+    font-family: "Montserrat", sans-serif;
+    color: #75766E;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.body-text2{
+    font-family: "Montserrat", sans-serif;
+    color: #75766E;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.NumberAnimation {
+    color: #D44C02;
+    font-size: 100px;
+    font-family: Gogol, serif;
+    line-height: 1;
+
+    padding-top: 40px;
+
+}
+
+/* Для экранов 360px и выше */
+@media (min-width: 360px) {
+    .accent-text2{
+        font-size: 30px;
+    }
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    .NumberAnimation{
+        padding-top: 60px;
+    }
+
+    .accent-text2{
+        font-size: 34px;
+    }
+    .accent-text{
+        font-size: 40px;
+    }
+
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .accent-text{
+        font-size: 50px;
+        margin-left: 226px;
+    }
+    .accent-text2{
+        font-size: 40px;
+    }
+    .NumberAnimation{
+        padding-top: 100px;
+        font-size: 130px;
+    }
+}
