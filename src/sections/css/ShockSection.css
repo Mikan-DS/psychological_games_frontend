@@ -1,73 +1,71 @@
-.shock-image{
+.shock-section .image{
     width: 100%;
     height: 231px;
     background-size: cover;
     background-position: 78%;
     padding-top: 129px;
 }
-.shock-image > img{
-    height: 100%;
+.shock-section .image > img{
+    height: 231px;
     width: 100%;
     object-fit: cover;
     object-position: 5%;
 }
-#ShockSection .content-box{
+.shock-section .content-box{
     padding-top: 60px;
     padding-bottom: 60px;
+}
+.shock-section .content-box > div{
+    padding-right: 1px;
 }
 
 /* Для экранов 360px и выше */
 @media (min-width: 360px) {
-    .shock-image {
+    .shock-section .image {
         height: 260px;
         background-position: 82%;
         padding-top: 145px;
     }
-    .shock-image > img {
+    .shock-section .image > img {
         object-position: 5%;
     }
-    #ShockSection .content-box {
-        padding-top: 60px;
-        padding-bottom: 60px;
+
+    .shock-section .content-box > div{
+        padding-right: 0;
     }
 }
+
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-
-    /** Shock **/
-    .shock-image {
+    .shock-section .image {
         width: 100%;
         height: 200px;
         background-position: 78%;
         background-position-y: top;
         padding-top: 32px;
     }
-
-    .shock-image > img {
+    .shock-section .image > img {
         height: 200px;
         object-position: 5%;
     }
-
-    #ShockSection .content-box {
-        padding-top: 100px;
-        padding-bottom: 100px;
+    .shock-section .content-box{
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
+
 /* Для экранов 1200px и выше */
 @media (min-width: 1200px) {
-    .shock-image {
+    .shock-section .image {
         height: 500px;
         background-position: 78%;
         padding-top: 100px;
     }
-
-    .shock-image > img {
+    .shock-section .image > img {
         height: 500px;
         object-position: 5%;
     }
-
-
-    #ShockSection .content-box > div {
+    .shock-section .content-box > div {
         width: 767px;
         margin-left: auto;
     }
@@ -75,13 +73,13 @@
 
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
-    .shock-image {
+    .shock-section .image {
         height: 500px;
         background-position: 78%;
         padding-top: 100px;
         background-position-y: 10%;
     }
-    .shock-image > img {
+    .shock-section .image > img {
         height: 500px;
         width: 1000px;
         object-position: 5%;
@@ -92,11 +90,11 @@
 
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
-    #ShockSection .content-box{
+    .shock-section .content-box{
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    #ShockSection .content-box > div{
+    .shock-section .content-box > div{
         width: 926px;
         margin-left: auto;
     }

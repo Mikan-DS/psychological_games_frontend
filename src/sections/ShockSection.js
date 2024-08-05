@@ -6,12 +6,11 @@ import React from "react";
 
 export default function ShockSection(){
     return (
-        <div id={"ShockSection"}>
+        <div className={"shock-section"}>
 
-            <div
-                className={"shock-image"}
-                style={{backgroundImage: "url(" + shockImage1 + ")"}}>
-                <img src={shockImage2} alt="Персонажи"/>
+            <div className={"image"}
+                 style={{backgroundImage: "url(" + shockImage1 + ")"}}>
+                <img src={shockImage2 || ""} alt="Персонажи"/>
             </div>
 
             <div className={"content-box body-text"}>
