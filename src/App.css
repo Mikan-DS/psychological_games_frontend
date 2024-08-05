@@ -510,16 +510,20 @@ header{
     padding: 60px 0;
 }
 
-#FAQ h1{
+.faq h1{
     margin: 0;
 }
 
-#FAQ h3{
+.faq h3{
     font-size: 20px;
 }
 
-#FAQ hr{
+.faq hr{
     background-color: #9E9F9A;
+    margin-top: 60px;
+}
+
+.faq-toggle-question hr{
     margin-top: 30px;
 }
 
@@ -729,6 +733,26 @@ header{
         max-width: 293px;
     }
 
+    /* FAQ */
+    #FAQ{
+        background-color: #F3F2EE;
+        padding: 80px 0;
+    }
+
+    #FAQ h3{
+        font-size: 24px;
+    }
+
+    .faq-toggle-question{
+        margin-top: 40px;
+    }
+    .faq-toggle-question hr{
+        margin-top: 40px;
+    }
+
+    .faq-answer{
+        padding-top: 40px;
+    }
 
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
@@ -916,6 +940,35 @@ header{
 
     .authors-results > .body-text{
         max-width: 570px;
+    }
+
+    /* FAQ */
+    #FAQ{
+        background-color: #F3F2EE;
+        padding: 100px 0;
+    }
+
+    #FAQ h3{
+        font-size: 26px;
+    }
+
+    .faq hr{
+        margin-top: 80px;
+    }
+
+    .faq-toggle-question{
+        margin-top: 40px;
+    }
+    .faq-toggle-question hr{
+        margin-top: 40px;
+    }
+
+    .faq-answer{
+        max-width: 1050px;
+    }
+
+    .faq-toggle-question h3{
+        max-width: 1045px;
     }
 
 

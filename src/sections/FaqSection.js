@@ -4,7 +4,7 @@ import React from "react";
 export default function FaqSection(){
 
     return (
-        <div id="FAQ">
+        <div id="FAQ" className={"faq"}>
             <div className={"content-box"}>
                 <h1>
                     ЧАСТЫЕ ВОПРОСЫ
