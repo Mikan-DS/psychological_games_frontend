@@ -536,6 +536,40 @@ header{
     padding-top: 30px;
 }
 
+/* Footer */
+footer{
+    padding: 60px 0;
+    background-color: #264C3D;
+}
+
+footer img{
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.footer-menu-text a,
+.footer-menu-text button {
+    font-family: "Montserrat", sans-serif;
+    color: #FCFCFA;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+.footer-menu-text a:hover,
+.footer-menu-text button:hover {
+    color: #F4CC18;
+}
+
+
+.footer-menu-text > button {
+    font-size: 10px;
+}
 
 /* Для экранов 360px и выше */
 @media (min-width: 360px) {

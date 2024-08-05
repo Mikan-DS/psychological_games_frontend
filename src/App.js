@@ -14,6 +14,7 @@ import PolicyModal from "./PolicyModal";
 import ShockSection from "./sections/ShockSection";
 import AuthorsSection from "./sections/AuthorsSection";
 import FaqSection from "./sections/FaqSection";
+import Footer from "./sections/Footer";
 
 let onlyOne = true;
 
@@ -98,10 +99,11 @@ function App() {
             {/*    ВОЗНИКАЮТ <span>ПСИХИЧЕСКИЕ РАССТРОЙСТВА</span>*/}
             {/*</FactSection>*/}
             {/*<AuthorsSection/>*/}
-            <FaqSection/>
+            {/*<FaqSection/>*/}
+            <Footer user={user} api={api} openLogin={loginModalControl.openModal}/>
 
-            <div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>
-            </div>
+            {/*<div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>*/}
+            {/*</div>*/}
 
         </div>
     );
