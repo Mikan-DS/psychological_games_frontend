@@ -89,20 +89,20 @@ function App() {
 
             <CoverSection username={user.name} authenticated={user.authenticated} loginModalControl={loginModalControl} playAction={playAction} screenVariant={screenVariant}/>
             <ForStudentSection playAction={playAction} screenVariant={screenVariant}/>
-            <FactSection reverse={false}>
+            <FactSection reverse={false} screenVariant={screenVariant}>
                 ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
                 И <span>70%</span> УЧИТЕЛЕЙ
                 <div className={"body-text"}>
                     По статистике за Ноябрь 2023
                 </div>
             </FactSection>
-            <ForParentSection user={user} playAction={playAction}/>
-            <FactSection reverse={true}>
+            <ForParentSection playAction={playAction}/>
+            <FactSection reverse={true} screenVariant={screenVariant}>
                 Каждый <span>ВТОРОЙ</span> РЕБЕНОК СТАЛКИВАЕТСЯ С АГРЕССИЕЙ И
                 КАЖДЫЙ <span>ТРЕТИЙ</span> — С ЕЁ ФИЗИЧЕСКИМИ ПРОЯВЛЕНИЯМИ
             </FactSection>
             <ShockSection/>
-            <FactSection reverse={true}>
+            <FactSection reverse={true} screenVariant={screenVariant}>
                 У <span>ТРЕТИ</span> УЧЕНИКОВ, КОТОРЫХ ТРАВИЛИ В ШКОЛЕ, В БУДУЩЕМ
                 ВОЗНИКАЮТ <span>ПСИХИЧЕСКИЕ РАССТРОЙСТВА</span>
             </FactSection>

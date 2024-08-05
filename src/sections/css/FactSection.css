@@ -12,6 +12,7 @@
 .fact-section.card-text{
     font-family: 'Ruda', sans-serif;
     color: #383D38;
+    line-height: 1;
     font-size: 26px;
     letter-spacing: -0.04em;
     font-weight: 600;
@@ -24,6 +25,9 @@
     height: 213px;
     object-fit: cover;
     object-position: center;
+}
+.fact-section .reversed{
+    padding-right: 1px;
 }
 
 
@@ -42,6 +46,7 @@
         max-width: 497px;
     }
     .fact-section .reversed{
+        padding-left: 0;
         max-width: 570px;
     }
     .fact-section img{
@@ -60,18 +65,13 @@
     .fact-section{
         height: 312px;
     }
-
-    .fact-section .normal{
-        max-width: 778px;
-    }
+    .fact-section .normal,
     .fact-section .reversed{
         max-width: 778px;
     }
-
     .fact-section img{
         margin-top: -312px;
     }
-
     .fact-section.card-text{
         font-size: 40px;
     }

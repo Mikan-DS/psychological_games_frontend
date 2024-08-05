@@ -6,10 +6,10 @@ import Screenshot6 from "../img/screenshots/6.png";
 
 import React from "react";
 
-export default function ForParentSection({user, playAction}){
+export default function ForParentSection({playAction}){
 
     return (
-        <div className={"about-section for-student content-box body-text"}>
+        <div id={"forParent"} className={"about-section for-parent content-box body-text"}>
             <h1>
                 Если вы родитель
             </h1>
@@ -19,7 +19,7 @@ export default function ForParentSection({user, playAction}){
 
             <div className={"stretched-box showcase"}>
                 <div>
-                    <img src={Screenshot4 ? Screenshot4 : ""} alt="Скриншот 4"/>
+                    <img src={Screenshot4 || ""} alt="Скриншот 4"/>
                     <h4>Вернуться в детство</h4>
                     <div>
                         В основе игры лежат реальные события.
@@ -30,7 +30,7 @@ export default function ForParentSection({user, playAction}){
                     </div>
                 </div>
                 <div>
-                    <img src={Screenshot5 ? Screenshot5 : ""} alt="Скриншот 5"/>
+                    <img src={Screenshot5 || ""} alt="Скриншот 5"/>
                     <h4>Понять ребенка</h4>
                     <div>
                         Пройдите игру вместе с ребенком или понаблюдайте за его игрой.
@@ -42,7 +42,7 @@ export default function ForParentSection({user, playAction}){
                     </div>
                 </div>
                 <div>
-                    <img src={Screenshot6 ? Screenshot6 : ""} alt="Скриншот 6"/>
+                    <img src={Screenshot6 || ""} alt="Скриншот 6"/>
                     <h4>Помочь ребенку</h4>
                     <div>
                         Может быть, ваш ребенок стал замкнутым и подавленным,
