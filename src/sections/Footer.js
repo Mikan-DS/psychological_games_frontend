@@ -9,27 +9,29 @@ export default function Footer({user, api, openLogin}){
             <div className={"content-box footer-menu-text"}>
                 <img src={footerTitle || ""} alt="Логотип"/>
 
-                <div>
-                    <a href={"#forStudent"}>ЕСЛИ ТЫ - ШКОЛЬНИК</a>
-                    <a href={"#forParents"}>ЕСЛИ ВЫ - РОДИТЕЛЬ</a>
-                    <a href={"#Authors"}>АВТОРЫ</a>
-                    <a href={"#FAQ"}>ВОПРОСЫ</a>
-                </div>
+                <div className={"footer-menu"}>
+                    <div>
+                        <a href={"#forStudent"}>ЕСЛИ ТЫ - ШКОЛЬНИК</a>
+                        <a href={"#forParents"}>ЕСЛИ ВЫ - РОДИТЕЛЬ</a>
+                        <a href={"#Authors"}>АВТОРЫ</a>
+                        <a href={"#FAQ"}>ВОПРОСЫ</a>
+                    </div>
 
-                <div>
-                    <button onClick={() => {
-                        window.alert("Этот раздел в разработке!")
-                    }}>
-                        ПОДРОБНЕЕ О ПРОЕКТЕ
-                    </button>
-                    {user.authenticated ?
-                        <button onClick={api.logout}>
-                            ВЫЙТИ
-                        </button> :
-                        <button onClick={openLogin}>
-                            АВТОРИЗАЦИЯ
+                    <div>
+                        <button onClick={() => {
+                            window.alert("Этот раздел в разработке!")
+                        }}>
+                            ПОДРОБНЕЕ О ПРОЕКТЕ
                         </button>
-                    }
+                        {user.authenticated ?
+                            <button onClick={api.logout}>
+                                ВЫЙТИ
+                            </button> :
+                            <button onClick={openLogin}>
+                                АВТОРИЗАЦИЯ
+                            </button>
+                        }
+                    </div>
                 </div>
 
                 <button>

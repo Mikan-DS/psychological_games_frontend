@@ -540,6 +540,8 @@ header{
 footer{
     padding: 60px 0;
     background-color: #264C3D;
+    background-size: cover;
+    background-position: center;
 }
 
 footer img{
@@ -565,10 +567,26 @@ footer img{
 .footer-menu-text button:hover {
     color: #F4CC18;
 }
-
-
 .footer-menu-text > button {
     font-size: 10px;
+}
+
+footer .content-box{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-menu > div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 /* Для экранов 360px и выше */
