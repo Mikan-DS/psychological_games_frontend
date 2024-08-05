@@ -87,16 +87,20 @@
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
 
-    .about-list > div {
+    .about-list > div{
         width: 453px;
     }
 
-    .about-statistic {
+    .about-statistic{
         padding-bottom: 100px;
         width: 927px;
     }
 
-    #forParent .secondary-button {
+    #forParent .secondary-button{
         margin-bottom: 100px;
+    }
+
+    .about-section .accent-text{
+        margin-left: 353px;
     }
 }

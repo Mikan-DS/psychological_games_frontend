@@ -32,29 +32,29 @@
 .cover-section .description-text{
     padding-top: 20px;
 }
-.menu-text a{
+.cover-section .menu-text a{
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-decoration: none;
 }
-.menu-text a:hover{
+.cover-section .menu-text a:hover{
     color: #F4CC18;
 }
-.menu-buttons{
+.cover-section .menu-buttons{
     gap: 20px;
 }
 
 /*** DROPDOWN MENU ***/
 
-.dropdown-menu {
+.cover-section .dropdown-menu {
     position: relative;
 }
-.menu-button {
+.cover-section .menu-button {
     background: none;
     border: none;
     cursor: pointer;
 }
-.menu-content {
+.cover-section .menu-content {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -65,12 +65,12 @@
     border-radius: 5px;
     padding: 10px;
 }
-.menu-content a {
+.cover-section .menu-content a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
 }
-.menu-content a:hover {
+.cover-section .menu-content a:hover {
     background-color: #444;
 }
 
@@ -112,10 +112,10 @@
     .cover-section .description-box{
         gap: 40px
     }
-    .icon{
+    .cover-section .icon{
         width: 31px;
     }
-    .menu-text a{
+    .cover-section .menu-text a{
         font-size: 16px;
     }
 }
@@ -147,7 +147,7 @@
     .cover-section .description-box{
         gap: 20px
     }
-    .menu-text a{
+    .cover-section .menu-text a{
         font-size: 20px;
     }
 }
@@ -162,8 +162,5 @@
     }
     .cover-section .description-box {
         gap: 40px
-    }
-    .accent-text{
-        margin-left: 353px;
     }
 }
