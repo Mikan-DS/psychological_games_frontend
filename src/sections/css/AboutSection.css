@@ -1,17 +1,14 @@
-#ForStudent{
-    padding-top: 60px;
+.about-section{
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
-
-
-.about-list{
+.about-section .showcase{
     padding-top: 40px;
     padding-bottom: 40px;
-    gap: 40px;
     flex-direction: column;
-
+    gap: 40px;
 }
-
-.about-list img{
+.about-section .showcase img{
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -19,87 +16,61 @@
 
     height: 150px;
 }
-
-.about-statistic{
+.about-section .statistic{
     padding-bottom: 20px;
     flex-direction: column;
 
 }
 
-#forParent .secondary-button{
-    margin-bottom: 20px;
-}
-
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-    .about-statistic {
+    .about-section .statistic {
         flex-direction: row;
         padding-bottom: 33px;
     }
-
-    #forParent .secondary-button {
-        margin-bottom: 33px;
-    }
-
-    .about-statistic > div {
+    .about-section .statistic > div {
         max-width: 170px;
     }
-
-    .about-list img {
+    .about-section .showcase img {
         height: 230px;
     }
-
-    .about-list div > div {
+    .about-section .showcase div > div {
         max-width: 320px;
     }
 }
+
 /* Для экранов 1200px и выше */
 @media (min-width: 1200px) {
-
-    .about-list{
+    .about-section .showcase{
         flex-direction: row;
         padding-top: 80px;
         gap: unset;
     }
-
-    .about-list > div{
+    .about-section .showcase > div{
         width: 373px;
     }
-
-    .about-list div > div{
+    .about-section .showcase div > div{
         max-width: 100%;
     }
-    .about-statistic{
+    .about-section .statistic{
         padding-bottom: 150px;
         margin-left: auto;
         width: 767px;
     }
-
-    #forParent .secondary-button{
-        margin-bottom: 150px;
-    }
-    .about-statistic > div{
+    .about-section .statistic > div{
         max-width: 210px;
     }
-
 }
 
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
-
-    .about-list > div{
+    .about-section .showcase > div{
         width: 453px;
     }
-
-    .about-statistic{
+    .about-section .statistic{
         padding-bottom: 100px;
         width: 927px;
     }
-
-    #forParent .secondary-button{
-        margin-bottom: 100px;
-    }
-
     .about-section .accent-text{
         margin-left: 353px;
     }

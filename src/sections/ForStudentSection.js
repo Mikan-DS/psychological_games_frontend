@@ -11,7 +11,7 @@ import React from "react";
 export default function ForStudentSection({user, playAction}){
 
     return (
-        <div id={"forStudent"} className={"content-box body-text"}>
+        <div className={"about-section for-student content-box body-text"}>
             <h1>
                 Если ты школьник
             </h1>
@@ -19,9 +19,9 @@ export default function ForStudentSection({user, playAction}){
                 играй дома, чтобы выигрывать в классе
             </div>
 
-            <div className={"stretched-box about-list"}>
+            <div className={"stretched-box showcase"}>
                 <div>
-                    <img src={Screenshot1 ? Screenshot1 : ""} alt="Скриншот 1"/>
+                    <img src={Screenshot1 || ""} alt="Скриншот 1"/>
                     <h4>Отдохнуть</h4>
                     <div>
                         Погрузись в игру, по жанру это визуальная новелла, основанная на реальных событиях.
@@ -30,7 +30,7 @@ export default function ForStudentSection({user, playAction}){
                     </div>
                 </div>
                 <div>
-                    <img src={Screenshot2 ? Screenshot2 : ""} alt="Скриншот 2"/>
+                    <img src={Screenshot2 || ""} alt="Скриншот 2"/>
                     <h4>Понять себя</h4>
                     <div>
                         Честно делай выборы в игре, так же,
@@ -39,7 +39,7 @@ export default function ForStudentSection({user, playAction}){
                     </div>
                 </div>
                 <div>
-                    <img src={Screenshot3 ? Screenshot3 : ""} alt="Скриншот 3"/>
+                    <img src={Screenshot3 || ""} alt="Скриншот 3"/>
                     <h4>Прокачать себя</h4>
                     <div>
                         Пройдя игру несколько раз, ты поймешь, как выйти из своей старой роли,
@@ -53,7 +53,7 @@ export default function ForStudentSection({user, playAction}){
                 ХОЧУ ИГРАТЬ
             </button>
 
-            <div className={"stretched-box about-statistic"}>
+            <div className={"stretched-box statistic"}>
                 <div>
                     <NumberAnimation targetNumber={357} duration={2100}/>
                     Варианта развития событий

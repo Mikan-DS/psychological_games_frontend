@@ -17,7 +17,7 @@ export default function ForParentSection({user, playAction}){
                 и хотите помочь своему ребёнку
             </div>
 
-            <div className={"stretched-box about-list"}>
+            <div className={"stretched-box showcase"}>
                 <div>
                     <img src={Screenshot4 ? Screenshot4 : ""} alt="Скриншот 4"/>
                     <h4>Вернуться в детство</h4>
