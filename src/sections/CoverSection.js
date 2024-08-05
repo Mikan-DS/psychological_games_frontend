@@ -27,7 +27,7 @@ export default function CoverSection({username, authenticated, loginModalControl
 
     const descriptionPlayBox = (
         <div className={"vertical-box align-right description-box"}>
-            <div className={"accent-text2 description-text content-box"}>
+            <div className={"accent-text2 description-text"}>
                 Психологическая компьютерная игра
                 <br/>
                 Проблемы школьного буллинга

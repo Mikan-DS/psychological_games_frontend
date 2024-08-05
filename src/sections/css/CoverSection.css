@@ -6,46 +6,15 @@
     background-size: cover;
     pointer-events: none;
 
-    height: 600px;
-}
-
-.cover-section header > div{
-    padding-bottom: 12px;
 }
 .cover-section header{
-    margin-bottom: 20px;
     padding-top: 12px;
-}
-.cover-section .title-image{
-    height: 124px;
-}
-.cover-section .age-image{
-    width: 30px;
-}
-.cover-section .play-box{
-    gap: 20px;
-}
-.cover-section .description-box{
-    gap: 20px
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.cover-section .description-text{
-    padding-top: 20px;
-}
-.cover-section .menu-text a{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-decoration: none;
-}
-.cover-section .menu-text a:hover{
-    color: #F4CC18;
-}
-.cover-section .menu-buttons{
-    gap: 20px;
-}
-
-/*** DROPDOWN MENU ***/
-
+/* Dropdown menu */
 .cover-section .dropdown-menu {
     position: relative;
 }
@@ -61,12 +30,12 @@
     top: 40px;
     right: 0;
     background-color: #333;
-    border: 1px solid #ccc;
+    border: 1px solid #FCFCFA;
     border-radius: 5px;
     padding: 10px;
 }
 .cover-section .menu-content a {
-    color: white;
+    color: #FCFCFA;
     text-decoration: none;
     padding: 10px 20px;
 }
@@ -74,63 +43,76 @@
     background-color: #444;
 }
 
-/* Для экранов 360px и выше */
-@media (min-width: 360px) {
-    .cover-section {
-        height: 639px;
-    }
-    .cover-section .title-image {
-        height: 142px;
-    }
-    .cover-section .description-text {
-        padding-top: 20px;
-        width: 320px;
-    }
+/* Simple menu */
+.cover-section .menu-text a{
+    font-family: 'Montserrat', sans-serif;
+    color: #FCFCFA;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.cover-section .menu-text a:hover{
+    color: #F4CC18;
+}
+.cover-section .menu-buttons{
+    gap: 20px;
+}
+
+/* Content */
+.cover-section > div.content-box{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.cover-section .title-image{
+    width: 100%;
+}
+.cover-section .description-box,
+.cover-section .play-box{
+    gap: 20px;
+}
+.cover-section .description-box{
+    padding-top: 20px;
+}
+.cover-section .age-image{
+    width: 30px;
 }
 
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-    .cover-section{
-        height: 947px;
-    }
-    .cover-section header > div{
-        padding-bottom: 21px;
-    }
+
     .cover-section header{
-        margin-bottom: 38px;
-        padding-top: 21px;
-    }
-    .cover-section .age-image{
-        width: 80px;
-    }
-    .cover-section .title-image{
-        height: 266px;
-    }
-    .cover-section .description-text{
-        width: 574px;
-    }
-    .cover-section .description-box{
-        gap: 40px
+        padding-top: 20px;
+        gap: 20px;
     }
     .cover-section .icon{
         width: 31px;
     }
-    .cover-section .menu-text a{
-        font-size: 16px;
+    .cover-section > div.content-box{
+        padding-top: 38px;
+        padding-bottom: 40px;
+    }
+    .cover-section .play-box{
+        gap: 40px;
+    }
+    .cover-section .age-image{
+        width: 80px;
     }
 }
 
 /* Для экранов 1200px и выше */
 @media (min-width: 1200px) {
-    .cover-section{
-        height: 858px;
-    }
-    .cover-section header > div{
-        padding-bottom: 22px;
-    }
     .cover-section header{
-        margin-bottom: 40px;
         padding-top: 22px;
+        gap: 22px;
+    }
+    .cover-section > div.content-box{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .cover-section .title-image{
+        width: auto;
+        height: 300px;
     }
     .cover-section .age-image{
         width: 100px;
@@ -141,11 +123,10 @@
         height: 300px;
     }
     .cover-section .description-text{
-        padding: 0;
         width: 444px;
     }
-    .cover-section .description-box{
-        gap: 20px
+    .cover-section .play-box{
+        gap: 20px;
     }
     .cover-section .menu-text a{
         font-size: 20px;
@@ -154,9 +135,7 @@
 
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
-    .cover-section {
-        height: 900px;
-    }
+
     .cover-section .description-text {
         width: 675px;
     }

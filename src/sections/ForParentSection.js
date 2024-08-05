@@ -9,7 +9,7 @@ import React from "react";
 export default function ForParentSection({user, playAction}){
 
     return (
-        <div id={"forParent"} className={"content-box body-text"}>
+        <div className={"about-section for-student content-box body-text"}>
             <h1>
                 Если вы родитель
             </h1>
