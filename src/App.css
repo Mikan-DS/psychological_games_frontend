@@ -567,7 +567,7 @@ footer img{
 .footer-menu-text button:hover {
     color: #F4CC18;
 }
-.footer-menu-text > button {
+.footer-menu-text > .only-mobile > button {
     font-size: 10px;
 }
 
@@ -1166,6 +1166,14 @@ footer .content-box{
     .authors-results > .body-text{
         max-width: 100%;
     }
+
+    /* Footer */
+
+
+    footer .content-box{
+        gap: 514px;
+    }
+
 
     #ShockSection .content-box{
         padding-top: 100px;

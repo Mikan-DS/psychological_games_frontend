@@ -33,9 +33,12 @@ export default function Footer({user, api, openLogin, openPolicy}){
                         }
                     </div>
                 </div>
-                <button className={"only-phone only-mobile"} onClick={openPolicy}>
-                    ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                </button>
+                <div className={"only-phone only-mobile"} >
+                    <button onClick={openPolicy}>
+                        ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
+                    </button>
+                </div>
+
             </div>
             <div className={"content-box footer-menu-text"}>
                 <div className={"only-desktop"}>
