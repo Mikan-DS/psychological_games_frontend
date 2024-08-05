@@ -540,6 +540,11 @@ header{
     font-size: 20px;
 }
 
+.faq-toggle-question > .stretched-box{
+    cursor: pointer;
+}
+
+
 .faq-answer{
     padding-top: 30px;
 }
@@ -1133,7 +1138,6 @@ footer .content-box{
 
     .fact-section img{
         margin-top: -280px;
-        /*width: 1600px;*/
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -1193,10 +1197,5 @@ footer .content-box{
         width: 926px;
         margin-left: auto;
     }
-
-}
-
-/* Для экранов 1900px и выше */
-@media (min-width: 1900px) {
 
 }
