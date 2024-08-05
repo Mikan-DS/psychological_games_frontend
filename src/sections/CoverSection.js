@@ -9,7 +9,12 @@ import Icon from "../img/icon.png"
 
 import React, {useState} from "react";
 
-export default function CoverSection({username, authenticated, loginModalControl, playAction, screenVariant}){
+export default function CoverSection({
+                                         username,
+                                         authenticated,
+                                         loginModalControl,
+                                         playAction,
+                                         screenVariant}){
     function userProfile(){
         if (authenticated){
             window.alert("Личный кабинет в разработке!")

@@ -8,10 +8,10 @@ import NumberAnimation from "../components/NumberAnimation";
 
 import React from "react";
 
-export default function ForStudentSection({user, playAction}){
+export default function ForStudentSection({playAction, screenVariant}){
 
     return (
-        <div className={"about-section for-student content-box body-text"}>
+        <div id={"forStudent"} className={"about-section for-student content-box body-text"}>
             <h1>
                 Если ты школьник
             </h1>
@@ -60,9 +60,10 @@ export default function ForStudentSection({user, playAction}){
                 </div>
                 <div>
                     <NumberAnimation targetNumber={6} duration={1500}/>
-                    <div className={"only-phone only-mobile"}>Концовок | ролей</div>
-                    <div className={"only-desktop"}>Концовок |<br/> ролей</div>
-
+                    {screenVariant.isDesktop ?
+                        <div>Концовок |<br/> ролей</div>:
+                        <div>Концовок | ролей</div>
+                    }
                 </div>
                 <div>
                     <NumberAnimation targetNumber={10} duration={2000}/>

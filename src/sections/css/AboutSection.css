@@ -1,6 +1,9 @@
 .about-section{
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 20px;
+}
+.about-section .accent-text{
+    padding-top: 20px;
 }
 .about-section .showcase{
     padding-top: 40px;
@@ -17,30 +20,45 @@
     height: 150px;
 }
 .about-section .statistic{
-    padding-bottom: 20px;
+    padding-top: 40px;
     flex-direction: column;
-
+    gap: 40px;
+}
+.about-section h4{
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-    .about-section .statistic {
-        flex-direction: row;
+    .about-section{
+        padding-top: 80px;
         padding-bottom: 33px;
     }
+    .about-section .statistic {
+        flex-direction: row;
+        padding-top: 60px;
+    }
     .about-section .statistic > div {
-        max-width: 170px;
+        max-width: 173px;
     }
     .about-section .showcase img {
         height: 230px;
     }
-    .about-section .showcase div > div {
+    .about-section .showcase > div > div {
         max-width: 320px;
     }
 }
 
 /* Для экранов 1200px и выше */
 @media (min-width: 1200px) {
+    .about-section .accent-text{
+        margin-left: 226px;
+    }
+    .about-section{
+        padding-top: 100px;
+        padding-bottom: 150px;
+    }
     .about-section .showcase{
         flex-direction: row;
         padding-top: 80px;
@@ -50,10 +68,10 @@
         width: 373px;
     }
     .about-section .showcase div > div{
-        max-width: 100%;
+        max-width: 320px;
     }
     .about-section .statistic{
-        padding-bottom: 150px;
+        padding-top: 100px;
         margin-left: auto;
         width: 767px;
     }
@@ -64,14 +82,16 @@
 
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
+    .about-section .accent-text{
+        margin-left: 353px;
+    }
+    .about-section{
+        padding-bottom: 100px;
+    }
     .about-section .showcase > div{
         width: 453px;
     }
     .about-section .statistic{
-        padding-bottom: 100px;
         width: 927px;
-    }
-    .about-section .accent-text{
-        margin-left: 353px;
     }
 }

@@ -88,7 +88,7 @@ function App() {
             <PolicyModal modalControl={policyModalControl}/>
 
             <CoverSection username={user.name} authenticated={user.authenticated} loginModalControl={loginModalControl} playAction={playAction} screenVariant={screenVariant}/>
-            <ForStudentSection user={user} playAction={playAction}/>
+            <ForStudentSection playAction={playAction} screenVariant={screenVariant}/>
             <FactSection reverse={false}>
                 ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
                 И <span>70%</span> УЧИТЕЛЕЙ
