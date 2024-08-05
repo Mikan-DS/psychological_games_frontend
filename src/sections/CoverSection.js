@@ -35,7 +35,7 @@ export default function CoverSection({user, loginModalControl, playAction}){
                         <a href={"#forStudent"}>
                             ШКОЛЬНИКУ
                         </a>
-                        <a href={"#forParents"}>
+                        <a href={"#forParent"}>
                             РОДИТЕЛЮ
                         </a>
                         <a href={"#Authors"}>
@@ -59,11 +59,11 @@ export default function CoverSection({user, loginModalControl, playAction}){
                         </button>
                         {isDropDownMenuOpen && (
                             <div className="menu-content">
-                                <a href={"#forStudent"}>ШКОЛЬНИКУ</a>
-                                <a href={"#forParents"}>РОДИТЕЛЮ</a>
-                                <a href={"#Authors"}>АВТОРЫ</a>
-                                <a href={"#FAQ"}>ВОПРОСЫ</a>
-                                <a onClick={userProfile}>
+                                <a href={"#forStudent"} onClick={toggleMenu}>ШКОЛЬНИКУ</a>
+                                <a href={"#forParent"} onClick={toggleMenu}>РОДИТЕЛЮ</a>
+                                <a href={"#Authors"} onClick={toggleMenu}>АВТОРЫ</a>
+                                <a href={"#FAQ"} onClick={toggleMenu}>ВОПРОСЫ</a>
+                                <a onClick={()=>{userProfile(); toggleMenu()}}>
                                     {user.authenticated ? user.name.split(' ')[0].toUpperCase() : "ВОЙТИ"}
                                 </a>
                             </div>

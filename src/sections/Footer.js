@@ -12,7 +12,7 @@ export default function Footer({user, api, openLogin, openPolicy}){
                 <div className={"footer-menu"}>
                     <div>
                         <a href={"#forStudent"}>ЕСЛИ ТЫ - ШКОЛЬНИК</a>
-                        <a href={"#forParents"}>ЕСЛИ ВЫ - РОДИТЕЛЬ</a>
+                        <a href={"#forParent"}>ЕСЛИ ВЫ - РОДИТЕЛЬ</a>
                         <a href={"#Authors"}>АВТОРЫ</a>
                         <a href={"#FAQ"}>ВОПРОСЫ</a>
                     </div>

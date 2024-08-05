@@ -3,7 +3,6 @@ import TapeMobileImage from "../img/tape_mobile.png";
 import React from "react";
 
 export default function FactSection({children, reverse}) {
-    // style={{backgroundImage: "url(" + TapeImage + ")"}}
     return (
         <div className={"fact-section stretched-box card-text"}>
             <div className={"content-box"}>
