@@ -3,30 +3,36 @@ body{
 }
 
 /* Виды контейнеров и позиции */
-.stretched-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.vertical-box{
-    display: flex;
-    flex-direction: column;
-}
-.horizontal-box{
-    display: flex;
-    flex-direction: row;
-}
+
 .content-box{
     width: 280px;
     margin-left: auto;
     margin-right: auto;
 }
+
+/** flex **/
+.stretched-box,
+.vertical-box,
+.horizontal-box,
+.align-center,
 .align-right{
     display: flex;
+}
+
+.stretched-box{
+    flex-direction: row;
+    justify-content: space-between;
+}
+.vertical-box{
+    flex-direction: column;
+}
+.horizontal-box{
+    flex-direction: row;
+}
+.align-right{
     align-items: flex-end;
 }
 .align-center{
-    display: flex;
     align-items: center;
 }
 

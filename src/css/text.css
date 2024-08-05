@@ -1,33 +1,26 @@
-.accent-text{
+/* Gogol */
+.accent-text,
+.accent-text2,
+.accent-text3{
     font-family: Gogol, serif;
-    color: #383D38;
     line-height: 1;
     font-size: 30px;
+
 }
 
-.accent-text2{ /* TODO Склеить с первым accent-text */
-    font-family: Gogol, serif;
+.accent-text{
+    color: #383D38;
+}
+.accent-text2{
     color: #FCFCFA;
     text-align: right;
-    line-height: 1;
-    font-size: 30px;
 }
-
-.accent-text3{ /* TODO Склеить с первым accent-text */
-    font-family: Gogol, serif;
+.accent-text3{
     color: #383D38;
-    line-height: 1;
-    font-size: 30px;
 }
 
-.body-text{
-    font-family: "Montserrat", sans-serif;
-    color: #75766E;
-    line-height: 1;
-    font-size: 18px;
-    font-weight: 500;
-}
-
+/* Montserrat */
+.body-text,
 .body-text2{
     font-family: "Montserrat", sans-serif;
     color: #75766E;

@@ -1,4 +1,4 @@
-import './FactSection.css'
+import './css/FactSection.css'
 
 import TapeImage from "../img/tape_1.webp";
 import TapeMobileImage from "../img/tape_mobile.png";

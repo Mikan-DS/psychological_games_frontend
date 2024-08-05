@@ -1,11 +1,11 @@
 import Modal from "./Modal";
-import CoverPics from "./img/cover_pic_modal_desktop.png"
+import CoverPics from "../img/cover_pic_modal_desktop.png"
 import React, {useState} from "react";
-import CodeInput from "./CodeInput";
+import CodeInput from "../components/CodeInput";
 
 
 export default function LoginModal({modalControl, openPayment, api, initialLogin}) {
-    const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
+    const {closeModal, isModalOpen} = modalControl;
 
     const [phone, setPhone] = useState(initialLogin);
     const [codes, _setCodes] = useState(['', '', '', '']);
@@ -23,7 +23,7 @@ export default function LoginModal({modalControl, openPayment, api, initialLogin
     const [vkBot, setVkBot] = useState(null)
 
     const handlePhone = (e) => {
-        const {name, value, type} = e.target;
+        const {value} = e.target;
         setErrors({
             ...errors,
             ["phone"]: null

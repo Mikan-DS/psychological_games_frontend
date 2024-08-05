@@ -1,6 +1,6 @@
-import './FaqSection.css'
+import './css/FaqSection.css'
 
-import ToggleQuestion from "../ToggleQuestion";
+import ToggleQuestion from "../components/ToggleQuestion";
 import React from "react";
 
 export default function FaqSection(){

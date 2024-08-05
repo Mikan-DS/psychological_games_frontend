@@ -9,12 +9,12 @@ export default function API() {
                 credentials: 'same-origin'
             });
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                console.error('Error fetching:', 'Network response was not ok');
+                return null;
             }
             return await response.json();
         } catch (error) {
             console.error('Error fetching:', error);
-            // throw error;
             return null;
         }
     }
@@ -51,7 +51,8 @@ export default function API() {
             });
 
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                console.error('Error fetching:', 'Network response was not ok');
+                return null;
             }
 
             return await response.json();

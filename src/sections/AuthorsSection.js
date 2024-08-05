@@ -1,11 +1,11 @@
-import "./AuthorsSection.css"
+import "./css/AuthorsSection.css"
 
 import AuthorImage1 from "../img/autors/autor_1.webp";
 import AuthorImage2 from "../img/autors/autor_2.webp";
 import AuthorImage3 from "../img/autors/autor_3.webp";
 import AuthorImage4 from "../img/autors/autor_4.webp";
 import AuthorImage5 from "../img/autors/autor_5.webp";
-import NumberAnimation from "../NumberAnimation";
+import NumberAnimation from "../components/NumberAnimation";
 import winnersImage from "../img/autors/image_winner.webp";
 import React, {useState} from "react";
 import ToggleImage from "../img/toggle.png";

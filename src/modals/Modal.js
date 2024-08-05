@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import closeButtonImage from './img/close_button.png'
+import closeButtonImage from '../img/close_button.png'
 
 export default function Modal({isOpen, onClose, children}) {
     useEffect(() => {

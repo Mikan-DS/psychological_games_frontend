@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ToggleImage from './img/toggle.png'
+import ToggleImage from '../img/toggle.png'
 
 export default function ToggleQuestion({question, children}) {
     const [isOpen, setIsOpen] = useState(false);

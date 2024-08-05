@@ -1,10 +1,10 @@
-import './AboutSection.css'
+import './css/AboutSection.css'
 
 import Screenshot1 from "../img/screenshots/1.png";
 import Screenshot2 from "../img/screenshots/2.png";
 import Screenshot3 from "../img/screenshots/3.png";
 
-import NumberAnimation from "../NumberAnimation";
+import NumberAnimation from "../components/NumberAnimation";
 
 import React from "react";
 

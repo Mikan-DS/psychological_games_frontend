@@ -1,4 +1,4 @@
-import './CoverSection.css'
+import './css/CoverSection.css'
 
 import Cover from "../img/cover_desktop.png";
 import TitleImage from "../img/title.png";

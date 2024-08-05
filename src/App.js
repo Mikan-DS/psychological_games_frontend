@@ -6,21 +6,21 @@ import './css/text.css'
 
 import React, {useEffect, useState} from "react";
 
-import ModalControl from "./ModalControl";
+import ModalControl from "./modals/ModalControl";
 
-import API from "./API";
+import API from "./utils/API";
 import CoverSection from "./sections/CoverSection";
-import PaymentModal from "./PaymentModal";
-import LoginModal from "./LoginModal";
+import PaymentModal from "./modals/PaymentModal";
+import LoginModal from "./modals/LoginModal";
 import ForStudentSection from "./sections/ForStudentSection";
 import FactSection from "./sections/FactSection";
 import ForParentSection from "./sections/ForParentSection";
-import PolicyModal from "./PolicyModal";
+import PolicyModal from "./modals/PolicyModal";
 import ShockSection from "./sections/ShockSection";
 import AuthorsSection from "./sections/AuthorsSection";
 import FaqSection from "./sections/FaqSection";
 import Footer from "./sections/Footer";
-import ScreenVariant from "./sections/ResponsiveLogic";
+import ScreenVariant from "./utils/ResponsiveLogic";
 
 let onlyOne = true;
 

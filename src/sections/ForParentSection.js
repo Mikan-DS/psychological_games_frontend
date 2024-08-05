@@ -1,4 +1,4 @@
-import './AboutSection.css'
+import './css/AboutSection.css'
 
 import Screenshot4 from "../img/screenshots/4.png";
 import Screenshot5 from "../img/screenshots/5.png";

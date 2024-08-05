@@ -1,8 +1,9 @@
-import './Footer.css'
+import './css/Footer.css'
 
 import footerTitle from "../img/footer_title.png";
-import React from "react";
 import footerBackground from "../img/footer_bg.png";
+
+import React from "react";
 
 export default function Footer({user, api, openLogin, openPolicy}){
     return (

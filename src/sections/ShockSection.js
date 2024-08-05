@@ -1,4 +1,4 @@
-import './ShockSection.css'
+import './css/ShockSection.css'
 
 import shockImage1 from "../img/shockSection/pic_desktop.webp";
 import shockImage2 from "../img/shockSection/pic_desktop_2.webp";

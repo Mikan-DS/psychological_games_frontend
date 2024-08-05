@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import Modal from "./Modal";
-import RadioButton from "./RadioButton";
-import CoverPics from "./img/cover_pic_modal_desktop.png"
+import RadioButton from "../components/RadioButton";
+import CoverPics from "../img/cover_pic_modal_desktop.png"
 
 
 export default function PaymentModal({modalControl, openPolicy, openLogin, api}) {
 
-    const {openModal, closeModal, isModalOpen, setIsModalOpen} = modalControl;
+    const {closeModal, isModalOpen} = modalControl;
 
     const [selectedOption, setSelectedOption] = useState('game');
 
