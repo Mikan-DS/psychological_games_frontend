@@ -25,100 +25,94 @@ export default function CoverSection({username, authenticated, loginModalControl
         setIsDropDownMenuOpen(!isDropDownMenuOpen);
     };
 
+    const descriptionPlayBox = (
+        <div className={"vertical-box align-right description-box"}>
+            <div className={"accent-text2 description-text content-box"}>
+                Психологическая компьютерная игра
+                <br/>
+                Проблемы школьного буллинга
+            </div>
+            <div className={"align-center play-box"}>
+            {!screenVariant.isPhone?
+                    <img className={"age-image"} src={AgeImage || ""} alt="12+"/>:null
+            }
+            <button
+                    className={"primary-button "+(
+                        screenVariant.isDesktop?
+                            "large":
+                            screenVariant.isTablet?
+                                "medium":
+                                "small")}
+                    onClick={playAction}>
+                    ИГРАТЬ
+                </button>
+            </div>
+        </div>
+    )
+
     return (
         <div className={"cover-section"} style={{backgroundImage: "url(" + Cover + ")"}}>
-
             <header className={"content-box"}>
                 <div className={"stretched-box align-center"}>
-
-                    <img className={"icon"} src={Icon ? Icon : ""} alt="КД"/>
-
-                    {
-                        screenVariant.isTablet || screenVariant.isDesktop ?
-                            <div className={"menu-text menu-buttons horizontal-box"}>
-                                <a href={"#forStudent"}>
-                                    ШКОЛЬНИКУ
-                                </a>
-                                <a href={"#forParent"}>
-                                    РОДИТЕЛЮ
-                                </a>
-                                <a href={"#Authors"}>
-                                    АВТОРЫ
-                                </a>
-                                <a href={"#FAQ"}>
-                                    ВОПРОСЫ
-                                </a>
-                                <a onClick={userProfile}>
-                                    {authenticated ? username.split(' ')[0].toUpperCase() : "ВОЙТИ"}
-                                </a>
-                            </div>
-                            :
-                            <div className="dropdown-menu">
-                                <button className="menu-button" onClick={toggleMenu}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.75 6H20.25M3.75 12H20.25M3.75 18H20.25" stroke="#FCFCFA"
-                                              strokeWidth="1.5"
-                                              strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
-                                </button>
-                                {isDropDownMenuOpen && (
-                                    <div className="menu-content">
-                                        <a href={"#forStudent"} onClick={toggleMenu}>ШКОЛЬНИКУ</a>
-                                        <a href={"#forParent"} onClick={toggleMenu}>РОДИТЕЛЮ</a>
-                                        <a href={"#Authors"} onClick={toggleMenu}>АВТОРЫ</a>
-                                        <a href={"#FAQ"} onClick={toggleMenu}>ВОПРОСЫ</a>
-                                        <a onClick={() => {
-                                            userProfile();
-                                            toggleMenu()
-                                        }}>
-                                            {authenticated ? username.split(' ')[0].toUpperCase() : "ВОЙТИ"}
-                                        </a>
-                                    </div>
-                                )}
-                            </div>
-                    }
+                    <img className={"icon"} src={Icon || ""} alt="КД"/>
+                    {!screenVariant.isPhone ?
+                        <div className={"menu-text menu-buttons horizontal-box"}>
+                            <a href={"#forStudent"}>
+                                ШКОЛЬНИКУ
+                            </a>
+                            <a href={"#forParent"}>
+                                РОДИТЕЛЮ
+                            </a>
+                            <a href={"#Authors"}>
+                                АВТОРЫ
+                            </a>
+                            <a href={"#FAQ"}>
+                                ВОПРОСЫ
+                            </a>
+                            <a onClick={userProfile}>
+                                {authenticated ? username.split(' ')[0].toUpperCase() : "ВОЙТИ"}
+                            </a>
+                        </div>
+                        :
+                        <div className="dropdown-menu">
+                            <button className="menu-button" onClick={toggleMenu}>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.75 6H20.25M3.75 12H20.25M3.75 18H20.25" stroke="#FCFCFA"
+                                          strokeWidth="1.5"
+                                          strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                            {isDropDownMenuOpen && (
+                                <div className="menu-content">
+                                    <a href={"#forStudent"} onClick={toggleMenu}>ШКОЛЬНИКУ</a>
+                                    <a href={"#forParent"} onClick={toggleMenu}>РОДИТЕЛЮ</a>
+                                    <a href={"#Authors"} onClick={toggleMenu}>АВТОРЫ</a>
+                                    <a href={"#FAQ"} onClick={toggleMenu}>ВОПРОСЫ</a>
+                                    <a onClick={() => {
+                                        userProfile();
+                                        toggleMenu()
+                                    }}>
+                                        {authenticated ? username.split(' ')[0].toUpperCase() : "ВОЙТИ"}
+                                    </a>
+                                </div>
+                            )}
+                        </div>}
                 </div>
                 <hr/>
             </header>
 
             <div className={"content-box"}>
                 <div className={"stretched-box"}>
-                    <img className={"title-image"} src={TitleImage ? TitleImage : ""} alt="Классные джунгли"/>
-                    <div className={"vertical-box align-right description-box only-desktop"}>
-                        <div className={"accent-text2 description-text"}>
-                            Психологическая компьютерная игра
-                            <br/>
-                            Проблемы школьного буллинга
-                        </div>
-                        <div className={"align-center play-box"}>
-                            <img className={"age-image"} src={AgeImage ? AgeImage : ""} alt="12+"/>
-                            <button className={"primary-button large"} onClick={playAction}>
-                                ИГРАТЬ
-                            </button>
-                        </div>
-                    </div>
+                    <img className={"title-image"} src={TitleImage || ""} alt="Классные джунгли"/>
+                    {screenVariant.isDesktop ?descriptionPlayBox:null}
                 </div>
-                <img className={"content-box only-desktop"} src={CoverPics ? CoverPics : ""} alt="Фоны игры"/>
-                <img className={"content-box only-mobile only-phone"} src={CoverPicsMobile ? CoverPicsMobile : ""}
-                     alt="Фоны игры"/>
-
-                <div className={"vertical-box align-right description-box only-mobile only-phone"}>
-                    <div className={"accent-text2 description-text content-box"}>
-                        Психологическая компьютерная игра
-                        <br/>
-                        Проблемы школьного буллинга
-                    </div>
-                    <div className={"align-center play-box"}>
-                        <img className={"age-image only-mobile"} src={AgeImage ? AgeImage : ""} alt="12+"/>
-                        <button className={"primary-button small only-phone"} onClick={playAction}>
-                            ИГРАТЬ
-                        </button>
-                        <button className={"primary-button medium only-mobile"} onClick={playAction}>
-                            ИГРАТЬ
-                        </button>
-                    </div>
-                </div>
+                {screenVariant.isDesktop?
+                    <img className={"content-box"} src={CoverPics || ""} alt="Фоны игры"/>
+                    :
+                    <img className={"content-box"} src={CoverPicsMobile || ""} alt="Фоны игры"/>
+                }
+                {!screenVariant.isDesktop ?descriptionPlayBox:null}
             </div>
         </div>
     );
