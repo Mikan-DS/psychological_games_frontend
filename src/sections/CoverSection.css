@@ -8,9 +8,7 @@
 
     height: 600px;
 }
-.cover-section a, button{
-    pointer-events: auto;
-}
+
 .cover-section header > div{
     padding-bottom: 12px;
 }

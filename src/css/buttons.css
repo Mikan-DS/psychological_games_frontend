@@ -1,18 +1,21 @@
-/** Primary **/
-.primary-button{
-    color: #F4CC18;
+.primary-button,
+.secondary-button{
     background: none;
-    border-color: #F4CC18;
-    cursor: pointer;
     border-radius: 500px;
-
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     line-height: 1;
 }
-.primary-button:hover{
+.primary-button:hover,
+.secondary-button:hover{
     color: #FCFCFA;
     background: #F4CC18;
+    border-color: #F4CC18;
+}
+
+/** Primary **/
+.primary-button{
+    color: #F4CC18;
     border-color: #F4CC18;
 }
 
@@ -20,12 +23,10 @@
     padding: 18px 58px;
     font-size: 80px;
 }
-
 .primary-button-medium{
     padding: 18px 38px;
     font-size: 60px;
 }
-
 .primary-button-small{
     padding: 18px 38px;
     font-size: 40px;
@@ -34,19 +35,7 @@
 /** Secondary **/
 .secondary-button{
     color: #222226;
-    background: none;
     border-color: #9E9F9A;
-    cursor: pointer;
-    border-radius: 500px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    line-height: 1;
-}
-.secondary-button:hover{
-    color: #FCFCFA;
-    background: #F4CC18;
-    border-color: #F4CC18;
 }
 
 .secondary-button-large{
