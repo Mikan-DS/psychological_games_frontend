@@ -546,7 +546,7 @@ footer{
 
 footer img{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     pointer-events: none;
 }
 
@@ -587,6 +587,7 @@ footer .content-box{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 244px;
 }
 
 /* Для экранов 360px и выше */
@@ -806,6 +807,24 @@ footer .content-box{
         padding-top: 40px;
     }
 
+    /* Footer */
+    footer {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    footer img{
+        width: 433px;
+        height: 164px;
+    }
+
+    footer .content-box{
+        gap: 80px;
+    }
+    .footer-menu{
+        flex-direction: row;
+    }
+
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{
         font-size: 34px;
@@ -1023,6 +1042,22 @@ footer .content-box{
         max-width: 1045px;
     }
 
+    /* Footer */
+    footer {
+        padding-top: 100px;
+    }
+
+    footer .content-box{
+        flex-direction: row;
+        gap: 354px;
+    }
+    .footer-menu{
+        padding-top: 47px;
+        flex-direction: column;
+    }
+    footer > .footer-menu-text > .only-desktop{
+        padding-top: 35px;
+    }
 
     /* TODO проверить используется ли еще где-то*/
     .accent-text2{

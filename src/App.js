@@ -100,7 +100,12 @@ function App() {
             {/*</FactSection>*/}
             {/*<AuthorsSection/>*/}
             {/*<FaqSection/>*/}
-            <Footer user={user} api={api} openLogin={loginModalControl.openModal}/>
+            <Footer
+                user={user}
+                api={api}
+                openLogin={loginModalControl.openModal}
+                openPolicy={policyModalControl.openModal}
+            />
 
             {/*<div style={{height: 500, backgroundColor: "aqua", textAlign: "center"}}>*/}
             {/*</div>*/}

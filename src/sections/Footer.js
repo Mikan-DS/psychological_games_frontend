@@ -2,7 +2,7 @@ import footerTitle from "../img/footer_title.png";
 import React from "react";
 import footerBackground from "../img/footer_bg.png";
 
-export default function Footer({user, api, openLogin}){
+export default function Footer({user, api, openLogin, openPolicy}){
 
     return (
         <footer style={{backgroundImage: "url(" + footerBackground + ")"}}>
@@ -33,11 +33,16 @@ export default function Footer({user, api, openLogin}){
                         }
                     </div>
                 </div>
-
-                <button>
+                <button className={"only-phone only-mobile"} onClick={openPolicy}>
                     ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
                 </button>
-
+            </div>
+            <div className={"content-box footer-menu-text"}>
+                <div className={"only-desktop"}>
+                    <button onClick={openPolicy}>
+                        ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
+                    </button>
+                </div>
             </div>
         </footer>
     );
