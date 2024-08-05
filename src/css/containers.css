@@ -3,7 +3,6 @@ body{
 }
 
 /* Виды контейнеров и позиции */
-
 .content-box{
     width: 280px;
     margin-left: auto;
@@ -18,7 +17,6 @@ body{
 .align-right{
     display: flex;
 }
-
 .stretched-box{
     flex-direction: row;
     justify-content: space-between;
@@ -38,9 +36,7 @@ body{
 
 /* Отображение на адаптивах */
 
-.only-desktop { /* 1200+ */
-    display: none;
-}
+.only-desktop, /* 1200+ */
 .only-mobile { /* 640+ */
     display: none;
 }
