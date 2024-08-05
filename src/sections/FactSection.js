@@ -8,7 +8,7 @@ export default function FactSection({children, reverse}) {
     return (
         <div className={"fact-section stretched-box card-text"}>
             <div className={"content-box"}>
-                <div className={reverse?"fact-section-second":"fact-section-first"}>
+                <div className={reverse?"reversed":"normal"}>
                     {children}
                 </div>
             </div>

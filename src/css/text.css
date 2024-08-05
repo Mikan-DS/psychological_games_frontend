@@ -23,8 +23,14 @@
     font-family: "Montserrat", sans-serif;
     color: #75766E;
     line-height: 1;
-    font-size: 18px; /* TODO body-text2 в шаблоне размером в 20 */
     font-weight: 500;
+}
+.body-text{
+    font-size: 18px;
+
+}
+.body-text2{
+    font-size: 20px;
 }
 
 /* Для экранов 640px и выше */
@@ -38,7 +44,7 @@
 }
 
 /* Для экранов 1200px и выше */
-@media (min-width: 1200px) { /* TODO А может от 1600?*/
+@media (min-width: 1200px) {
     .accent-text{
         font-size: 50px;
     }
