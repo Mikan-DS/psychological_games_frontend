@@ -12,6 +12,10 @@ body{
     display: flex;
     flex-direction: column;
 }
+.horizontal-box{
+    display: flex;
+    flex-direction: row;
+}
 .content-box{
     width: 280px;
     margin-left: auto;

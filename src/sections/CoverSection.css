@@ -1,4 +1,4 @@
-#cover-section{
+.cover-section{
     background-color: #121715;
     width: 100%;
     background-repeat: no-repeat;
@@ -8,30 +8,30 @@
 
     height: 600px;
 }
-#cover-section a, button{
+.cover-section a, button{
     pointer-events: auto;
 }
-header > div{
+.cover-section header > div{
     padding-bottom: 12px;
 }
-header{
+.cover-section header{
     margin-bottom: 20px;
     padding-top: 12px;
 }
-.cover-title-image{
+.cover-section .title-image{
     height: 124px;
 }
-.cover-age-image{
+.cover-section .age-image{
     width: 30px;
 }
-.cover-play-box{
+.cover-section .play-box{
     gap: 20px;
 }
-.cover-description-box{
+.cover-section .description-box{
     gap: 20px
 }
 
-.cover-description-text{
+.cover-section .description-text{
     padding-top: 20px;
 }
 .menu-text a{
@@ -78,13 +78,13 @@ header{
 
 /* Для экранов 360px и выше */
 @media (min-width: 360px) {
-    #cover-section {
+    .cover-section {
         height: 639px;
     }
-    .cover-title-image {
+    .cover-section .title-image {
         height: 142px;
     }
-    .cover-description-text {
+    .cover-section .description-text {
         padding-top: 20px;
         width: 320px;
     }
@@ -92,26 +92,26 @@ header{
 
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-    #cover-section{
+    .cover-section{
         height: 947px;
     }
-    header > div{
+    .cover-section header > div{
         padding-bottom: 21px;
     }
-    header{
+    .cover-section header{
         margin-bottom: 38px;
         padding-top: 21px;
     }
-    .cover-age-image{
+    .cover-section .age-image{
         width: 80px;
     }
-    .cover-title-image{
+    .cover-section .title-image{
         height: 266px;
     }
-    .cover-description-text{
+    .cover-section .description-text{
         width: 574px;
     }
-    .cover-description-box{
+    .cover-section .description-box{
         gap: 40px
     }
     .icon{
@@ -124,29 +124,29 @@ header{
 
 /* Для экранов 1200px и выше */
 @media (min-width: 1200px) {
-    #cover-section{
+    .cover-section{
         height: 858px;
     }
-    header > div{
+    .cover-section header > div{
         padding-bottom: 22px;
     }
-    header{
+    .cover-section header{
         margin-bottom: 40px;
         padding-top: 22px;
     }
-    .cover-age-image{
+    .cover-section .age-image{
         width: 100px;
     }
-    .cover-title-image{
+    .cover-section .title-image{
         margin-bottom: -38px;
         margin-right: -200px;
         height: 300px;
     }
-    .cover-description-text{
+    .cover-section .description-text{
         padding: 0;
         width: 444px;
     }
-    .cover-description-box{
+    .cover-section .description-box{
         gap: 20px
     }
     .menu-text a{
@@ -156,13 +156,13 @@ header{
 
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
-    #cover-section {
+    .cover-section {
         height: 900px;
     }
-    .cover-description-text {
+    .cover-section .description-text {
         width: 675px;
     }
-    .cover-description-box {
+    .cover-section .description-box {
         gap: 40px
     }
     .accent-text{

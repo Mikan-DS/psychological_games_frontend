@@ -20,6 +20,7 @@ import ShockSection from "./sections/ShockSection";
 import AuthorsSection from "./sections/AuthorsSection";
 import FaqSection from "./sections/FaqSection";
 import Footer from "./sections/Footer";
+import ScreenVariant from "./sections/ResponsiveLogic";
 
 let onlyOne = true;
 
@@ -51,7 +52,9 @@ function App() {
             });
             onlyOne = false;
         }
-    }, [user]);
+    }, [user, api, loginModalControl]);
+
+    const screenVariant = ScreenVariant()
 
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -84,7 +87,7 @@ function App() {
                 initialLogin={initialLogin}/>
             <PolicyModal modalControl={policyModalControl}/>
 
-            <CoverSection user={user} loginModalControl={loginModalControl} playAction={playAction}/>
+            <CoverSection username={user.name} authenticated={user.authenticated} loginModalControl={loginModalControl} playAction={playAction} screenVariant={screenVariant}/>
             <ForStudentSection user={user} playAction={playAction}/>
             <FactSection reverse={false}>
                 ЖЕРТВАМИ БУЛЛИНГА В РОССИИ СТАЛИ <span>57%</span> ДЕТЕЙ
