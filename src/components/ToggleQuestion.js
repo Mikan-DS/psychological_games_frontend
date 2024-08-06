@@ -9,7 +9,7 @@ export default function ToggleQuestion({question, children}) {
     };
 
     return (
-        <div className={"faq-toggle-question body-text2"}>
+        <div className={"toggle-question body-text2"}>
             <div className={"stretched-box"} onClick={toggleContent}>
                 <h3>{question}</h3>
                 <img src={ToggleImage || ""} style={{
@@ -20,7 +20,7 @@ export default function ToggleQuestion({question, children}) {
                 }} alt={">"}/>
 
             </div>
-            {isOpen && <div className={"faq-answer"}>{children}</div>}
+            {isOpen && <div className={"answer"}>{children}</div>}
             <hr/>
         </div>
     );
