@@ -106,7 +106,7 @@ function App() {
                 У <span>ТРЕТИ</span> УЧЕНИКОВ, КОТОРЫХ ТРАВИЛИ В ШКОЛЕ, В БУДУЩЕМ
                 ВОЗНИКАЮТ <span>ПСИХИЧЕСКИЕ РАССТРОЙСТВА</span>
             </FactSection>
-            <AuthorsSection/>
+            <AuthorsSection screenVariant={screenVariant}/>
             <FaqSection/>
             <Footer
                 user={user}

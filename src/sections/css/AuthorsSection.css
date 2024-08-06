@@ -1,61 +1,49 @@
-
-#Authors{
+.authors-section{
     padding-top: 60px;
     padding-bottom: 40px;
 }
-
-#Authors h1{
-    margin: 0 0 20px;
+.authors-section .accent-text3{
+    padding-top: 20px;
 }
-
-
-
-.authors-box{
+.authors-section .list{
     display: flex;
     flex-direction: column;
     padding-top: 60px;
     gap: 60px;
 }
-
-.authors-author{
+.authors-section .author{
     display: flex;
     flex-direction: column;
     color: #383D38;
-    /*padding-top: 60px;*/
+    gap: 40px
 }
-
-.authors-author > img{
+.authors-section .author > img{
     width: 150px;
     height: 150px;
     object-fit: cover;
-    margin-bottom: 40px;
 }
-
-.authors-author > div > div{
+.authors-section .author > div > div{
     color: #75766E;
     padding-top: 6px;
     padding-bottom: 20px;
 }
-
-
-
-.authors-more{
+.authors-section .more{
     padding-top: 40px;
     padding-bottom: 80px;
 }
-
-.authors-more > button{
+.authors-section .more > button{
     background: none;
     border: none;
     padding: 0;
-    justify-content: unset;
     gap: 20px;
 }
-.authors-more > button h3{
+.authors-section .more > button h3{
     color: #75766E;
 }
-
-.authors-project-link{
+.authors-section .more > .list{
+    padding-top: 40px;
+}
+.authors-section .project-link{
     color: #75766E;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -65,143 +53,126 @@
     max-width: 100%;
     text-decoration: none;
 }
-
-.authors-project-link:hover{
+.authors-section .project-link:hover{
     color: #383D38;
     text-decoration: underline;
 }
 
-.authors-number-animation{
-    display: flex;
-}
-.authors-number-animation .numeric-text{
-    color: #383D38;
-}
-
-.authors-winners-image{
-    width: 100%;
-    border-radius: 6px;
-}
-
-
-.authors-achievement{
+.authors-section .achievement{
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding-bottom: 40px;
-    padding-top: 10px;
+    padding-top: 60px;
 }
-
-.authors-statistic{
+.authors-section .statistic{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
-.authors-results{
+.authors-section .counter-box{
+    display: flex;
+}
+.authors-section .counter-box .numeric-text{
+    color: #383D38;
+}
+.authors-section .results{
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
-
-.authors-results .body-text{
+.authors-section .results > img{
+    width: 100%;
+    border-radius: 6px;
+}
+.authors-section .results .body-text{
     color: #383D38;
+}
+.authors-section .secondary-button{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
-
-    /* Authors */
-    #Authors {
+    .authors-section {
         padding-top: 80px;
         padding-bottom: 80px;
     }
-
-    .authors-author {
+    .authors-section .author {
         flex-direction: row;
         gap: 60px;
     }
-
-    .authors-author > img {
-        margin-bottom: 0;
-    }
-
-    .authors-author > img {
+    .authors-section .author > img {
         width: 200px;
         height: 200px;
-        margin-bottom: 0;
     }
 
-    .authors-more > button {
+    .authors-section .more > button {
         margin-left: 260px;
     }
 
-    .authors-statistic {
+    .authors-section .statistic {
         max-width: 293px;
     }
 }
 /* Для экранов 1200px и выше */
 @media (min-width: 1200px) {
-    #Authors {
+    .authors-section {
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    #Authors > .accent-text3 {
+    .authors-section > .accent-text3 {
         padding-left: 226px;
-        max-width: 880px;
+        max-width: 934px;
     }
-    .authors-list {
+    .authors-section .list {
         margin-left: 53px;
-    }
-    .authors-author {
-        gap: 60px;
-        align-items: center;
         padding-top: 80px;
     }
-    .authors-author > img {
-        margin-bottom: 0;
+    .authors-section .author {
+        align-items: center;
     }
-    .authors-author > img {
+    .authors-section .author > img {
         width: 280px;
         height: 280px;
     }
-    .authors-more {
+    .authors-section .more {
         padding-top: 20px;
         padding-bottom: 100px;
     }
-    .authors-more > button {
-        margin-left: 260px;
+    .authors-section .more > button {
+        margin-left: 340px;
     }
-    .authors-achievement {
+    .authors-section .achievement {
         display: flex;
         flex-direction: row;
         gap: 100px;
-        padding: 80px 81px 167px 50px;
+        padding: 80px 0 167px 50px;
     }
-    .authors-statistic {
+    .authors-section .statistic {
         max-width: 243px;
-
     }
-    .authors-results > .body-text {
+    .authors-section .results > .body-text {
         max-width: 570px;
     }
 }
 
 /* Для экранов 1600px и выше */
 @media (min-width: 1600px) {
-    .authors-achievement {
+    .authors-section .achievement {
         gap: 120px;
-        padding: 80px 0 60px 0;
+        padding: 80px 0 60px 60px;
     }
-    .authors-statistic {
+    .authors-section .statistic {
         margin-top: 147px;
         max-width: 293px;
 
     }
-    .authors-number-animation .numeric-text {
+    .authors-section .counter-box .numeric-text {
         padding-top: 0;
     }
-    .authors-results > .body-text {
+    .authors-section .results > .body-text {
         max-width: 100%;
     }
 }

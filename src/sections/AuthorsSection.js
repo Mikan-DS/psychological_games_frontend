@@ -10,7 +10,7 @@ import winnersImage from "../img/autors/image_winner.webp";
 import React, {useState} from "react";
 import ToggleImage from "../img/toggle.png";
 
-export default function AuthorsSection(){
+export default function AuthorsSection({screenVariant}){
 
     const [isOpenMoreAuthors, setIsOpenMoreAuthors] = useState(false);
 
@@ -19,7 +19,7 @@ export default function AuthorsSection(){
     };
 
     return (
-        <div id="Authors" className={"content-box"}>
+        <div id="Authors" className={"content-box authors-section"}>
             <h1>
                 АВТОРЫ ПРОЕКТА
             </h1>
@@ -29,10 +29,9 @@ export default function AuthorsSection(){
                 прошёл тестирование на школьниках и занял первое место на Всероссийском конкурсе “Золотая
                 Психея”
             </div>
-
             <div className={"authors-list"}>
-                <div className={"authors-box"}>
-                    <div className={"body-text2 authors-author"}>
+                <div className={"list"}>
+                    <div className={"body-text2 author"}>
                         <img src={AuthorImage1 || ""} alt="Доценко Евгений Леонидович"/>
                         <div>
                             <h3>
@@ -51,7 +50,7 @@ export default function AuthorsSection(){
                             манипуляции».
                         </div>
                     </div>
-                    <div className={"authors-author body-text2"}>
+                    <div className={"author body-text2"}>
                         <img src={AuthorImage2 || ""} alt="Потёмкин Сергей Александрович"/>
                         <div>
                             <h3>
@@ -70,10 +69,8 @@ export default function AuthorsSection(){
                         </div>
                     </div>
                 </div>
-
-                <div className={"authors-more"}>
-
-                    <button className={"stretched-box"} onClick={toggleContent}>
+                <div className={"more"}>
+                    <button className={"horizontal-box"} onClick={toggleContent}>
                         <h3>ЕЩЕ АВТОРЫ</h3>
                         <img src={ToggleImage || ""} style={{
                             transform: isOpenMoreAuthors ? null : "scaleY(-1)",
@@ -82,10 +79,9 @@ export default function AuthorsSection(){
                             height: "100%"
                         }} alt={">"}/>
                     </button>
-
                     {isOpenMoreAuthors ? (
-                        <div className={"authors-box"}>
-                            <div className={"authors-author body-text2"}>
+                        <div className={"list"}>
+                            <div className={"author body-text2"}>
                                 <img src={AuthorImage3 || ""} alt="Волкова Александра Андреевна"/>
                                 <div>
                                     <h3>
@@ -99,7 +95,7 @@ export default function AuthorsSection(){
                                     Практикующий психолог.
                                 </div>
                             </div>
-                            <div className={"authors-author body-text2"}>
+                            <div className={"author body-text2"}>
                                 <img src={AuthorImage4 || ""} alt="Волкова Александра Андреевна"/>
                                 <div>
                                     <h3>
@@ -113,7 +109,7 @@ export default function AuthorsSection(){
                                     2 года магистратуры по направлению «личностное и организационное консультирование».
                                 </div>
                             </div>
-                            <div className={"authors-author body-text2"}>
+                            <div className={"author body-text2"}>
                                 <img src={AuthorImage5 || ""} alt="Иванова Ева Константиновна"/>
                                 <div>
                                     <h3>
@@ -130,54 +126,35 @@ export default function AuthorsSection(){
                         </div>
                     ) : null}
                 </div>
-
             </div>
-
-
-            <a className={"authors-project-link"}
+            <a className={"project-link"}
                href="https://psy.su/psyche/projects/3043/?ysclid=lxewujg7zo638636246">
                 ПРОЕКТ ЗАНЯЛ 1 МЕСТО НА ВСЕРОССИЙСКОМ КОНКУРСЕ «ЗОЛОТАЯ ПСИХЕЯ»
             </a>
-
-            <div className={"authors-achievement"}>
-                <div className={"authors-statistic"}>
-                    <div className={"authors-number-animation"}>
+            <div className={"achievement"}>
+                <div className={"statistic"}>
+                    <div className={"counter-box"}>
                         <NumberAnimation targetNumber={1700} duration={1000}/>
                         <div className="numeric-text">+</div>
                     </div>
-
                     <div className={"body-text"}>
                         Школьников протестировано и результаты проверены психологами
                     </div>
                 </div>
-
-                <div className={"authors-results"}>
-                    <img className={"authors-winners-image"} src={winnersImage || ""}
+                <div className={"results"}>
+                    <img src={winnersImage || ""}
                          alt='Победители конкурса "ЗОЛОТАЯ ПСИХЕЯ"'/>
-
                     <div className={"body-text"}>
                         Эффективность игры показана на 2 магистерских диссертациях
                     </div>
                 </div>
             </div>
-
-            <div className={"only-phone"}>
-                <button className="secondary-button large"
-                        onClick={() => {
-                            window.alert("Этот раздел в разработке!")
-                        }}>
-                    О ПРОЕКТЕ
-                </button>
-            </div>
-            <div className={"only-mobile only-desktop"}>
-                <button className="secondary-button large"
-                        onClick={() => {
-                            window.alert("Этот раздел в разработке!")
-                        }}>
-                    ПОДРОБНЕЕ О ПРОЕКТЕ
-                </button>
-            </div>
-
+            <button className="secondary-button large"
+                    onClick={() => {
+                        window.alert("Этот раздел в разработке!")
+                    }}>
+                {!screenVariant.isPhone? "ПОДРОБНЕЕ ":""}О ПРОЕКТЕ
+            </button>
         </div>
     );
 }
