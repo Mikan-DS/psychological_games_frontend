@@ -6,18 +6,15 @@ import footerBackground from "../img/footer_bg.png";
 import React from "react";
 
 export default function Footer({user, api, openLogin, openPolicy, screenVariant}){
-
     const policyButton = (
         <button onClick={openPolicy} className={"policy-button"}>
             ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
         </button>
     )
-
     return (
         <footer className={"footer-section"} style={{backgroundImage: "url(" + footerBackground + ")"}}>
             <div className={"content-box menu-text"}>
                 <img src={footerTitle || ""} alt="Логотип"/>
-
                 <div className={"menu"}>
                     <div>
                         <a href={"#forStudent"}>ЕСЛИ ТЫ - ШКОЛЬНИК</a>
@@ -25,7 +22,6 @@ export default function Footer({user, api, openLogin, openPolicy, screenVariant}
                         <a href={"#Authors"}>АВТОРЫ</a>
                         <a href={"#FAQ"}>ВОПРОСЫ</a>
                     </div>
-
                     <div>
                         <button onClick={() => {
                             window.alert("Этот раздел в разработке!")
@@ -42,17 +38,10 @@ export default function Footer({user, api, openLogin, openPolicy, screenVariant}
                         }
                     </div>
                 </div>
-
-                {!screenVariant.isDesktop ?
-                    policyButton:null
-                }
-
-
+                {!screenVariant.isDesktop ? policyButton:null}
             </div>
             <div className={"content-box menu-text"}>
-                {screenVariant.isDesktop ?
-                    policyButton:null
-                }
+                {screenVariant.isDesktop ? policyButton:null}
             </div>
         </footer>
     );
