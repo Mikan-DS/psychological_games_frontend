@@ -13,6 +13,8 @@
 
 .payment-modal > img{
     padding-top: 20px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .payment-modal .personal{
@@ -41,7 +43,7 @@
 }
 
 .payment-modal .variant > .vertical-box{
-    width: 226px;
+    width: 223px;
 }
 
 .payment-modal .variant .name{
@@ -91,3 +93,31 @@
 .payment-modal .modal-sub-text{
     padding-top: 40px;
 }
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    .payment-modal .variant > .vertical-box{
+        width: 527px;
+    }
+
+    .payment-modal .personal > .personal{
+        flex-direction: row;
+        width: 100%;
+    }
+    .payment-modal .personal > .personal div{
+        width: 100%;
+    }
+    .payment-modal .policy-confirmation{
+        align-items: center;
+    }
+
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+
+    .payment-modal .block > h3{
+        margin-bottom: 30px;
+    }
+}
+

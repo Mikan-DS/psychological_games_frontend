@@ -139,7 +139,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                     Играть
                 </h2>
                 <hr/>
-                <div className={"variant horizontal-box"} onClick={() => setSelectedOption("game")}>
+                <div className={"variant stretched-box"} onClick={() => setSelectedOption("game")}>
                     <div className={"vertical-box"}>
                         <div className={"horizontal-box name"}>
                             <RadioButton onChange={setSelectedOption} currentSelected={selectedOption} value="game"/>
@@ -154,7 +154,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                     3 750 ₽
                 </div>
                 <hr/>
-                <div className={"variant horizontal-box"}
+                <div className={"variant stretched-box"}
                      onClick={() => setSelectedOption("game_consultation")}>
                     <div className={"vertical-box"}>
                         <div className={"horizontal-box name"}>
@@ -185,7 +185,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                         <h3 className={"align-center"}>
                             ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ
                         </h3>
-                        <div className={errors.name ? "errorInput" : ""}>
+                        <div className={errors.name ? "error" : ""}>
                             <label htmlFor="name">{errors.name ? errors.name : "Имя*"}</label>
                             <input
                                 className="form-input-text"
@@ -198,7 +198,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                             />
                         </div>
                         <div className={"vertical-box personal"}>
-                            <div className={errors.phone ? "errorInput" : ""}>
+                            <div className={errors.phone ? "error" : ""}>
                                 <label htmlFor="phone">{errors.phone ? errors.phone : "Телефон*"}</label>
                                 <input
                                     className="form-input-text"
@@ -210,7 +210,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                                     required
                                 />
                             </div>
-                            <div className={errors.email ? "errorInput" : ""}>
+                            <div className={errors.email ? "error" : ""}>
                                 <label htmlFor="email">{errors.email ? errors.email : "E-mail"}</label>
                                 <input
                                     className="form-input-text"
@@ -234,7 +234,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                                 /></div>) : null}
 
                         <div
-                            className={"horizontal-box align-start policy-confirmation" + (errors.consent ? " errorInput" : "")}>
+                            className={"horizontal-box align-start policy-confirmation" + (errors.consent ? " error" : "")}>
 
                             <input
                                 type="checkbox"
