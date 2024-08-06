@@ -5,13 +5,20 @@ import footerBackground from "../img/footer_bg.png";
 
 import React from "react";
 
-export default function Footer({user, api, openLogin, openPolicy}){
+export default function Footer({user, api, openLogin, openPolicy, screenVariant}){
+
+    const policyButton = (
+        <button onClick={openPolicy} className={"policy-button"}>
+            ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
+        </button>
+    )
+
     return (
-        <footer style={{backgroundImage: "url(" + footerBackground + ")"}}>
-            <div className={"content-box footer-menu-text"}>
+        <footer className={"footer-section"} style={{backgroundImage: "url(" + footerBackground + ")"}}>
+            <div className={"content-box menu-text"}>
                 <img src={footerTitle || ""} alt="Логотип"/>
 
-                <div className={"footer-menu"}>
+                <div className={"menu"}>
                     <div>
                         <a href={"#forStudent"}>ЕСЛИ ТЫ - ШКОЛЬНИК</a>
                         <a href={"#forParent"}>ЕСЛИ ВЫ - РОДИТЕЛЬ</a>
@@ -35,19 +42,17 @@ export default function Footer({user, api, openLogin, openPolicy}){
                         }
                     </div>
                 </div>
-                <div className={"only-phone only-mobile"} >
-                    <button onClick={openPolicy}>
-                        ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                    </button>
-                </div>
+
+                {!screenVariant.isDesktop ?
+                    policyButton:null
+                }
+
 
             </div>
-            <div className={"content-box footer-menu-text"}>
-                <div className={"only-desktop"}>
-                    <button onClick={openPolicy}>
-                        ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                    </button>
-                </div>
+            <div className={"content-box menu-text"}>
+                {screenVariant.isDesktop ?
+                    policyButton:null
+                }
             </div>
         </footer>
     );

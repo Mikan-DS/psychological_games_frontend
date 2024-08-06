@@ -44,16 +44,6 @@
 }
 
 /* Simple menu */
-.cover-section .menu-text a{
-    font-family: 'Montserrat', sans-serif;
-    color: #FCFCFA;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-}
-.cover-section .menu-text a:hover{
-    color: #F4CC18;
-}
 .cover-section .menu-buttons{
     gap: 20px;
 }
@@ -127,9 +117,6 @@
     }
     .cover-section .play-box{
         gap: 20px;
-    }
-    .cover-section .menu-text a{
-        font-size: 20px;
     }
 }
 

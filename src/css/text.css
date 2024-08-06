@@ -18,18 +18,20 @@
 }
 
 /* Montserrat */
+
 .body-text,
 .body-text2{
     font-family: "Montserrat", sans-serif;
-    color: #75766E;
     line-height: 1;
     font-weight: 500;
 }
 .body-text{
+    color: #75766E;
     font-size: 18px;
 
 }
 .body-text2{
+    color: #75766E;
     font-size: 20px;
 }
 

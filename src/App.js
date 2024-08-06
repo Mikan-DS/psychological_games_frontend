@@ -113,6 +113,7 @@ function App() {
                 api={api}
                 openLogin={loginModalControl.openModal}
                 openPolicy={policyModalControl.openModal}
+                screenVariant={screenVariant}
             />
 
 

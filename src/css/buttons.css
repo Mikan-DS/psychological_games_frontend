@@ -1,5 +1,7 @@
 .primary-button,
-.secondary-button{
+.secondary-button,
+.menu-text a,
+.menu-text button{
     background: none;
     border-radius: 500px;
     font-family: 'Montserrat', sans-serif;
@@ -40,4 +42,25 @@
     width: 100%;
     padding: 36px 62px;
     font-size: 26px;
+}
+
+/* Menu */
+.menu-text a,
+.menu-text button{
+    color: #FCFCFA;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0;
+    font-weight: 500;
+}
+.menu-text a:hover,
+.menu-text button:hover {
+    color: #F4CC18;
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .menu-text a {
+        font-size: 20px;
+    }
 }
