@@ -2,11 +2,14 @@ import {useEffect, useState} from "react";
 
 export default function ScreenVariant(){
 
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    console.log(window.screen.width)
+    const width = window.screen.width;
+    console.log("3e")
+    const [screenWidth, setScreenWidth] = useState(width);
 
     useEffect(() => {
         const handleResize = () => {
-            setScreenWidth(window.outerWidth);
+            setScreenWidth(width);
         };
 
         window.addEventListener('resize', handleResize);
