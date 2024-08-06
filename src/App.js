@@ -71,6 +71,7 @@ function App() {
             window.alert("Игры в разработке!")
         }
         else {
+            window.alert("Текущее окно находится в процессе правок")
             paymentModalControl.openModal()
         }
     }

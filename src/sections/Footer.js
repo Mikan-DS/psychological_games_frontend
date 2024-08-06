@@ -6,8 +6,14 @@ import footerBackground from "../img/footer_bg.png";
 import React from "react";
 
 export default function Footer({user, api, openLogin, openPolicy, screenVariant}){
+
+    function policyAction() {
+        window.alert("Текущее окно находится в процессе правок")
+        openPolicy()
+    }
+
     const policyButton = (
-        <button onClick={openPolicy} className={"policy-button"}>
+        <button onClick={policyAction} className={"policy-button"}>
             ПОЛИТИКА ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ
         </button>
     )
