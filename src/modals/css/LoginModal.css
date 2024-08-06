@@ -1,0 +1,63 @@
+.login-modal .body-text{
+    text-align: center;
+    max-width: 100%;
+}
+.login-modal h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-modal > img{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.login-modal > .form-text-inputs{
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.login-modal .modal-sub-text{
+    padding-top: 40px;
+}
+.login-modal .get-code{
+    max-width: 350px;
+}
+.login-modal .get-code > .body-text a{
+    color: #75766E;
+}
+.login-modal .get-code > .body-text a:hover{
+    color: #383D38;
+    text-decoration: underline;
+}
+
+.login-modal .get-code > .body-text{
+    padding-bottom: 40px;
+}
+
+.code-input-container {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+.code-input {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #F3F2EE;
+    color: #383D38;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    .login-modal > .form-text-inputs{
+        width: 350px;
+    }
+}

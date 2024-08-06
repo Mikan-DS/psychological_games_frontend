@@ -6,6 +6,7 @@ button{
 }
 /* Заголовки */
 h1,
+h2,
 h3,
 h4{
     font-family: 'Montserrat', sans-serif;
@@ -22,6 +23,11 @@ h1{
     max-width: 100%;
     word-break: break-word;
     overflow-wrap: break-word;
+}
+h2{
+    font-weight: 500;
+    font-size: 28px;
+    max-width: 100%;
 }
 h3{
     font-size: 26px; /* TODO 20? */

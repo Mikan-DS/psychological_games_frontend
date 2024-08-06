@@ -1,5 +1,6 @@
 .primary-button,
 .secondary-button,
+.tertiary-button,
 .menu-text a,
 .menu-text button{
     background: none;
@@ -9,7 +10,8 @@
     line-height: 1;
 }
 .primary-button:hover,
-.secondary-button:hover{
+.secondary-button:hover,
+.tertiary-button:hover{
     color: #FCFCFA;
     background: #F4CC18;
     border-color: #F4CC18;
@@ -42,6 +44,18 @@
     width: 100%;
     padding: 36px 62px;
     font-size: 26px;
+}
+
+/** Tertiary **/
+.tertiary-button{
+    color: white;
+    border-color: #383D38;
+    background-color: #383D38;
+}
+.tertiary-button.large{
+    width: 100%;
+    padding: 13px 62px;
+    font-size: 16px;
 }
 
 /* Menu */

@@ -6,7 +6,7 @@ import './css/text.css'
 
 import React, {useEffect, useState} from "react";
 
-import ModalControl from "./modals/ModalControl";
+import ModalControl from "./utils/ModalControl";
 
 import API from "./utils/API";
 import CoverSection from "./sections/CoverSection";
@@ -84,7 +84,8 @@ function App() {
                 modalControl={loginModalControl}
                 openPayment={paymentModalControl.openModal}
                 api={api}
-                initialLogin={initialLogin}/>
+                initialLogin={initialLogin}
+                screenVariant={screenVariant}/>
             <PolicyModal modalControl={policyModalControl}/>
 
             <CoverSection username={user.name} authenticated={user.authenticated} loginModalControl={loginModalControl} playAction={playAction} screenVariant={screenVariant}/>

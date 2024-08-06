@@ -195,7 +195,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
             <img src={CoverPics} alt="Скришоты из игры" style={{width: "100%"}}/>
 
             <div className="formInputs">
-                <div className="formTextInputs">
+                <div className="form-text-inputs">
 
                     <h2>
                         ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ
@@ -204,7 +204,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                     <div className={errors.name ? "errorInput" : ""}>
                         <label htmlFor="name">{errors.name ? errors.name : "Имя*"}</label>
                         <input
-                            className="formInputText"
+                            className="form-input-text"
                             type="text"
                             id="name"
                             name="name"
@@ -218,7 +218,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                         <div className={errors.phone ? "errorInput" : ""} style={{width: "100%"}}>
                             <label htmlFor="phone">{errors.phone ? errors.phone : "Телефон*"}</label>
                             <input
-                                className="formInputText"
+                                className="form-input-text"
                                 type="tel"
                                 id="phone"
                                 name="phone"
@@ -230,7 +230,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                         <div className={errors.email ? "errorInput" : ""} style={{width: "100%"}}>
                             <label htmlFor="email">{errors.email ? errors.email : "E-mail"}</label>
                             <input
-                                className="formInputText"
+                                className="form-input-text"
                                 type="email"
                                 id="email"
                                 name="email"
@@ -244,7 +244,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api})
                     {selectedOption === "game_consultation" ? (
                         <div><label htmlFor="custom_question">Напишите ваш вопрос</label>
                             <input
-                                className="formInputText"
+                                className="form-input-text"
                                 type="text"
                                 id="custom_question"
                                 name="custom_question"

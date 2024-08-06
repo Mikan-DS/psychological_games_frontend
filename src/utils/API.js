@@ -1,6 +1,6 @@
 export default function API() {
 
-    const host = ""//http://localhost:8000
+    const host = true?"http://localhost:8000": ""
 
     async function fetchGetApi({url}) {
         try {

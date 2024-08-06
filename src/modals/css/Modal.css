@@ -1,0 +1,93 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #383D387F;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin-bottom: 1px;*/
+    /*max-width: 800px;*/
+    padding: 20px 20px 40px;
+    /*margin-bottom: 20px;*/
+}
+.close-button {
+    background: none;
+    border: none;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Формы */
+.modal-content label,
+.modal-sub-text,
+.modal-sub-text a{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.form-text-inputs label {
+    display: block;
+
+}
+.form-text-inputs input {
+    width: 100%;
+}
+
+.form-input-text {
+    border: none;
+    border-bottom: 1px solid #9E9F9A;
+}
+
+.form-input-text:focus-visible {
+    border: none;
+    border-bottom: 1px solid #9E9F9A;
+    outline: none;
+}
+
+.error label {
+    color: #DC1C07;
+}
+
+.error input {
+    border-bottom: 1px solid #DC1C07;
+}
+
+.error .code-input {
+    background-color: #DC1C07;
+}
+
+.modal-sub-text,
+.modal-sub-text a{
+    color: #383D38;
+    font-size: 14px;
+}
+.modal-sub-text a{
+    color: #75766E;
+}
+.modal-sub-text a:hover{
+    color: #383D38;
+    text-decoration: underline;
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .modal-content {
+        width: 680px;
+        margin: 40px auto;
+        border-radius: 20px;
+    }
+}
