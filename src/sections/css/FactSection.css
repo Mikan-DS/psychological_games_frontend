@@ -1,0 +1,102 @@
+.fact-section{
+    padding-top: 60px;
+    background-color: #FFDE51;
+    flex-direction: column;
+}
+.fact-section .body-text{
+    color: #383D38;
+    text-transform: none;
+    padding-top: 10px;
+    letter-spacing: 0;
+}
+.fact-section.card-text{
+    font-family: 'Ruda', sans-serif;
+    color: #383D38;
+    line-height: 1;
+    font-size: 26px;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.fact-section.card-text span{
+    color: #D44C02;
+}
+.fact-section img{
+    height: 213px;
+    object-fit: cover;
+    object-position: center;
+}
+.fact-section .reversed{
+    padding-right: 1px;
+}
+
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    .fact-section{
+        padding-top: 0;
+        height: 252px;
+    }
+    .fact-section .content-box{
+        padding-top: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .fact-section .normal{
+        max-width: 497px;
+    }
+    .fact-section .reversed{
+        padding-left: 0;
+        max-width: 570px;
+    }
+    .fact-section img{
+        margin-top: -252px;
+        object-fit: cover;
+        height: 100%;
+        object-position: center;
+    }
+    .fact-section.card-text{
+        font-size: 30px;
+    }
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .fact-section{
+        height: 312px;
+    }
+    .fact-section .normal,
+    .fact-section .reversed{
+        max-width: 778px;
+    }
+    .fact-section img{
+        margin-top: -312px;
+    }
+    .fact-section.card-text{
+        font-size: 40px;
+    }
+}
+
+/* Для экранов 1600px и выше */
+@media (min-width: 1600px) {
+    .fact-section {
+        height: 280px;
+    }
+    .fact-section .content-box {
+        margin-top: 100px;
+    }
+    .fact-section .normal{
+        max-width: 947px;
+    }
+    .fact-section .reversed{
+        max-width: 1020px;
+    }
+    .fact-section img {
+        margin-top: -280px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

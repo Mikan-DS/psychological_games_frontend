@@ -1,0 +1,132 @@
+.cover-section{
+    background-color: #121715;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+
+}
+.cover-section header{
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Dropdown menu */
+.cover-section .dropdown-menu {
+    position: relative;
+}
+.cover-section .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.cover-section .menu-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    border: 1px solid #FCFCFA;
+    border-radius: 5px;
+    padding: 10px;
+}
+.cover-section .menu-content a {
+    color: #FCFCFA;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.cover-section .menu-content a:hover {
+    background-color: #444;
+}
+
+/* Simple menu */
+.cover-section .menu-buttons{
+    gap: 20px;
+}
+
+/* Content */
+.cover-section > div.content-box{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.cover-section .title-image{
+    width: 100%;
+}
+.cover-section .description-box,
+.cover-section .play-box{
+    gap: 20px;
+}
+.cover-section .description-box{
+    padding-top: 20px;
+}
+.cover-section .age-image{
+    width: 30px;
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+
+    .cover-section header{
+        padding-top: 20px;
+        gap: 20px;
+    }
+    .cover-section .icon{
+        width: 31px;
+    }
+    .cover-section > div.content-box{
+        padding-top: 38px;
+        padding-bottom: 40px;
+    }
+    .cover-section .play-box{
+        gap: 40px;
+    }
+    .cover-section .age-image{
+        width: 80px;
+    }
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .cover-section header{
+        padding-top: 22px;
+        gap: 22px;
+    }
+    .cover-section > div.content-box{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .cover-section .title-image{
+        width: auto;
+        height: 300px;
+    }
+    .cover-section .age-image{
+        width: 100px;
+    }
+    .cover-section .title-image{
+        margin-bottom: -38px;
+        margin-right: -200px;
+        height: 300px;
+    }
+    .cover-section .description-text{
+        width: 444px;
+    }
+    .cover-section .play-box{
+        gap: 20px;
+    }
+}
+
+/* Для экранов 1600px и выше */
+@media (min-width: 1600px) {
+
+    .cover-section .description-text {
+        width: 675px;
+    }
+    .cover-section .description-box {
+        gap: 40px
+    }
+}

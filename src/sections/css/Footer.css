@@ -1,0 +1,92 @@
+.footer-section{
+    padding: 60px 0;
+    background-color: #264C3D;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-section img{
+    width: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.footer-section .menu-text a,
+.footer-section .menu-text button {
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+    text-align: left;
+}
+.footer-section .menu-text > .policy-button {
+    font-size: 10px;
+}
+
+.footer-section .content-box{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.footer-section .menu{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-section .menu > div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 244px;
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    .footer-section {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    .footer-section img {
+        width: 433px;
+        height: 164px;
+    }
+    .footer-section .content-box {
+        gap: 80px;
+    }
+    .footer-section .menu {
+        flex-direction: row;
+    }
+}
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .footer-section {
+        padding-top: 100px;
+    }
+
+    .footer-section .content-box{
+        flex-direction: row;
+        gap: 354px;
+    }
+    .footer-section .menu{
+        padding-top: 47px;
+        flex-direction: column;
+    }
+    .footer-section > .menu-text > .policy-button{
+        padding-top: 35px;
+    }
+
+    .footer-section .menu-text a,
+    .footer-section .menu-text button{
+        font-size: 16px;
+    }
+}
+
+/* Для экранов 1600px и выше */
+@media (min-width: 1600px) {
+    .footer-section .content-box {
+        gap: 514px;
+    }
+}

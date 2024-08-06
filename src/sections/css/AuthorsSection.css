@@ -1,0 +1,178 @@
+.authors-section{
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.authors-section .accent-text3{
+    padding-top: 20px;
+}
+.authors-section .list{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 60px;
+}
+.authors-section .author{
+    display: flex;
+    flex-direction: column;
+    color: #383D38;
+    gap: 40px
+}
+.authors-section .author > img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.authors-section .author > div > div{
+    color: #75766E;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+.authors-section .more{
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.authors-section .more > button{
+    background: none;
+    border: none;
+    padding: 0;
+    gap: 20px;
+}
+.authors-section .more > button h3{
+    color: #75766E;
+}
+.authors-section .more > .list{
+    padding-top: 40px;
+}
+.authors-section .project-link{
+    color: #75766E;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    text-decoration: none;
+}
+.authors-section .project-link:hover{
+    color: #383D38;
+    text-decoration: underline;
+}
+
+.authors-section .achievement{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.authors-section .statistic{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.authors-section .counter-box{
+    display: flex;
+}
+.authors-section .counter-box .numeric-text{
+    color: #383D38;
+}
+.authors-section .results{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.authors-section .results > img{
+    width: 100%;
+    border-radius: 6px;
+}
+.authors-section .results .body-text{
+    color: #383D38;
+}
+.authors-section .secondary-button{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    .authors-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .authors-section .author {
+        flex-direction: row;
+        gap: 60px;
+    }
+    .authors-section .author > img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .authors-section .more > button {
+        margin-left: 260px;
+    }
+
+    .authors-section .statistic {
+        max-width: 293px;
+    }
+}
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .authors-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .authors-section > .accent-text3 {
+        padding-left: 226px;
+        max-width: 934px;
+    }
+    .authors-section .list {
+        margin-left: 53px;
+        padding-top: 80px;
+    }
+    .authors-section .author {
+        align-items: center;
+    }
+    .authors-section .author > img {
+        width: 280px;
+        height: 280px;
+    }
+    .authors-section .more {
+        padding-top: 20px;
+        padding-bottom: 100px;
+    }
+    .authors-section .more > button {
+        margin-left: 340px;
+    }
+    .authors-section .achievement {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        padding: 80px 0 167px 50px;
+    }
+    .authors-section .statistic {
+        max-width: 243px;
+    }
+    .authors-section .results > .body-text {
+        max-width: 570px;
+    }
+}
+
+/* Для экранов 1600px и выше */
+@media (min-width: 1600px) {
+    .authors-section .achievement {
+        gap: 120px;
+        padding: 80px 0 60px 60px;
+    }
+    .authors-section .statistic {
+        margin-top: 147px;
+        max-width: 293px;
+
+    }
+    .authors-section .counter-box .numeric-text {
+        padding-top: 0;
+    }
+    .authors-section .results > .body-text {
+        max-width: 100%;
+    }
+}

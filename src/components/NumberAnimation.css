@@ -1,0 +1,23 @@
+.numeric-text {
+    color: #D44C02;
+    font-size: 100px;
+    font-family: Gogol, serif;
+    line-height: 1;
+    /*padding-top: 40px;*/
+}
+
+/* Для экранов 640px и выше */
+@media (min-width: 640px) {
+    /*.numeric-text{*/
+    /*    padding-top: 60px;*/
+    /*}*/
+}
+
+/* Для экранов 1200px и выше */
+@media (min-width: 1200px) {
+    .numeric-text{
+        /*padding-top: 100px;*/
+        font-size: 130px;
+    }
+}
+
