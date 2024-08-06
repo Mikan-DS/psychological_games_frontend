@@ -8,7 +8,6 @@ import React from "react";
 export default function Footer({user, api, openLogin, openPolicy, screenVariant}){
 
     function policyAction() {
-        window.alert("Текущее окно находится в процессе правок")
         openPolicy()
     }
 
