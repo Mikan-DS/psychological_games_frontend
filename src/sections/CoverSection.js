@@ -31,7 +31,7 @@ export default function CoverSection({
     };
 
     const descriptionPlayBox = (
-        <div className={"vertical-box align-right description-box"}>
+        <div className={"vertical-box align-end description-box"}>
             <div className={"accent-text2 description-text"}>
                 Психологическая компьютерная игра
                 <br/>
@@ -74,7 +74,7 @@ export default function CoverSection({
                             <a href={"#FAQ"}>
                                 ВОПРОСЫ
                             </a>
-                            <a onClick={userProfile}>
+                            <a onClick={userProfile}> {/* TODO Заменить на кнопку */}
                                 {authenticated ? username.split(' ')[0].toUpperCase() : "ВОЙТИ"}
                             </a>
                         </div>

@@ -14,7 +14,8 @@ body{
 .vertical-box,
 .horizontal-box,
 .align-center,
-.align-right{
+.align-end,
+.align-start{
     display: flex;
 }
 .stretched-box{
@@ -27,11 +28,14 @@ body{
 .horizontal-box{
     flex-direction: row;
 }
-.align-right{
+.align-end{
     align-items: flex-end;
 }
 .align-center{
     align-items: center;
+}
+.align-start{
+    align-items: flex-start;
 }
 
 /* Отображение на адаптивах */

@@ -43,7 +43,9 @@
     display: block;
 
 }
-.form-text-inputs input {
+.form-text-inputs input[type="text"],
+.form-text-inputs input[type="email"],
+.form-text-inputs input[type="tel"]{
     width: 100%;
 }
 
@@ -74,6 +76,7 @@
 .modal-sub-text a{
     color: #383D38;
     font-size: 14px;
+    text-align: center;
 }
 .modal-sub-text a{
     color: #75766E;

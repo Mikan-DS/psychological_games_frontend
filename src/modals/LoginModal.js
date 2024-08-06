@@ -136,9 +136,7 @@ export default function LoginModal({modalControl, openPayment, api, initialLogin
 
                 {errors.wrongEmail ?
                     <div className={"vertical-box modal-sub-text"}>
-                        <label>
-                            Ещё не покупали игру?
-                        </label>
+                        Ещё не покупали игру?
                         <a onClick={() => {
                             closeModal();
                             openPayment()
