@@ -22,12 +22,13 @@
 /* Для экранов 360px и выше */
 @media (min-width: 360px) {
     .shock-section .image {
-        height: 260px;
         background-position: 82%;
         padding-top: 145px;
+        height: 260px;
     }
     .shock-section .image > img {
         object-position: 5%;
+        height: 260px;
     }
 
     .shock-section .content-box > div{
