@@ -67,6 +67,12 @@
     width: 30px;
 }
 
+.cover-section .animated-frame{
+    background: none;
+    padding: 0;
+    border: none;
+}
+
 /* Для экранов 640px и выше */
 @media (min-width: 640px) {
 

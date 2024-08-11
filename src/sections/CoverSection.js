@@ -3,11 +3,10 @@ import './css/CoverSection.css'
 import Cover from "../img/cover_desktop.png";
 import TitleImage from "../img/title.png";
 import AgeImage from "../img/age.png"
-import CoverPics from "../img/Cover_pic_desktop.png"
-import CoverPicsMobile from "../img/Cover_pic_mobile.png"
 import Icon from "../img/icon.png"
 
 import React, {useState} from "react";
+import AnimatedPictures from "../components/AnimatedPictures";
 
 export default function CoverSection({
                                          username,
@@ -112,11 +111,7 @@ export default function CoverSection({
                     <img className={"title-image"} src={TitleImage || ""} alt="Классные джунгли"/>
                     {screenVariant.isDesktop ?descriptionPlayBox:null}
                 </div>
-                {screenVariant.isDesktop?
-                    <img className={"content-box"} src={CoverPics || ""} alt="Фоны игры"/>
-                    :
-                    <img className={"content-box"} src={CoverPicsMobile || ""} alt="Фоны игры"/>
-                }
+                <AnimatedPictures screenVariant={screenVariant}/>
                 {!screenVariant.isDesktop ?descriptionPlayBox:null}
             </div>
         </div>

@@ -6,7 +6,7 @@ export default function ScreenVariant(){
 
     useEffect(() => {
         const handleResize = () => {
-            setScreenWidth(window.outerWidth);
+            setScreenWidth(window.innerWidth);
         };
 
         window.addEventListener('resize', handleResize);
