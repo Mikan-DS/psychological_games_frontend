@@ -84,6 +84,7 @@
 }
 .modal-content a{
     color: #75766E;
+    text-decoration: underline;
 }
 .modal-content a:hover{
     color: #383D38;
