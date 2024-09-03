@@ -113,7 +113,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
 
         setErrors(newErrors)
 
-        if (!newErrors.phone && !newErrors.name && !newErrors.consent && !newErrors.email) {
+        if (!newErrors.phone && !newErrors.name && !newErrors.consent && !newErrors.email && !newErrors.clawback && !newErrors.optIn) {
             const buy_parameters = {
                 buy_type: selectedOption,
                 name: formData.name,
