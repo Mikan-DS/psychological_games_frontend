@@ -21,6 +21,8 @@ import AuthorsSection from "./sections/AuthorsSection";
 import FaqSection from "./sections/FaqSection";
 import Footer from "./sections/Footer";
 import ScreenVariant from "./utils/ResponsiveLogic";
+import OptInModal from "./modals/OptInModal";
+import ClawbackModal from "./modals/ClawbackModal";
 
 let onlyOne = true;
 
@@ -31,6 +33,8 @@ function App() {
     const paymentModalControl = ModalControl();
     const loginModalControl = ModalControl();
     const policyModalControl = ModalControl();
+    const optInModalControl = ModalControl();
+    const clawbackModalControl = ModalControl();
 
     const [user, setUser] = useState({
         authenticated: false,
@@ -68,7 +72,8 @@ function App() {
 
     function playAction(){
         if (user.authenticated){
-            window.alert("Игры в разработке!")
+            // window.alert("Игры в разработке!")
+            location.href = "http://psygames.online/games/cooljungle-160-web"
         }
         else {
             paymentModalControl.openModal()
@@ -83,7 +88,9 @@ function App() {
                 openPolicy={policyModalControl.openModal}
                 openLogin={loginModalControl.openModal}
                 api={api}
-                screenVariant={screenVariant}/>
+                screenVariant={screenVariant}
+                openOptIn={optInModalControl.openModal}
+                openClawback={clawbackModalControl.openModal}/>
             <LoginModal
                 modalControl={loginModalControl}
                 openPayment={paymentModalControl.openModal}
@@ -91,6 +98,8 @@ function App() {
                 initialLogin={initialLogin}
                 screenVariant={screenVariant}/>
             <PolicyModal modalControl={policyModalControl}/>
+            <OptInModal modalControl={optInModalControl}/>
+            <ClawbackModal modalControl={clawbackModalControl}/>
 
             <CoverSection username={user.name} authenticated={user.authenticated} loginModalControl={loginModalControl} playAction={playAction} screenVariant={screenVariant}/>
             <ForStudentSection playAction={playAction} screenVariant={screenVariant}/>

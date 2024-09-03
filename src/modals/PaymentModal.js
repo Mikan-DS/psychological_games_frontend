@@ -7,7 +7,7 @@ import CoverPics from "../img/cover_pic_modal_desktop.png"
 import CoverPicsPhone from "../img/cover_pic_modal_phone.png";
 
 
-export default function PaymentModal({modalControl, openPolicy, openLogin, api, screenVariant}) {
+export default function PaymentModal({modalControl, openPolicy, openLogin, api, screenVariant, openOptIn, openClawback}) {
 
     const {closeModal, isModalOpen} = modalControl;
 
@@ -19,6 +19,8 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
         email: '',
         custom_question: '',
         consent: false,
+        optIn: false,
+        clawback: false
     });
 
     const handleChangeFormData = (e) => {
@@ -63,6 +65,8 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
         phone: null,
         email: null,
         consent: null,
+        optIn: null,
+        clawback: null
     });
 
     async function pay() {
@@ -71,6 +75,8 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
             phone: null,
             email: null,
             consent: null,
+            optIn: null,
+            clawback: null
         }
 
         if (formData.name.length < 2) {
@@ -97,6 +103,12 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
 
         if (!formData.consent) {
             newErrors.consent = "Необходимо согласиться на обработку"
+        }
+        if (!formData.optIn) {
+            newErrors.optIn = "Необходимо согласиться с"
+        }
+        if (!formData.clawback) {
+            newErrors.clawback = "Необходимо согласиться с"
         }
 
         setErrors(newErrors)
@@ -250,6 +262,46 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                                     closeModal();
                                     openPolicy()
                                 }}> Персональных данных</a>
+                            </div>
+
+                        </div>
+                        <div
+                            className={"horizontal-box align-start policy-confirmation" + (errors.optIn ? " error" : "")}>
+
+                            <input
+                                type="checkbox"
+                                id="optIn"
+                                name="optIn"
+                                checked={formData.optIn}
+                                onChange={handleChangeFormData}
+                                required
+                            />
+                            <div>
+                                {errors.optIn ? errors.optIn : "Я ознакомился с"}
+                                <a onClick={() => {
+                                    closeModal();
+                                    openOptIn()
+                                }}> публичной офертой</a>
+                            </div>
+
+                        </div>
+                        <div
+                            className={"horizontal-box align-start policy-confirmation" + (errors.clawback ? " error" : "")}>
+
+                            <input
+                                type="checkbox"
+                                id="clawback"
+                                name="clawback"
+                                checked={formData.clawback}
+                                onChange={handleChangeFormData}
+                                required
+                            />
+                            <div>
+                                {errors.clawback ? errors.clawback : "Я ознакомился с"}
+                                <a onClick={() => {
+                                    closeModal();
+                                    openClawback()
+                                }}> правилами возврата</a>
                             </div>
 
                         </div>

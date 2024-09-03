@@ -60,6 +60,10 @@
     outline: none;
 }
 
+.error {
+    color: #DC1C07;
+}
+
 .error label {
     color: #DC1C07;
 }
@@ -78,10 +82,11 @@
     font-size: 14px;
     text-align: center;
 }
-.modal-sub-text a{
+.modal-content a{
     color: #75766E;
+    text-decoration: underline;
 }
-.modal-sub-text a:hover{
+.modal-content a:hover{
     color: #383D38;
     text-decoration: underline;
 }

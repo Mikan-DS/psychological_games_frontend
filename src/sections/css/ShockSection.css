@@ -70,6 +70,9 @@
         width: 767px;
         margin-left: auto;
     }
+    .shock-section .body-text{
+        font-size: 20px;
+    }
 }
 
 /* Для экранов 1600px и выше */

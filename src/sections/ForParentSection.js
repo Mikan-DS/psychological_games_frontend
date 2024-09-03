@@ -1,8 +1,8 @@
 import './css/AboutSection.css'
 
-import Screenshot4 from "../img/screenshots/4.png";
-import Screenshot5 from "../img/screenshots/5.png";
-import Screenshot6 from "../img/screenshots/6.png";
+import Screenshot4 from "../img/screenshots/4.jpg";
+import Screenshot5 from "../img/screenshots/5.jpg";
+import Screenshot6 from "../img/screenshots/6.jpg";
 
 import React from "react";
 
