@@ -73,7 +73,7 @@ function App() {
     function playAction(){
         if (user.authenticated){
             // window.alert("Игры в разработке!")
-            location.href = "http://psygames.online/games/cooljungle-160-web"
+            window.location.href = "http://psygames.online/games/cooljungle-160-web"
         }
         else {
             paymentModalControl.openModal()
