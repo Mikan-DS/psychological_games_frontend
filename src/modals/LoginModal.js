@@ -49,7 +49,7 @@ export default function LoginModal({modalControl, openPayment, api, initialLogin
             newErrors.phone = "Телефон это обязательный параметр!"
         } else if (!newPhone.match(/^[\d ]+$/)) {
             newErrors.phone = "Неправильный формат номера!"
-        } else if (newPhone.at(0) !== "7" && phone.at(0) !== "8") {
+        } else if (newPhone.at(0) !== "7" && newPhone.at(0) !== "8") {
             newErrors.phone = "Доступны только российские номера (+8)"
         } else {
             result = await api.loginInit(newPhone);
