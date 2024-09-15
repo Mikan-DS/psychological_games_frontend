@@ -7,7 +7,7 @@ import React, {useState} from "react";
 import CodeInput from "../components/CodeInput";
 
 
-export default function LoginModal({modalControl, openPayment, api, initialLogin, screenVariant}) {
+export default function LoginModal({modalControl, openPayment, api, initialLogin, screenVariant, newUser}) {
     const {closeModal, isModalOpen} = modalControl;
 
     const [phone, setPhone] = useState(initialLogin);
@@ -32,7 +32,7 @@ export default function LoginModal({modalControl, openPayment, api, initialLogin
     };
 
     const [errors, setErrors] = useState({
-        phone: initialLogin ? "Код неверен или устарел, получите новый." : null,
+        phone: initialLogin && !newUser ? "Код неверен или устарел, получите новый." : null,
         wrongEmail: null,
         code: null
     });

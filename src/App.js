@@ -52,6 +52,7 @@ function App() {
 
     const urlParams = new URLSearchParams(window.location.search);
     const initialLogin = urlParams.get('login') ? ("+" + urlParams.get('login')) : '';
+    const newUser = urlParams.get('newUser');
     const [initialLoginOpen, setInitialLoginOpen] = useState(initialLogin.length !== 0)
 
     if (initialLoginOpen) { // Это нужно на случай если страница с параметром логина
@@ -85,7 +86,9 @@ function App() {
                 openPayment={paymentModalControl.openModal}
                 api={api}
                 initialLogin={initialLogin}
-                screenVariant={screenVariant}/>
+                screenVariant={screenVariant}
+                newUser={newUser}
+            />
             <PolicyModal modalControl={policyModalControl}/>
             <OptInModal modalControl={optInModalControl}/>
             <ClawbackModal modalControl={clawbackModalControl}/>
