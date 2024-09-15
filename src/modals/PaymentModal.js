@@ -85,7 +85,9 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
 
 
         let phone = formData.phone;
-        phone = phone.replace("(", "").replace(")", "").replace("+", "").replace("-", "").replace("-", "").replace(" ", "").replace(" ", "")
+        phone = phone.replaceAll(/[^0-9]/g, "")
+
+        console.log(phone)
 
         if (phone.length === 0) {
             newErrors.phone = "Телефон это обязательный параметр!"

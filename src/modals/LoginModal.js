@@ -44,7 +44,7 @@ export default function LoginModal({modalControl, openPayment, api, initialLogin
             code: null
         }
         let result = null;
-        let newPhone = phone.replace("(", "").replace(")", "").replace("+", "").replace("-", "").replace("-", "").replace(" ", "").replace(" ", "")
+        let newPhone = phone.replaceAll(/[^0-9]/g, "")
         if (newPhone.length === 0) {
             newErrors.phone = "Телефон это обязательный параметр!"
         } else if (!newPhone.match(/^[\d ]+$/)) {
