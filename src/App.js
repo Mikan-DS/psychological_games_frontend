@@ -44,7 +44,19 @@ function App() {
         email: ""
     })
 
-
+    useEffect(() => {
+        if (onlyOne) {
+            api.get_user().then(r => {
+                if (r !== null) {
+                    setUser(r);
+                    if (r.username) {
+                        loginModalControl.closeModal()
+                    }
+                }
+            });
+            onlyOne = false;
+        }
+    }, [user, api, loginModalControl]);
 
 
     const screenVariant = ScreenVariant()
