@@ -71,7 +71,7 @@ export default function API() {
     }
 
     async function getPrices() {
-        return await fetchGetApi('/web/utils/prices/');
+        return await fetchGetApi({url:'/web/utils/prices/'});
     }
 
 
