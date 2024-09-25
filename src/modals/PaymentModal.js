@@ -1,6 +1,6 @@
 import './css/PaymentModal.css'
 
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Modal from "./Modal";
 import RadioButton from "../components/RadioButton";
 import CoverPics from "../img/cover_pic_modal_desktop.png"
@@ -12,6 +12,31 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
     const {closeModal, isModalOpen} = modalControl;
 
     const [selectedOption, setSelectedOption] = useState('game');
+    const defaultPrices = {
+        game: 500,
+        game_consultation: 3500
+    }
+    const [collectedPrice, setCollectedPrice] = useState(null)
+
+    useEffect(()=>{
+        if (collectedPrice === null){
+            api.getPrices().then((r) => {
+                if (r.game && r.game_consultation){
+                    setCollectedPrice({
+                        game: r.game,
+                        game_consultation: r.game_consultation
+                    })
+                }
+                else {
+                    setCollectedPrice(defaultPrices)
+                }
+            }).catch((r)=>{
+                setCollectedPrice(defaultPrices)
+            })
+        }
+    })
+
+    const prices = collectedPrice || defaultPrices
 
     const [formData, setFormData] = useState({
         name: '',
@@ -164,7 +189,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                             — Доступ к личному кабинету со статистикой ваших прохождений (в разработке)
                         </div>
                     </div>
-                    3 750 ₽
+                    {prices.game} ₽
                 </div>
                 <hr/>
                 <div className={"variant stretched-box"}
@@ -189,7 +214,7 @@ export default function PaymentModal({modalControl, openPolicy, openLogin, api, 
                             руководителя проекта Евгения Доценко.
                         </div>
                     </div>
-                    7 900 ₽
+                    {prices.game_consultation} ₽
                 </div>
                 <hr/>
                 <img src={(screenVariant.isPhone ? CoverPicsPhone : CoverPics) || ""} alt="Скришоты из игры"/>

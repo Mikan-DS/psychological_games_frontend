@@ -70,12 +70,17 @@ export default function API() {
         return await fetchPostApi({url: '/auth/pay/init', data: buy_parameters});
     }
 
+    async function getPrices() {
+        return await fetchGetApi('/web/utils/prices/');
+    }
+
 
     return {
         get_user,
         logout,
         isPhoneNew,
         buyInit,
-        loginInit
+        loginInit,
+        getPrices
     }
 }
