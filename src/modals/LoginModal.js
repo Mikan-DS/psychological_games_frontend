@@ -53,6 +53,12 @@ export default function LoginModal({modalControl, openPayment, api, initialLogin
             newErrors.phone = "Доступны только российские номера (+8)"
         } else {
             result = await api.loginInit(newPhone);
+
+            if (result && result.result === "auto"){
+                alert("Теперь вы можете начать играть!");
+                window.location.reload();
+            }
+
             if (!result || !result.result) {
                 newErrors.phone = result ? result.message : "Неверный логин";
                 newErrors.wrongEmail = true;
